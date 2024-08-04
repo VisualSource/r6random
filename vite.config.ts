@@ -2,7 +2,7 @@ import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react-swc'
 import path from "node:path"
 
-const ID = "/r6random"
+const ID = "/r6random/"
 const OUTDIR = `../../dist${ID}`
 
 // https://vitejs.dev/config/

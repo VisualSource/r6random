@@ -3,304 +3,304 @@
 		{
 			"id": "sledge",
 			"loadout": {
-				"primary": ["m590a1", "l85a2"],
-				"secondary": ["p226mk25"],
-				"gaget": ["frag", "stun", "impact-emp"]
+				"primary": ["M590A1", "L85A2"],
+				"secondary": ["P226_Mk_25"],
+				"gadget": ["Frag_Grenade", "Stun_Grenade", "Impact_EMP_Grenade"]
 			}
 		},
 		{
 			"id": "thatcher",
 			"loadout": {
-				"primary": ["ar33", "l85a2", "m590a1"],
-				"secondary": ["p226mk25"],
-				"gaget": ["claymore", "breach-charge"]
+				"primary": ["AR33", "L85A2", "M590A1"],
+				"secondary": ["P226_Mk_25"],
+				"gadget": ["Claymore", "Breach_Charge"]
 			}
 		},
 		{
 			"id": "ash",
 			"loadout": {
-				"primary": ["g36c", "r4-c"],
-				"secondary": ["m45-meusoc", "5_7-usg"],
-				"gaget": ["breach-charge", "claymore"]
+				"primary": ["G36C", "R4-C"],
+				"secondary": ["M45_MEUSOC", "5-7_USG"],
+				"gadget": ["Breach_Charge", "Claymore"]
 			}
 		},
 		{
 			"id": "thermite",
 			"loadout": {
-				"primary": ["m1014", "556xi"],
-				"secondary": ["m45-meusoc", "5_7-usg"],
-				"gaget": ["stun", "smoke"]
+				"primary": ["M1014", "556xi"],
+				"secondary": ["M45_MEUSOC", "5-7_USG"],
+				"gadget": ["Stun_Grenade", "Smoke_Grenade"]
 			}
 		},
 		{
 			"id": "twitch",
 			"loadout": {
-				"primary": ["f2", "417", "sg-cqb"],
-				"secondary": ["p9", "lfp586"],
-				"gaget": ["smoke", "claymore"]
+				"primary": ["F2", "417", "SG-CQB"],
+				"secondary": ["P9", "LFP586"],
+				"gadget": ["Smoke_Grenade", "Claymore"]
 			}
 		},
 		{
 			"id": "montagne",
 			"loadout": {
-				"primary": ["mont-shield"],
-				"secondary": ["p9", "lfp586"],
-				"gaget": ["smoke", "impact-emp", "hard-breach"]
+				"primary": ["LE_ROC_SHIELD"],
+				"secondary": ["P9", "LFP586"],
+				"gadget": ["Smoke_Grenade", "Impact_EMP_Grenade", "Hard_Breach"]
 			}
 		},
 		{
 			"id": "glaz",
 			"loadout": {
-				"primary": ["ots-03"],
-				"secondary": ["pmn", "gonne-6", "bearing-9"],
-				"gaget": ["smoke", "frag", "claymore"]
+				"primary": ["OTs-03"],
+				"secondary": ["PMM", "Gonne_6", "Bearing_9"],
+				"gadget": ["Smoke_Grenade", "Frag_Grenade", "Claymore"]
 			}
 		},
 		{
 			"id": "fuze",
 			"loadout": {
-				"primary": ["ballistic-shield", "6p41", "ak-12"],
-				"secondary": ["pmn", "gsh-18"],
-				"gaget": ["breach-charge", "hard-breach", "smoke"]
+				"primary": ["G52-Tactical_Shield", "6P41", "AK-12"],
+				"secondary": ["PMM", "GSH_18"],
+				"gadget": ["Breach_Charge", "Hard_Breach", "Smoke_Grenade"]
 			}
 		},
 		{
 			"id": "blitz",
 			"loadout": {
-				"primary": ["ballistic-shield"],
-				"secondary": ["p12"],
-				"gaget": ["smoke", "breach-charge"]
+				"primary": ["G52-Tactical_Shield"],
+				"secondary": ["P12"],
+				"gadget": ["Smoke_Grenade", "Breach_Charge"]
 			}
 		},
 		{
 			"id": "iq",
 			"loadout": {
-				"primary": ["aug-12", "552-commando", "g8a1"],
-				"secondary": ["p12"],
-				"gaget": ["breach-charge", "claymore", "frag"]
+				"primary": ["AUG_A2", "552_Commando", "G8A1"],
+				"secondary": ["P12"],
+				"gadget": ["Breach_Charge", "Claymore", "Frag_Grenade"]
 			}
 		},
 		{
 			"id": "buck",
 			"loadout": {
-				"primary": ["c8-sfw", "camrs"],
-				"secondary": ["mk19mm"],
-				"gaget": ["stun", "hard-breach"]
+				"primary": ["C8-SFW", "CAMRS"],
+				"secondary": ["Mk1_9mm"],
+				"gadget": ["Stun_Grenade", "Hard_Breach"]
 			}
 		},
 		{
 			"id": "blackbeard",
 			"loadout": {
-				"primary": ["mk17-cqb", "sr-25"],
-				"secondary": ["d-50"],
-				"gaget": ["claymore", "stun", "impact-emp"]
+				"primary": ["Mk17_CQB", "SR-25"],
+				"secondary": ["D-50"],
+				"gadget": ["Claymore", "Stun_Grenade", "Impact_EMP_Grenade"]
 			}
 		},
 		{
 			"id": "capitao",
 			"loadout": {
-				"primary": ["para-308", "m249"],
-				"secondary": ["prb92", "gonne-6"],
-				"gaget": ["claymore", "hard-breach", "impact-emp"]
+				"primary": ["PARA-308", "M249"],
+				"secondary": ["PRB92", "Gonne_6"],
+				"gadget": ["Claymore", "Hard_Breach", "Impact_EMP_Grenade"]
 			}
 		},
 		{
 			"id": "hibana",
 			"loadout": {
-				"primary": ["type-89", "superNova"],
-				"secondary": ["p229", "bearing-9"],
-				"gaget": ["stun", "breach-charge"]
+				"primary": ["Type-89", "SuperNova"],
+				"secondary": ["P229", "Bearing_9"],
+				"gadget": ["Stun_Grenade", "Breach_Charge"]
 			}
 		},
 		{
 			"id": "jackal",
 			"loadout": {
-				"primary": ["c73", "pdw9", "ita12l"],
-				"secondary": ["ita12s", "usp40"],
-				"gaget": ["claymore", "smoke"]
+				"primary": ["C7E", "PDW9", "ITA12L"],
+				"secondary": ["ITA12S", "USP40"],
+				"gadget": ["Claymore", "Smoke_Grenade"]
 			}
 		},
 		{
 			"id": "ying",
 			"loadout": {
-				"primary": ["t-95-lsw", "six12"],
-				"secondary": ["q-929"],
-				"gaget": ["smoke", "hard-breach"]
+				"primary": ["T-95_LSW", "SIX12"],
+				"secondary": ["Q-929"],
+				"gadget": ["Smoke_Grenade", "Hard_Breach"]
 			}
 		},
 		{
 			"id": "zofia",
 			"loadout": {
-				"primary": ["lmg-e", "m762"],
-				"secondary": ["rg15"],
-				"gaget": ["breach-charge", "claymore"]
+				"primary": ["LMG-E", "M762"],
+				"secondary": ["RG15"],
+				"gadget": ["Breach_Charge", "Claymore"]
 			}
 		},
 		{
 			"id": "dokkaebi",
 			"loadout": {
-				"primary": ["mk14-ebr", "bosg_12_2"],
-				"secondary": ["c75-auto", "gonne-6", "smg-12"],
-				"gaget": ["smoke", "stun", "impact-emp"]
+				"primary": ["Mk_14_EBR", "BOSG-12-2"],
+				"secondary": ["C75_Auto", "Gonne_6", "SMG-12"],
+				"gadget": ["Smoke_Grenade", "Stun_Grenade", "Impact_EMP_Grenade"]
 			}
 		},
 		{
 			"id": "lion",
 			"loadout": {
-				"primary": ["v308", "417", "sg-cqb"],
-				"secondary": ["p9", "lfp586"],
-				"gaget": ["stun", "claymore", "frag"]
+				"primary": ["V308", "417", "SG-CQB"],
+				"secondary": ["P9", "LFP586"],
+				"gadget": ["Stun_Grenade", "Claymore", "Frag_Grenade"]
 			}
 		},
 		{
 			"id": "finka",
 			"loadout": {
-				"primary": ["spear_308", "6p41", "sasg-12"],
-				"secondary": ["pmn", "gsh-18"],
-				"gaget": ["smoke", "stun", "frag"]
+				"primary": ["Spear_308", "6P41", "SASG-12"],
+				"secondary": ["PMM", "GSH_18"],
+				"gadget": ["Smoke_Grenade", "Stun_Grenade", "Frag_Grenade"]
 			}
 		},
 		{
 			"id": "maverick",
 			"loadout": {
-				"primary": ["ar-15_50", "m4"],
-				"secondary": ["1911-tacops"],
-				"gaget": ["claymore", "stun"]
+				"primary": ["AR-15-50", "M4"],
+				"secondary": ["1911_TACOPS"],
+				"gadget": ["Claymore", "Stun_Grenade"]
 			}
 		},
 		{
 			"id": "nomad",
 			"loadout": {
-				"primary": ["ak-74m", "arx200"],
-				"secondary": ["_44-mag-semi-auto", "prb92"],
-				"gaget": ["breach-charge", "stun"]
+				"primary": ["AK-74M", "ARX200"],
+				"secondary": ["44_MAG_SEMI-AUTO", "PRB92"],
+				"gadget": ["Breach_Charge", "Stun_Grenade"]
 			}
 		},
 		{
 			"id": "gridlock",
 			"loadout": {
-				"primary": ["f90", "m249-saw"],
-				"secondary": ["sdp-9mm", "super-shorty"],
-				"gaget": ["smoke", "impact-emp", "frag"]
+				"primary": ["F90", "M249_SAW"],
+				"secondary": ["SDP_9mm", "Super_Shorty"],
+				"gadget": ["Smoke_Grenade", "Impact_EMP_Grenade", "Frag_Grenade"]
 			}
 		},
 		{
 			"id": "nokk",
 			"loadout": {
-				"primary": ["fmg-9", "six12-sd"],
-				"secondary": ["5_7-usg", "d-50"],
-				"gaget": ["frag", "hard-breach", "impact-emp"]
+				"primary": ["FMG-9", "SIX12_SD"],
+				"secondary": ["5-7_USG", "D-50"],
+				"gadget": ["Frag_Grenade", "Hard_Breach", "Impact_EMP_Grenade"]
 			}
 		},
 		{
 			"id": "amaru",
 			"loadout": {
-				"primary": ["g8a1", "superNova"],
-				"secondary": ["ita12s", "gonne-6", "smg-11"],
-				"gaget": ["hard-breach", "stun"]
+				"primary": ["G8A1", "SuperNova"],
+				"secondary": ["ITA12S", "Gonne_6", "SMG-11"],
+				"gadget": ["Hard_Breach", "Stun_Grenade"]
 			}
 		},
 		{
 			"id": "kali",
 			"loadout": {
-				"primary": ["cspx-300"],
-				"secondary": ["c75-auto", "spsmg9", "p226mk25"],
-				"gaget": ["breach-charge", "claymore"]
+				"primary": ["CSRX_300"],
+				"secondary": ["C75_Auto", "SPSMG9", "P226_Mk_25"],
+				"gadget": ["Breach_Charge", "Claymore"]
 			}
 		},
 		{
 			"id": "iana",
 			"loadout": {
-				"primary": ["arx200", "g36c"],
-				"secondary": ["mk19mm", "gonne-6"],
-				"gaget": ["emp", "smoke"]
+				"primary": ["ARX200", "G36C"],
+				"secondary": ["Mk1_9mm", "Gonne_6"],
+				"gadget": ["emp", "Smoke_Grenade"]
 			}
 		},
 		{
 			"id": "ace",
 			"loadout": {
-				"primary": ["ak-12", "m1014"],
-				"secondary": ["p9"],
-				"gaget": ["breach-charge", "claymore"]
+				"primary": ["AK-12", "M1014"],
+				"secondary": ["P9"],
+				"gadget": ["Breach_Charge", "Claymore"]
 			}
 		},
 		{
 			"id": "zero",
 			"loadout": {
-				"primary": ["sc3000k", "mp7"],
-				"secondary": ["5_7-usg", "gonne-6"],
-				"gaget": ["claymore", "breach-charge"]
+				"primary": ["SC3000K", "MP7"],
+				"secondary": ["5-7_USG", "Gonne_6"],
+				"gadget": ["Claymore", "Breach_Charge"]
 			}
 		},
 		{
 			"id": "flores",
 			"loadout": {
-				"primary": ["ar33", "sr-25"],
-				"secondary": ["gsh-18"],
-				"gaget": ["stun", "claymore"]
+				"primary": ["AR33", "SR-25"],
+				"secondary": ["GSH_18"],
+				"gadget": ["Stun_Grenade", "Claymore"]
 			}
 		},
 		{
 			"id": "osa",
 			"loadout": {
-				"primary": ["556xi", "pdw9"],
-				"secondary": ["pmn"],
-				"gaget": ["claymore", "frag", "impact-emp"]
+				"primary": ["556xi", "PDW9"],
+				"secondary": ["PMM"],
+				"gadget": ["Claymore", "Frag_Grenade", "Impact_EMP_Grenade"]
 			}
 		},
 		{
 			"id": "sens",
 			"loadout": {
-				"primary": ["pof-9", "417"],
-				"secondary": ["sdp-9mm", "gonne-6"],
-				"gaget": ["hard-breach", "claymore"]
+				"primary": ["POF9", "417"],
+				"secondary": ["SDP_9mm", "Gonne_6"],
+				"gadget": ["Hard_Breach", "Claymore"]
 			}
 		},
 		{
 			"id": "grim",
 			"loadout": {
-				"primary": ["sg-cqb", "552-commando"],
-				"secondary": ["p229", "bailiff-410"],
-				"gaget": ["breach-charge", "hard-breach", "claymore"]
+				"primary": ["SG-CQB", "552_Commando"],
+				"secondary": ["P229", "Bailiff_410"],
+				"gadget": ["Breach_Charge", "Hard_Breach", "Claymore"]
 			}
 		},
 		{
 			"id": "brava",
 			"loadout": {
-				"primary": ["para-308", "camrs"],
-				"secondary": ["usp40", "super-shorty"],
-				"gaget": ["smoke", "claymore"]
+				"primary": ["PARA-308", "CAMRS"],
+				"secondary": ["USP40", "Super_Shorty"],
+				"gadget": ["Smoke_Grenade", "Claymore"]
 			}
 		},
 		{
 			"id": "ram",
 			"loadout": {
-				"primary": ["r4-c", "lmg-e"],
-				"secondary": ["mk19mm", "ita12s"],
-				"gaget": ["stun", "smoke"]
+				"primary": ["R4-C", "LMG-E"],
+				"secondary": ["Mk1_9mm", "ITA12S"],
+				"gadget": ["Stun_Grenade", "Smoke_Grenade"]
 			}
 		},
 		{
 			"id": "deimos",
 			"loadout": {
-				"primary": ["ak-74m", "m590a1"],
-				"secondary": ["_44-vendetta"],
-				"gaget": ["frag", "hard-breach"]
+				"primary": ["AK-74M", "M590A1"],
+				"secondary": ["44VENDETTA"],
+				"gadget": ["Frag_Grenade", "Hard_Breach"]
 			}
 		},
 		{
 			"id": "striker",
 			"loadout": {
-				"primary": ["m4", "m249"],
-				"secondary": ["5_7-usg", "ita12s"],
-				"gaget": [
-					"frag",
-					"hard-breach",
-					"smoke",
-					"stun",
-					"breach-charge",
-					"impact-emp",
-					"claymore"
+				"primary": ["M4", "M249"],
+				"secondary": ["5-7_USG", "ITA12S"],
+				"gadget": [
+					"Frag_Grenade",
+					"Hard_Breach",
+					"Smoke_Grenade",
+					"Stun_Grenade",
+					"Breach_Charge",
+					"Impact_EMP_Grenade",
+					"Claymore"
 				]
 			}
 		}
@@ -309,289 +309,297 @@
 		{
 			"id": "smoke",
 			"loadout": {
-				"primary": [],
-				"secondary": [],
-				"gaget": []
+				"primary": ["FMG-9", "M590A1"],
+				"secondary": ["P226_Mk_25", "SMG-11"],
+				"gadget": ["Barbed_Wire", "Proximity_Alarm"]
 			}
 		},
 		{
 			"id": "mute",
 			"loadout": {
-				"primary": [],
-				"secondary": [],
-				"gaget": []
+				"primary": ["MP5K", "M590A1"],
+				"secondary": ["P226_Mk_25", "SMG-11"],
+				"gadget": ["Nitro_Cell", "Bulletproof_Camera"]
 			}
 		},
 		{
 			"id": "castle",
 			"loadout": {
-				"primary": [],
-				"secondary": [],
-				"gaget": []
+				"primary": ["UMP45", "M1014"],
+				"secondary": ["5-7_USG", "Super_Shorty"],
+				"gadget": ["Bulletproof_Camera", "Proximity_Alarm"]
 			}
 		},
 		{
 			"id": "pulse",
 			"loadout": {
-				"primary": [],
-				"secondary": [],
-				"gaget": []
+				"primary": ["M1014", "UMP45"],
+				"secondary": ["M45_MEUSOC", "5-7_USG"],
+				"gadget": ["Nitro_Cell", "Deployable_Shield", "Observation_Blocker"]
 			}
 		},
 		{
 			"id": "doc",
 			"loadout": {
-				"primary": [],
-				"secondary": [],
-				"gaget": []
+				"primary": ["SG-CQB", "MP5", "P90"],
+				"secondary": ["P9", "LFP586", "Bailiff_410"],
+				"gadget": ["Barbed_Wire", "Bulletproof_Camera"]
 			}
 		},
 		{
 			"id": "rook",
 			"loadout": {
-				"primary": [],
-				"secondary": [],
-				"gaget": []
+				"primary": ["P90", "MP5", "SG-CQB"],
+				"secondary": ["LFP586", "P9"],
+				"gadget": ["Proximity_Alarm", "Impact_Grenade", "Observation_Blocker"]
 			}
 		},
 		{
 			"id": "kapkan",
 			"loadout": {
-				"primary": [],
-				"secondary": [],
-				"gaget": []
+				"primary": ["9x19VSN", "SASG-12"],
+				"secondary": ["PMM", "GSH_18"],
+				"gadget": ["Impact_Grenade", "Nitro_Cell"]
 			}
 		},
 		{
 			"id": "tachanka",
 			"loadout": {
-				"primary": [],
-				"secondary": [],
-				"gaget": []
+				"primary": ["DP27", "9x19VSN"],
+				"secondary": ["GSH_18", "PMM", "Bearing_9"],
+				"gadget": ["Barbed_Wire", "Deployable_Shield"]
 			}
 		},
 		{
 			"id": "jager",
 			"loadout": {
-				"primary": [],
-				"secondary": [],
-				"gaget": []
+				"primary": ["M870", "416C_Carbine"],
+				"secondary": ["P12"],
+				"gadget": ["Bulletproof_Camera", "Observation_Blocker"]
 			}
 		},
 		{
 			"id": "bandit",
 			"loadout": {
-				"primary": [],
-				"secondary": [],
-				"gaget": []
+				"primary": ["MP7", "M870"],
+				"secondary": ["P12"],
+				"gadget": ["Barbed_Wire", "Nitro_Cell"]
 			}
 		},
 		{
 			"id": "frost",
 			"loadout": {
-				"primary": [],
-				"secondary": [],
-				"gaget": []
+				"primary": ["Super_90", "9mm_C1"],
+				"secondary": ["Mk1_9mm", "ITA12S"],
+				"gadget": ["Bulletproof_Camera", "Deployable_Shield"]
 			}
 		},
 		{
 			"id": "valkyrie",
 			"loadout": {
-				"primary": [],
-				"secondary": [],
-				"gaget": []
+				"primary": ["MPX", "SPAS_12"],
+				"secondary": ["D-50"],
+				"gadget": ["Impact_Grenade", "Nitro_Cell"]
 			}
 		},
 		{
 			"id": "caveira",
 			"loadout": {
-				"primary": [],
-				"secondary": [],
-				"gaget": []
+				"primary": ["M12", "SPAS_15"],
+				"secondary": ["Luison"],
+				"gadget": ["Impact_Grenade", "Proximity_Alarm", "Observation_Blocker"]
 			}
 		},
 		{
 			"id": "echo",
 			"loadout": {
-				"primary": [],
-				"secondary": [],
-				"gaget": []
+				"primary": ["SuperNova", "MP5SD"],
+				"secondary": ["P229", "Bearing_9"],
+				"gadget": ["Impact_Grenade", "Deployable_Shield"]
 			}
 		},
 		{
 			"id": "mira",
 			"loadout": {
-				"primary": [],
-				"secondary": [],
-				"gaget": []
+				"primary": ["Vector_45_ACP", "ITA12L"],
+				"secondary": ["ITA12S", "USP40"],
+				"gadget": ["Proximity_Alarm", "Nitro_Cell"]
 			}
 		},
 		{
 			"id": "lesion",
 			"loadout": {
-				"primary": [],
-				"secondary": [],
-				"gaget": []
+				"primary": ["SIX12_SD", "T-5_SMG"],
+				"secondary": ["Q-929", "Super_Shorty"],
+				"gadget": ["Observation_Blocker", "Bulletproof_Camera"]
 			}
 		},
 		{
 			"id": "ela",
 			"loadout": {
-				"primary": [],
-				"secondary": [],
-				"gaget": []
+				"primary": ["Scorpion_EVO_3_A1"],
+				"secondary": ["FO-12"],
+				"gadget": ["Barbed_Wire", "Deployable_Shield", "Impact_Grenade"]
 			}
 		},
 		{
 			"id": "vigil",
 			"loadout": {
-				"primary": [],
-				"secondary": [],
-				"gaget": []
+				"primary": ["K1A", "BOSG-12-2"],
+				"secondary": ["C75_Auto", "SMG-12"],
+				"gadget": ["Bulletproof_Camera", "Impact_Grenade"]
 			}
 		},
 		{
 			"id": "maestro",
 			"loadout": {
-				"primary": [],
-				"secondary": [],
-				"gaget": []
+				"primary": ["ALDA_5-56", "ACS12"],
+				"secondary": ["Bailiff_410", "Keratos_357"],
+				"gadget": ["Barbed_Wire", "Impact_Grenade", "Observation_Blocker"]
 			}
 		},
 		{
 			"id": "alibi",
 			"loadout": {
-				"primary": [],
-				"secondary": [],
-				"gaget": []
+				"primary": ["Mx4_Storm", "ACS12"],
+				"secondary": ["Keratos_357", "Bailiff_410"],
+				"gadget": ["Proximity_Alarm", "Observation_Blocker"]
 			}
 		},
 		{
 			"id": "clash",
 			"loadout": {
-				"primary": [],
-				"secondary": [],
-				"gaget": []
+				"primary": ["CCE_Shield"],
+				"secondary": ["P-10C", "Super_Shorty", "SPSMG9"],
+				"gadget": ["Impact_Grenade", "Barbed_Wire"]
 			}
 		},
 		{
 			"id": "kaid",
 			"loadout": {
-				"primary": [],
-				"secondary": [],
-				"gaget": []
+				"primary": ["AUG_A3", "TCSG12"],
+				"secondary": ["44_MAG_SEMI-AUTO", "LFP586"],
+				"gadget": ["Barbed_Wire", "Nitro_Cell", "Observation_Blocker"]
 			}
 		},
 		{
 			"id": "mozzie",
 			"loadout": {
-				"primary": [],
-				"secondary": [],
-				"gaget": []
+				"primary": ["Commando_9", "P10Roni"],
+				"secondary": ["SDP_9mm"],
+				"gadget": ["Barbed_Wire", "Nitro_Cell"]
 			}
 		},
 		{
 			"id": "warden",
 			"loadout": {
-				"primary": [],
-				"secondary": [],
-				"gaget": []
+				"primary": ["M590A1", "MPX"],
+				"secondary": ["P-10C", "SMG-12"],
+				"gadget": ["Nitro_Cell", "Deployable_Shield", "Observation_Blocker"]
 			}
 		},
 		{
 			"id": "goyo",
 			"loadout": {
-				"primary": [],
-				"secondary": [],
-				"gaget": []
+				"primary": ["Vector_45_ACP", "TCSG12"],
+				"secondary": ["P229"],
+				"gadget": ["Proximity_Alarm", "Bulletproof_Camera", "Impact_Grenade"]
 			}
 		},
 		{
 			"id": "wamai",
 			"loadout": {
-				"primary": [],
-				"secondary": [],
-				"gaget": []
+				"primary": ["AUG_A2", "MP5K"],
+				"secondary": ["Keratos_357", "P12"],
+				"gadget": ["Proximity_Alarm", "Impact_Grenade"]
 			}
 		},
 		{
 			"id": "oryx",
 			"loadout": {
-				"primary": [],
-				"secondary": [],
-				"gaget": []
+				"primary": ["T-5_SMG", "SPAS_12"],
+				"secondary": ["Bailiff_410", "USP40"],
+				"gadget": ["Barbed_Wire", "Proximity_Alarm"]
 			}
 		},
 		{
 			"id": "melusi",
 			"loadout": {
-				"primary": [],
-				"secondary": [],
-				"gaget": []
+				"primary": ["MP5", "Super_90"],
+				"secondary": ["RG15", "ITA12S"],
+				"gadget": ["Impact_EMP_Grenade", "Bulletproof_Camera"]
 			}
 		},
 		{
 			"id": "aruni",
 			"loadout": {
-				"primary": [],
-				"secondary": [],
-				"gaget": []
+				"primary": ["P10Roni", "Mk_14_EBR"],
+				"secondary": ["PRB92"],
+				"gadget": ["Barbed_Wire", "Bulletproof_Camera"]
 			}
 		},
 		{
 			"id": "thunderbird",
 			"loadout": {
-				"primary": [],
-				"secondary": [],
-				"gaget": []
+				"primary": ["Spear_308", "SPAS_15"],
+				"secondary": ["Bearing_9", "Q-929"],
+				"gadget": ["Barbed_Wire", "Bulletproof_Camera", "Deployable_Shield"]
 			}
 		},
 		{
 			"id": "thorn",
 			"loadout": {
-				"primary": [],
-				"secondary": [],
-				"gaget": []
+				"primary": ["uzk50gi", "M870"],
+				"secondary": ["1911_TACOPS", "C75_Auto"],
+				"gadget": ["Barbed_Wire", "Deployable_Shield"]
 			}
 		},
 		{
 			"id": "azami",
 			"loadout": {
-				"primary": [],
-				"secondary": [],
-				"gaget": []
+				"primary": ["9x19VSN", "ACS12"],
+				"secondary": ["D-50"],
+				"gadget": ["Barbed_Wire", "Impact_Grenade"]
 			}
 		},
 		{
 			"id": "solis",
 			"loadout": {
-				"primary": [],
-				"secondary": [],
-				"gaget": []
+				"primary": ["P90", "ITA12L"],
+				"secondary": ["SMG-11"],
+				"gadget": ["Proximity_Alarm", "Bulletproof_Camera"]
 			}
 		},
 		{
 			"id": "fenrir",
 			"loadout": {
-				"primary": [],
-				"secondary": [],
-				"gaget": []
+				"primary": ["MP7", "SASG-12"],
+				"secondary": ["Bailiff_410", "5-7_USG"],
+				"gadget": ["Observation_Blocker", "Bulletproof_Camera"]
 			}
 		},
 		{
 			"id": "tubarao",
 			"loadout": {
-				"primary": [],
-				"secondary": [],
-				"gaget": []
+				"primary": ["MPX", "AR-15-50"],
+				"secondary": ["P226_Mk_25"],
+				"gadget": ["Nitro_Cell", "Proximity_Alarm"]
 			}
 		},
 		{
 			"id": "sentry",
 			"loadout": {
-				"primary": [],
-				"secondary": [],
-				"gaget": []
+				"primary": ["Commando_9", "M870"],
+				"secondary": ["C75_Auto", "Super_Shorty"],
+				"gadget": [
+					"Impact_Grenade",
+					"Deployable_Shield",
+					"Barbed_Wire",
+					"Bulletproof_Camera",
+					"Nitro_Cell",
+					"Proximity_Alarm",
+					"Observation_Blocker"
+				]
 			}
 		}
 	]

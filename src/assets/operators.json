@@ -1,0 +1,598 @@
+{
+	"attackers": [
+		{
+			"id": "sledge",
+			"loadout": {
+				"primary": ["m590a1", "l85a2"],
+				"secondary": ["p226mk25"],
+				"gaget": ["frag", "stun", "impact-emp"]
+			}
+		},
+		{
+			"id": "thatcher",
+			"loadout": {
+				"primary": ["ar33", "l85a2", "m590a1"],
+				"secondary": ["p226mk25"],
+				"gaget": ["claymore", "breach-charge"]
+			}
+		},
+		{
+			"id": "ash",
+			"loadout": {
+				"primary": ["g36c", "r4-c"],
+				"secondary": ["m45-meusoc", "5_7-usg"],
+				"gaget": ["breach-charge", "claymore"]
+			}
+		},
+		{
+			"id": "thermite",
+			"loadout": {
+				"primary": ["m1014", "556xi"],
+				"secondary": ["m45-meusoc", "5_7-usg"],
+				"gaget": ["stun", "smoke"]
+			}
+		},
+		{
+			"id": "twitch",
+			"loadout": {
+				"primary": ["f2", "417", "sg-cqb"],
+				"secondary": ["p9", "lfp586"],
+				"gaget": ["smoke", "claymore"]
+			}
+		},
+		{
+			"id": "montagne",
+			"loadout": {
+				"primary": ["mont-shield"],
+				"secondary": ["p9", "lfp586"],
+				"gaget": ["smoke", "impact-emp", "hard-breach"]
+			}
+		},
+		{
+			"id": "glaz",
+			"loadout": {
+				"primary": ["ots-03"],
+				"secondary": ["pmn", "gonne-6", "bearing-9"],
+				"gaget": ["smoke", "frag", "claymore"]
+			}
+		},
+		{
+			"id": "fuze",
+			"loadout": {
+				"primary": ["ballistic-shield", "6p41", "ak-12"],
+				"secondary": ["pmn", "gsh-18"],
+				"gaget": ["breach-charge", "hard-breach", "smoke"]
+			}
+		},
+		{
+			"id": "blitz",
+			"loadout": {
+				"primary": ["ballistic-shield"],
+				"secondary": ["p12"],
+				"gaget": ["smoke", "breach-charge"]
+			}
+		},
+		{
+			"id": "iq",
+			"loadout": {
+				"primary": ["aug-12", "552-commando", "g8a1"],
+				"secondary": ["p12"],
+				"gaget": ["breach-charge", "claymore", "frag"]
+			}
+		},
+		{
+			"id": "buck",
+			"loadout": {
+				"primary": ["c8-sfw", "camrs"],
+				"secondary": ["mk19mm"],
+				"gaget": ["stun", "hard-breach"]
+			}
+		},
+		{
+			"id": "blackbeard",
+			"loadout": {
+				"primary": ["mk17-cqb", "sr-25"],
+				"secondary": ["d-50"],
+				"gaget": ["claymore", "stun", "impact-emp"]
+			}
+		},
+		{
+			"id": "capitao",
+			"loadout": {
+				"primary": ["para-308", "m249"],
+				"secondary": ["prb92", "gonne-6"],
+				"gaget": ["claymore", "hard-breach", "impact-emp"]
+			}
+		},
+		{
+			"id": "hibana",
+			"loadout": {
+				"primary": ["type-89", "superNova"],
+				"secondary": ["p229", "bearing-9"],
+				"gaget": ["stun", "breach-charge"]
+			}
+		},
+		{
+			"id": "jackal",
+			"loadout": {
+				"primary": ["c73", "pdw9", "ita12l"],
+				"secondary": ["ita12s", "usp40"],
+				"gaget": ["claymore", "smoke"]
+			}
+		},
+		{
+			"id": "ying",
+			"loadout": {
+				"primary": ["t-95-lsw", "six12"],
+				"secondary": ["q-929"],
+				"gaget": ["smoke", "hard-breach"]
+			}
+		},
+		{
+			"id": "zofia",
+			"loadout": {
+				"primary": ["lmg-e", "m762"],
+				"secondary": ["rg15"],
+				"gaget": ["breach-charge", "claymore"]
+			}
+		},
+		{
+			"id": "dokkaebi",
+			"loadout": {
+				"primary": ["mk14-ebr", "bosg_12_2"],
+				"secondary": ["c75-auto", "gonne-6", "smg-12"],
+				"gaget": ["smoke", "stun", "impact-emp"]
+			}
+		},
+		{
+			"id": "lion",
+			"loadout": {
+				"primary": ["v308", "417", "sg-cqb"],
+				"secondary": ["p9", "lfp586"],
+				"gaget": ["stun", "claymore", "frag"]
+			}
+		},
+		{
+			"id": "finka",
+			"loadout": {
+				"primary": ["spear_308", "6p41", "sasg-12"],
+				"secondary": ["pmn", "gsh-18"],
+				"gaget": ["smoke", "stun", "frag"]
+			}
+		},
+		{
+			"id": "maverick",
+			"loadout": {
+				"primary": ["ar-15_50", "m4"],
+				"secondary": ["1911-tacops"],
+				"gaget": ["claymore", "stun"]
+			}
+		},
+		{
+			"id": "nomad",
+			"loadout": {
+				"primary": ["ak-74m", "arx200"],
+				"secondary": ["_44-mag-semi-auto", "prb92"],
+				"gaget": ["breach-charge", "stun"]
+			}
+		},
+		{
+			"id": "gridlock",
+			"loadout": {
+				"primary": ["f90", "m249-saw"],
+				"secondary": ["sdp-9mm", "super-shorty"],
+				"gaget": ["smoke", "impact-emp", "frag"]
+			}
+		},
+		{
+			"id": "nokk",
+			"loadout": {
+				"primary": ["fmg-9", "six12-sd"],
+				"secondary": ["5_7-usg", "d-50"],
+				"gaget": ["frag", "hard-breach", "impact-emp"]
+			}
+		},
+		{
+			"id": "amaru",
+			"loadout": {
+				"primary": ["g8a1", "superNova"],
+				"secondary": ["ita12s", "gonne-6", "smg-11"],
+				"gaget": ["hard-breach", "stun"]
+			}
+		},
+		{
+			"id": "kali",
+			"loadout": {
+				"primary": ["cspx-300"],
+				"secondary": ["c75-auto", "spsmg9", "p226mk25"],
+				"gaget": ["breach-charge", "claymore"]
+			}
+		},
+		{
+			"id": "iana",
+			"loadout": {
+				"primary": ["arx200", "g36c"],
+				"secondary": ["mk19mm", "gonne-6"],
+				"gaget": ["emp", "smoke"]
+			}
+		},
+		{
+			"id": "ace",
+			"loadout": {
+				"primary": ["ak-12", "m1014"],
+				"secondary": ["p9"],
+				"gaget": ["breach-charge", "claymore"]
+			}
+		},
+		{
+			"id": "zero",
+			"loadout": {
+				"primary": ["sc3000k", "mp7"],
+				"secondary": ["5_7-usg", "gonne-6"],
+				"gaget": ["claymore", "breach-charge"]
+			}
+		},
+		{
+			"id": "flores",
+			"loadout": {
+				"primary": ["ar33", "sr-25"],
+				"secondary": ["gsh-18"],
+				"gaget": ["stun", "claymore"]
+			}
+		},
+		{
+			"id": "osa",
+			"loadout": {
+				"primary": ["556xi", "pdw9"],
+				"secondary": ["pmn"],
+				"gaget": ["claymore", "frag", "impact-emp"]
+			}
+		},
+		{
+			"id": "sens",
+			"loadout": {
+				"primary": ["pof-9", "417"],
+				"secondary": ["sdp-9mm", "gonne-6"],
+				"gaget": ["hard-breach", "claymore"]
+			}
+		},
+		{
+			"id": "grim",
+			"loadout": {
+				"primary": ["sg-cqb", "552-commando"],
+				"secondary": ["p229", "bailiff-410"],
+				"gaget": ["breach-charge", "hard-breach", "claymore"]
+			}
+		},
+		{
+			"id": "brava",
+			"loadout": {
+				"primary": ["para-308", "camrs"],
+				"secondary": ["usp40", "super-shorty"],
+				"gaget": ["smoke", "claymore"]
+			}
+		},
+		{
+			"id": "ram",
+			"loadout": {
+				"primary": ["r4-c", "lmg-e"],
+				"secondary": ["mk19mm", "ita12s"],
+				"gaget": ["stun", "smoke"]
+			}
+		},
+		{
+			"id": "deimos",
+			"loadout": {
+				"primary": ["ak-74m", "m590a1"],
+				"secondary": ["_44-vendetta"],
+				"gaget": ["frag", "hard-breach"]
+			}
+		},
+		{
+			"id": "striker",
+			"loadout": {
+				"primary": ["m4", "m249"],
+				"secondary": ["5_7-usg", "ita12s"],
+				"gaget": [
+					"frag",
+					"hard-breach",
+					"smoke",
+					"stun",
+					"breach-charge",
+					"impact-emp",
+					"claymore"
+				]
+			}
+		}
+	],
+	"defenders": [
+		{
+			"id": "smoke",
+			"loadout": {
+				"primary": [],
+				"secondary": [],
+				"gaget": []
+			}
+		},
+		{
+			"id": "mute",
+			"loadout": {
+				"primary": [],
+				"secondary": [],
+				"gaget": []
+			}
+		},
+		{
+			"id": "castle",
+			"loadout": {
+				"primary": [],
+				"secondary": [],
+				"gaget": []
+			}
+		},
+		{
+			"id": "pulse",
+			"loadout": {
+				"primary": [],
+				"secondary": [],
+				"gaget": []
+			}
+		},
+		{
+			"id": "doc",
+			"loadout": {
+				"primary": [],
+				"secondary": [],
+				"gaget": []
+			}
+		},
+		{
+			"id": "rook",
+			"loadout": {
+				"primary": [],
+				"secondary": [],
+				"gaget": []
+			}
+		},
+		{
+			"id": "kapkan",
+			"loadout": {
+				"primary": [],
+				"secondary": [],
+				"gaget": []
+			}
+		},
+		{
+			"id": "tachanka",
+			"loadout": {
+				"primary": [],
+				"secondary": [],
+				"gaget": []
+			}
+		},
+		{
+			"id": "jager",
+			"loadout": {
+				"primary": [],
+				"secondary": [],
+				"gaget": []
+			}
+		},
+		{
+			"id": "bandit",
+			"loadout": {
+				"primary": [],
+				"secondary": [],
+				"gaget": []
+			}
+		},
+		{
+			"id": "frost",
+			"loadout": {
+				"primary": [],
+				"secondary": [],
+				"gaget": []
+			}
+		},
+		{
+			"id": "valkyrie",
+			"loadout": {
+				"primary": [],
+				"secondary": [],
+				"gaget": []
+			}
+		},
+		{
+			"id": "caveira",
+			"loadout": {
+				"primary": [],
+				"secondary": [],
+				"gaget": []
+			}
+		},
+		{
+			"id": "echo",
+			"loadout": {
+				"primary": [],
+				"secondary": [],
+				"gaget": []
+			}
+		},
+		{
+			"id": "mira",
+			"loadout": {
+				"primary": [],
+				"secondary": [],
+				"gaget": []
+			}
+		},
+		{
+			"id": "lesion",
+			"loadout": {
+				"primary": [],
+				"secondary": [],
+				"gaget": []
+			}
+		},
+		{
+			"id": "ela",
+			"loadout": {
+				"primary": [],
+				"secondary": [],
+				"gaget": []
+			}
+		},
+		{
+			"id": "vigil",
+			"loadout": {
+				"primary": [],
+				"secondary": [],
+				"gaget": []
+			}
+		},
+		{
+			"id": "maestro",
+			"loadout": {
+				"primary": [],
+				"secondary": [],
+				"gaget": []
+			}
+		},
+		{
+			"id": "alibi",
+			"loadout": {
+				"primary": [],
+				"secondary": [],
+				"gaget": []
+			}
+		},
+		{
+			"id": "clash",
+			"loadout": {
+				"primary": [],
+				"secondary": [],
+				"gaget": []
+			}
+		},
+		{
+			"id": "kaid",
+			"loadout": {
+				"primary": [],
+				"secondary": [],
+				"gaget": []
+			}
+		},
+		{
+			"id": "mozzie",
+			"loadout": {
+				"primary": [],
+				"secondary": [],
+				"gaget": []
+			}
+		},
+		{
+			"id": "warden",
+			"loadout": {
+				"primary": [],
+				"secondary": [],
+				"gaget": []
+			}
+		},
+		{
+			"id": "goyo",
+			"loadout": {
+				"primary": [],
+				"secondary": [],
+				"gaget": []
+			}
+		},
+		{
+			"id": "wamai",
+			"loadout": {
+				"primary": [],
+				"secondary": [],
+				"gaget": []
+			}
+		},
+		{
+			"id": "oryx",
+			"loadout": {
+				"primary": [],
+				"secondary": [],
+				"gaget": []
+			}
+		},
+		{
+			"id": "melusi",
+			"loadout": {
+				"primary": [],
+				"secondary": [],
+				"gaget": []
+			}
+		},
+		{
+			"id": "aruni",
+			"loadout": {
+				"primary": [],
+				"secondary": [],
+				"gaget": []
+			}
+		},
+		{
+			"id": "thunderbird",
+			"loadout": {
+				"primary": [],
+				"secondary": [],
+				"gaget": []
+			}
+		},
+		{
+			"id": "thorn",
+			"loadout": {
+				"primary": [],
+				"secondary": [],
+				"gaget": []
+			}
+		},
+		{
+			"id": "azami",
+			"loadout": {
+				"primary": [],
+				"secondary": [],
+				"gaget": []
+			}
+		},
+		{
+			"id": "solis",
+			"loadout": {
+				"primary": [],
+				"secondary": [],
+				"gaget": []
+			}
+		},
+		{
+			"id": "fenrir",
+			"loadout": {
+				"primary": [],
+				"secondary": [],
+				"gaget": []
+			}
+		},
+		{
+			"id": "tubarao",
+			"loadout": {
+				"primary": [],
+				"secondary": [],
+				"gaget": []
+			}
+		},
+		{
+			"id": "sentry",
+			"loadout": {
+				"primary": [],
+				"secondary": [],
+				"gaget": []
+			}
+		}
+	]
+}

@@ -65,8 +65,9 @@
   #root {
     height: 100vh;
   }
-  body {
+  body { 
     @apply bg-background text-foreground;
+    background-image: url("./assets/backgound.webp");
   }
 }
 
@@ -108,7 +109,7 @@
   box-sizing: border-box;
   opacity: 0.9;
   color: rgba(0,0,0,0.9);
-  border: solid 2px #000;
+  border: solid 2px transparent;
   backface-visibility: hidden;
 }
 

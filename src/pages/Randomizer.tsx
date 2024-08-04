@@ -1,56 +1,39 @@
-import { TeamSelector } from "@/components/TeamSelector";
-import { type Team, useRouter } from "@/Router";
-import { useEffect, useRef, useState } from "react";
 import useLocalStorageState from "use-local-storage-state";
-import operators from "../assets/operators.json"
-import r6operators from "r6operators"
-import prand from 'pure-rand';
+import r6operators from "r6operators";
+import { useState } from "react";
+
+import { TeamSelector } from "@/components/TeamSelector";
+import { generateLoadoutFromOp } from "@/lib/loadout";
+import { Spinner } from "@/components/ui/Spinner";
 import { Button } from "@/components/ui/button";
+import { useRouter } from "@/Router";
+import { getSeed } from "@/lib/rand";
+
 enum State {
     Wait = 0,
     Spinning = 1,
     Display = 2
 }
 
-const slotAngle = 360 / 12
-const REEL_RADIUS = 150;
-
-function getSeed(max: number) {
-    const rnd = prand.xoroshiro128plus(Date.now() ^ (Math.random() * 0x100000000))
-    const value = prand.unsafeUniformIntDistribution(0, max, rnd)
-    return value
-}
-
-function generateLoadoutFromOp(op: string, team: Team) {
-    const idx = operators[team].findIndex(e => e.id === op)
-    const loadout = operators[team][idx].loadout
-
-    const primaryIdx = getSeed(loadout.primary.length - 1)
-    const secondaryIdx = getSeed(loadout.secondary.length - 1)
-    const gadgetIdx = getSeed(loadout.gadget.length - 1)
-
-    let utility = null
-    if (op === "striker" || op === "sentry") {
-        const utilityIdx = getSeed(loadout.gadget.length - 1)
-        utility = loadout.gadget[utilityIdx]
-    }
-
-    return {
-        primary: loadout.primary[primaryIdx],
-        secondary: loadout.secondary[secondaryIdx],
-        gadget: loadout.gadget[gadgetIdx],
-        utility: utility
-    }
-}
-
 // https://codepen.io/AdrianSandu/pen/MyBQYz
 function spin(timer: number, max: number) {
     const el = document.getElementById("ring1")
-    const seed = getSeed(max)
-
-    const deg = (-5040 - (30 * seed))
+    let seed = getSeed(max)
 
     if (el) {
+        const prevTarget = el.getAttribute("data-target")
+        if (max > 1 && prevTarget === seed.toString()) {
+            let i = 0
+            while (i < 25) {
+                seed = getSeed(max)
+                if (seed.toString() !== prevTarget) {
+                    break;
+                }
+                i++
+            }
+        }
+
+        const deg = (-5040 - (30 * seed))
 
         const targetEl = el.querySelector(`[data-index="${seed}"]`)
         targetEl?.classList.remove("hidden")
@@ -80,46 +63,6 @@ function spin(timer: number, max: number) {
         el.setAttribute("style", `--rotation: ${deg}deg; animation: back-spin 1s, spin ${timer + 1 * 0.5}s;`)
     }
 }
-// states 
-
-// spin wait -> spinning -> display
-
-const Spinner: React.FC<{ onDone: () => void }> = ({ onDone }) => {
-    const { team } = useRouter()
-    const [selected, _] = useLocalStorageState<string[]>(`r6r.${team}`, { defaultValue: [] })
-    const target = useRef<HTMLDivElement>(null)
-
-    useEffect(() => {
-
-        if (target.current) {
-            target.current.addEventListener("animationend", onDone)
-        }
-        return () => {
-            target.current?.removeEventListener("animationend", onDone)
-        }
-    }, [onDone])
-
-    return (
-        <div id="stage" className="perspective-on relative">
-            <div className="border-t border-b w-full h-20 absolute top-14 z-30">
-
-            </div>
-            <div id="rotate">
-                <div ref={target} id="ring1" className="ring-container">
-                    {selected.map((id, i) => (
-                        // biome-ignore lint/security/noDangerouslySetInnerHtml: <explanation>
-                        <div data-name={id} data-index={i} data-deg={slotAngle * i} dangerouslySetInnerHTML={{
-                            __html: r6operators[id as keyof typeof r6operators]?.toSVG({ class: "object-fill h-full w-full" }) ?? ""
-                        }}
-                            key={`card-${id}`}
-                            className="slot"
-                            style={{ transform: `rotateX(${slotAngle * i}deg) translateZ(${REEL_RADIUS}px)` }} />
-                    ))}
-                </div>
-            </div>
-        </div>
-    );
-}
 
 const Randomizer: React.FC = () => {
     const [gen, setGen] = useState<{ op: typeof r6operators.ace, loadout: { primary: string, secondary: string, gadget: string, utility: string | null } | null } | null>(null)
@@ -129,11 +72,7 @@ const Randomizer: React.FC = () => {
 
     return (
         <div className="flex flex-col h-full">
-            <div className="flex relative">
-                <TeamSelector />
-                <button className="absolute left-2/3" type="button" onClick={() => goTo("/")}>⚙️</button>
-            </div>
-
+            <TeamSelector />
             <div className="container my-auto">
                 {state === State.Display ? (
                     <div className="flex justify-center animate-in zoom-in-75 duration-1000">
@@ -147,7 +86,7 @@ const Randomizer: React.FC = () => {
                                 </div>
                             </div>
                             <div className="h-80 w-44 border rounded-sm p-2">
-                                <img className="h-full w-full object-contain" src={`/ops/${gen?.op?.id}.webp`} alt={gen?.op?.name} />
+                                <img className="h-full w-full object-contain" src={`${import.meta.env.BASE_URL}ops/${gen?.op?.id}.webp`} alt={gen?.op?.name} />
                             </div>
                         </div>
 
@@ -156,14 +95,14 @@ const Randomizer: React.FC = () => {
                                 <h1 className="font-bold text-lg">Primary</h1>
                                 <p className="text-muted-foreground">{gen?.loadout.primary.replaceAll("_", " ")}</p>
                                 <div className="h-14">
-                                    <img className="h-full w-full object-contain" src={`/weapons/${gen.loadout.primary}.webp`} alt={gen?.loadout.primary} />
+                                    <img className="h-full w-full object-contain" src={`${import.meta.env.BASE_URL}weapons/${gen.loadout.primary}.webp`} alt={gen?.loadout.primary} />
                                 </div>
                             </div>
                             <div className="bg-gray-600 px-4 py-2 max-w-48">
                                 <h1 className="font-bold text-lg">Secondary</h1>
                                 <p className="text-muted-foreground">{gen?.loadout.secondary.replaceAll("_", " ")}</p>
                                 <div className="h-14">
-                                    <img className="h-full w-full object-contain" src={`/weapons/${gen?.loadout.secondary}.webp`} alt={gen?.loadout.secondary} />
+                                    <img className="h-full w-full object-contain" src={`${import.meta.env.BASE_URL}weapons/${gen?.loadout.secondary}.webp`} alt={gen?.loadout.secondary} />
                                 </div>
                             </div>
                             <div className="flex gap-2">
@@ -171,14 +110,14 @@ const Randomizer: React.FC = () => {
                                     <h1 className="font-bold text-lg">Gadget</h1>
                                     <p className="text-muted-foreground">{gen?.loadout.gadget.replaceAll("_", " ")}</p>
                                     <div className="h-14">
-                                        <img className="h-full w-full object-contain" src={`/gadget/${gen?.loadout.gadget}.webp`} alt={gen?.loadout.gadget} />
+                                        <img className="h-full w-full object-contain" src={`${import.meta.env.BASE_URL}gadget/${gen?.loadout.gadget}.webp`} alt={gen?.loadout.gadget} />
                                     </div>
                                 </div>
                                 {gen?.loadout.utility ? (<div className="bg-gray-600 px-4 py-2">
                                     <h1 className="font-bold text-lg">Utility</h1>
                                     <p className="text-muted-foreground">{gen?.loadout.utility.replaceAll("_", " ")}</p>
                                     <div className="h-14">
-                                        <img className="h-full w-full object-contain" src={`/gadget/${gen?.loadout.utility}.webp`} alt={gen?.loadout.utility} />
+                                        <img className="h-full w-full object-contain" src={`${import.meta.env.BASE_URL}gadget/${gen?.loadout.utility}.webp`} alt={gen?.loadout.utility} />
                                     </div>
                                 </div>) : null}
                             </div>
@@ -203,7 +142,7 @@ const Randomizer: React.FC = () => {
                 }} />}
             </div>
 
-            <div className="container flex justify-center my-6">
+            <div className="container flex justify-center my-6 gap-2">
                 <Button size="lg" className="bg-orange-500 text-accent-foreground hover:bg-orange-500/90 rounded-none" onClick={async () => {
                     if (state !== State.Spinning) {
                         setState(State.Spinning)
@@ -213,6 +152,9 @@ const Randomizer: React.FC = () => {
                     spin(2, selected.length - 1)
 
                 }}>Spin</Button>
+                <Button size="lg" className="rounded-none" onClick={() => goTo("/")}>
+                    ⚙️ Settings
+                </Button>
             </div>
         </div>
     );

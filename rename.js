@@ -1,5 +1,5 @@
-import { readdirSync, renameSync } from "node:fs"
-const path = "C:\\Users\\Collin\\Downloads\\"
+import { readdirSync, renameSync, writeFileSync } from "node:fs"
+/*const path = "C:\\Users\\Collin\\Downloads\\"
 const re = "undefined"
 for (const file of readdirSync(path)){
     console.log(file,file.endsWith(".webp") && file.includes(re))
@@ -8,4 +8,15 @@ for (const file of readdirSync(path)){
         console.log(`${path}${og}`)
         renameSync(`${path}${file}`,`${path}${og}`)
     }
+}*/
+
+
+const path = "./public/weapons"
+const data = {}
+for (const file of readdirSync(path)){
+    const weapon = file.replace(".webp","")
+    data[weapon] = { }
 }
+
+writeFileSync("./src/assets/weapons.json",JSON.stringify(data))
+

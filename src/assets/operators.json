@@ -405,7 +405,7 @@
 		{
 			"id": "caveira",
 			"loadout": {
-				"primary": ["M12", "SPAS_15"],
+				"primary": ["M12", "SPAS-15"],
 				"secondary": ["Luison"],
 				"gadget": ["Impact_Grenade", "Proximity_Alarm", "Observation_Blocker"]
 			}

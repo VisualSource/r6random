@@ -34,7 +34,7 @@ export const RouterProvider: React.FC = () => {
 	const [currentPage, setCurrentPage] = useState<Page>(
 		(localStorage.getItem("r6r.page") as Page) ?? "/",
 	);
-	const [isPending, startTransition] = useTransition();
+	const [_, startTransition] = useTransition();
 	const goTo = useCallback((page: Page) => {
 		startTransition(() => {
 			setCurrentPage(page);

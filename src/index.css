@@ -88,7 +88,7 @@
 }
 #rotate {
   margin: 0 auto 0;
-  width: 450px;
+  width: 270px; /* 90 * 3 | OG: 450px -> 90 * 5 */
   height: 220px;
   transform: translateY(25%);
   /* Ensure that we're in 3D space */
@@ -99,6 +99,7 @@
   margin: 0 auto;
   height: 80px;
   width: 90px;
+  float: left;
   transform-style: preserve-3d;
 
 }
@@ -109,7 +110,8 @@
   box-sizing: border-box;
   opacity: 0.9;
   color: rgba(0,0,0,0.9);
-  border: solid 2px transparent;
+  /*border: solid 1px hsl(var(--background));*/
+  background-color: hsla(224, 71%, 4%, 0.06);
   backface-visibility: hidden;
 }
 

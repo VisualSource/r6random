@@ -213,7 +213,7 @@
 			"loadout": {
 				"primary": ["ARX200", "G36C"],
 				"secondary": ["Mk1_9mm", "Gonne_6"],
-				"gadget": ["emp", "Smoke_Grenade"]
+				"gadget": ["Impact_EMP_Grenade", "Smoke_Grenade"]
 			}
 		},
 		{

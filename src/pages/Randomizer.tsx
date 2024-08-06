@@ -1,213 +1,64 @@
-import useLocalStorageState from "use-local-storage-state";
-import r6operators from "r6operators";
-import { useState } from "react";
-
+import { useCallback, useRef, useState } from "react";
+import { Loadout, type OperatorLoadout } from "@/components/Loadout";
+import { Spinner, type SpinnerRef } from "@/components/ui/Spinner";
 import { TeamSelector } from "@/components/TeamSelector";
 import { generateLoadoutFromOp } from "@/lib/loadout";
-import { Spinner } from "@/components/ui/Spinner";
 import { Button } from "@/components/ui/button";
 import { useRouter } from "@/Router";
-import { getSeed } from "@/lib/rand";
 
 enum State {
-	Wait = 0,
-	Spinning = 1,
-	Display = 2,
-}
-
-// https://codepen.io/AdrianSandu/pen/MyBQYz
-function spin(timer: number, max: number) {
-	const el = document.getElementById("ring1");
-	let seed = getSeed(max);
-
-	if (el) {
-		const prevTarget = el.getAttribute("data-target");
-		if (max > 1 && prevTarget === seed.toString()) {
-			let i = 0;
-			while (i < 25) {
-				seed = getSeed(max);
-				if (seed.toString() !== prevTarget) {
-					break;
-				}
-				i++;
-			}
-		}
-
-		const deg = -5040 - 30 * seed;
-
-		const targetEl = el.querySelector(`[data-index="${seed}"]`);
-		targetEl?.classList.remove("hidden");
-		const targetDeg = Number.parseInt(targetEl?.getAttribute("data-deg") ?? "");
-
-		const b = targetDeg + 360;
-		const c = b + 360;
-		const d = c + 360;
-
-		const old = el.querySelectorAll(
-			`[data-deg="${b}"],[data-deg="${c}"],[data-deg="${d}"]`,
-		);
-
-		for (const child of old) {
-			child.classList.add("hidden");
-		}
-
-		el.setAttribute("data-target", seed.toString());
-		el.classList.remove("spin-variable");
-		el.removeAttribute("style");
-
-		// restart animation: why? Dont know
-		// https://stackoverflow.com/questions/6268508/restart-animation-in-css3-any-better-way-than-removing-the-element
-		el.style.animation = "none";
-		el.offsetHeight;
-		(el.style.animation as never as string | null) = null;
-
-		el.classList.add("spin-variable");
-		el.setAttribute(
-			"style",
-			`--rotation: ${deg}deg; animation: back-spin 1s, spin ${timer + 1 * 0.5}s;`,
-		);
-	}
+	Spinning = 0,
+	Display = 1,
 }
 
 const Randomizer: React.FC = () => {
-	const [gen, setGen] = useState<{
-		op: typeof r6operators.ace;
-		loadout: {
-			primary: string;
-			secondary: string;
-			gadget: string;
-			utility: string | null;
-		} | null;
-	} | null>(null);
+	const spinnerRef = useRef<SpinnerRef>(null)
+	const [loadout, setLoadout] = useState<OperatorLoadout | null>(null);
 	const { team, generateLoadout, goTo } = useRouter();
-	const [selected, _] = useLocalStorageState<string[]>(`r6r.${team}`, {
-		defaultValue: [],
-	});
+	const [isSpinning, setIsSpinning] = useState(false);
 	const [state, setState] = useState<State>(State.Spinning);
+
+	const onDone = useCallback(async () => {
+
+		const operator = spinnerRef.current?.getOperator()
+		if (!operator) return;
+
+		let loadout = null;
+		if (generateLoadout) {
+			loadout = generateLoadoutFromOp(operator.id, team);
+		}
+		setLoadout({ operator, loadout: loadout });
+		await new Promise(ok => setTimeout(ok, 3000));
+		setState(State.Display);
+		setIsSpinning(false);
+	}, [generateLoadout, team,]);
 
 	return (
 		<div className="flex flex-col h-full">
 			<TeamSelector />
 			<div className="container my-auto">
 				{state === State.Display ? (
-					<div className="flex justify-center animate-in zoom-in-75 duration-1000">
-						<div className="flex flex-col">
-							<div className="flex">
-								<div
-									className="w-16 h-16"
-									// biome-ignore lint/security/noDangerouslySetInnerHtml: SVG
-									dangerouslySetInnerHTML={{ __html: gen?.op?.toSVG() ?? "" }}
-								/>
-								<div className="flex items-center">
-									<h1 className="font-bold text-xl">{gen?.op?.name}</h1>
-								</div>
-							</div>
-							<div className="h-80 w-44 border rounded-sm p-2">
-								<img
-									className="h-full w-full object-contain"
-									src={`${import.meta.env.BASE_URL}ops/${gen?.op?.id}.webp`}
-									alt={gen?.op?.name}
-								/>
-							</div>
-						</div>
-
-						{generateLoadout && gen?.loadout ? (
-							<div className="flex flex-col gap-2 ml-4">
-								<div className="bg-gray-600 px-4 py-2 min-w-36 max-w-48">
-									<h1 className="font-bold text-lg">Primary</h1>
-									<p className="text-muted-foreground">
-										{gen?.loadout.primary.replaceAll("_", " ")}
-									</p>
-									<div className="h-14">
-										<img
-											className="h-full w-full object-contain"
-											src={`${import.meta.env.BASE_URL}weapons/${gen.loadout.primary}.webp`}
-											alt={gen?.loadout.primary}
-										/>
-									</div>
-								</div>
-								<div className="bg-gray-600 px-4 py-2 max-w-48">
-									<h1 className="font-bold text-lg">Secondary</h1>
-									<p className="text-muted-foreground">
-										{gen?.loadout.secondary.replaceAll("_", " ")}
-									</p>
-									<div className="h-14">
-										<img
-											className="h-full w-full object-contain"
-											src={`${import.meta.env.BASE_URL}weapons/${gen?.loadout.secondary}.webp`}
-											alt={gen?.loadout.secondary}
-										/>
-									</div>
-								</div>
-								<div className="flex gap-2">
-									<div className="bg-gray-600 px-4 py-2 min-w-36 max-w-48">
-										<h1 className="font-bold text-lg">Gadget</h1>
-										<p className="text-muted-foreground">
-											{gen?.loadout.gadget.replaceAll("_", " ")}
-										</p>
-										<div className="h-14">
-											<img
-												className="h-full w-full object-contain"
-												src={`${import.meta.env.BASE_URL}gadget/${gen?.loadout.gadget}.webp`}
-												alt={gen?.loadout.gadget}
-											/>
-										</div>
-									</div>
-									{gen?.loadout.utility ? (
-										<div className="bg-gray-600 px-4 py-2">
-											<h1 className="font-bold text-lg">Utility</h1>
-											<p className="text-muted-foreground">
-												{gen?.loadout.utility.replaceAll("_", " ")}
-											</p>
-											<div className="h-14">
-												<img
-													className="h-full w-full object-contain"
-													src={`${import.meta.env.BASE_URL}gadget/${gen?.loadout.utility}.webp`}
-													alt={gen?.loadout.utility}
-												/>
-											</div>
-										</div>
-									) : null}
-								</div>
-							</div>
-						) : null}
-					</div>
+					<Loadout data={loadout} generateLoadout={generateLoadout} />
 				) : (
-					<Spinner
-						onDone={() => {
-							const container = document.getElementById("ring1");
-							const targetId = container?.getAttribute("data-target");
-							const targetOp = container?.querySelector(
-								`[data-index="${targetId}"]`,
-							);
-							const name = targetOp?.getAttribute("data-name");
-							const op = r6operators[name as keyof typeof r6operators];
-
-							let loadout = null;
-							if (generateLoadout) {
-								loadout = generateLoadoutFromOp(op.id, team);
-							}
-
-							setGen({ op, loadout: loadout });
-							setTimeout(() => {
-								setState(State.Display);
-							}, 3000);
-						}}
+					<Spinner ref={spinnerRef}
+						onDone={onDone}
 					/>
 				)}
 			</div>
 
 			<div className="container flex justify-center my-6 gap-2">
-				<Button
+				<Button disabled={isSpinning}
 					size="lg"
 					className="bg-orange-500 text-accent-foreground hover:bg-orange-500/90 rounded-none"
 					onClick={async () => {
+						const audioEl = document.getElementById("sound-effect") as HTMLAudioElement;
 						if (state !== State.Spinning) {
 							setState(State.Spinning);
 							await new Promise((ok) => setTimeout(ok, 600));
 						}
-
-						spin(2, selected.length - 1);
+						setIsSpinning(true)
+						audioEl.play();
+						setTimeout(() => spinnerRef.current?.spin(), 1000);
 					}}
 				>
 					Spin

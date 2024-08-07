@@ -1,20 +1,17 @@
 import r6operators from "r6operators";
 import { useMemo } from "react";
 
-import { TeamSelector } from "@/components/TeamSelector";
-import operators from "../assets/operators.json";
-import { useRouter } from "@/Router";
-
-import useLocalStorageState from "use-local-storage-state";
-import { Button } from "@/components/ui/button";
+import { useSelectedOperators } from "@/lib/hooks/useSelectedOperators";
 import { SelectableOperator } from "@/components/SelectableOperator";
 import { TooltipProvider } from "@/components/ui/tooltip";
+import { TeamSelector } from "@/components/TeamSelector";
+import operators from "../assets/operators.json";
+import { Button } from "@/components/ui/button";
+import { useRouter } from "@/Router";
 
 const Home: React.FC = () => {
 	const { team, goTo, setGenerateLoadout, generateLoadout } = useRouter();
-	const [_, setSelected] = useLocalStorageState<string[]>(`r6r.${team}`, {
-		defaultValue: [],
-	});
+	const [_, setSelected] = useSelectedOperators(team);
 
 	const ops = useMemo(() => {
 		const t = operators[team as keyof typeof operators];

@@ -397,7 +397,7 @@
 		{
 			"id": "valkyrie",
 			"loadout": {
-				"primary": ["MPX", "SPAS_12"],
+				"primary": ["MPX", "SPAS-12"],
 				"secondary": ["D-50"],
 				"gadget": ["Impact_Grenade", "Nitro_Cell"]
 			}
@@ -517,7 +517,7 @@
 		{
 			"id": "oryx",
 			"loadout": {
-				"primary": ["T-5_SMG", "SPAS_12"],
+				"primary": ["T-5_SMG", "SPAS-12"],
 				"secondary": ["Bailiff_410", "USP40"],
 				"gadget": ["Barbed_Wire", "Proximity_Alarm"]
 			}

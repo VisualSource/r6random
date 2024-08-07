@@ -1,12 +1,7 @@
-import {
-	createContext,
-	useCallback,
-	useContext,
-	useState,
-	useTransition,
-} from "react";
-import Home from "./pages/Home";
+import { createContext, useContext, useState } from "react";
+import useLocalStorageState from "use-local-storage-state";
 import Randomizer from "./pages/Randomizer";
+import Home from "./pages/Home";
 
 const PAGES = {
 	"/": Home,
@@ -27,31 +22,25 @@ export type RouterState = {
 const router = createContext<RouterState | null>(null);
 
 export const RouterProvider: React.FC = () => {
+	const [currentPage, setCurrentPage] = useLocalStorageState("r6.page", {
+		defaultValue: "/",
+	});
+	const [team, setTeam] = useLocalStorageState("r6.team", {
+		defaultValue: "attackers",
+	});
 	const [generateLoadout, setGenerateLoadout] = useState<boolean>(true);
-	const [team, setTeam] = useState(
-		(localStorage.getItem("r6r.team") as Team) ?? "attackers",
-	);
-	const [currentPage, setCurrentPage] = useState<Page>(
-		(localStorage.getItem("r6r.page") as Page) ?? "/",
-	);
-	const [_, startTransition] = useTransition();
-	const goTo = useCallback((page: Page) => {
-		startTransition(() => {
-			setCurrentPage(page);
-		});
-	}, []);
 
-	const Page = PAGES[currentPage];
+	const Page = PAGES[currentPage as Page];
 
 	return (
 		<router.Provider
 			value={{
-				team,
+				team: team as Team,
 				generateLoadout,
 				setGenerateLoadout,
 				setTeam,
 				page: currentPage,
-				goTo,
+				goTo: setCurrentPage,
 			}}
 		>
 			<Page />

@@ -16,6 +16,7 @@
 		"@radix-ui/react-tooltip": "^1.1.2",
 		"class-variance-authority": "^0.7.0",
 		"clsx": "^2.1.1",
+		"lodash.debounce": "^4.0.8",
 		"lucide-react": "^0.424.0",
 		"pure-rand": "^6.1.0",
 		"r6operators": "^2.9.0",
@@ -27,6 +28,7 @@
 	},
 	"devDependencies": {
 		"@biomejs/biome": "^1.8.3",
+		"@types/lodash.debounce": "^4.0.9",
 		"@types/node": "^22.1.0",
 		"@types/react": "^18.3.3",
 		"@types/react-dom": "^18.3.0",

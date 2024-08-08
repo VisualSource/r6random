@@ -1,73 +1,11 @@
 {
-	"417": {},
-	"1911_TACOPS": {},
-	"416C_Carbine": {},
-	"44VENDETTA": {},
-	"44_MAG_SEMI-AUTO": {},
-	"5-7_USG": {},
-	"552_Commando": {},
-	"556xi": {},
-	"6P41": {},
-	"9mm_C1": {},
-	"9x19VSN": {},
-	"ACS12": {},
-	"AK-12": {},
-	"AK-74M": {},
-	"ALDA_5-56": {},
-	"AR-15-50": {},
-	"AR33": {},
-	"ARX200": {},
-	"AUG_A2": {},
-	"AUG_A3": {},
-	"Bailiff_410": {},
-	"Bearing_9": {},
-	"BOSG-12-2": {},
-	"C75_Auto": {},
-	"C7E": {},
-	"C8-SFW": {},
-	"CAMRS": {},
-	"CCE_Shield": {},
-	"Commando_9": {},
-	"CSRX_300": {},
-	"D-50": {},
-	"DP27": {},
-	"F2": {},
-	"F90": {},
-	"FMG-9": {},
-	"FO-12": {},
-	"G36C": {},
-	"G52-Tactical_Shield": {},
-	"G8A1": {},
-	"Gonne_6": {},
-	"GSH_18": {},
-	"ITA12L": {},
-	"ITA12S": {},
-	"K1A": {},
-	"Keratos_357": {},
-	"L85A2": {},
-	"LE_ROC_SHIELD": {},
-	"LFP586": {},
-	"LMG-E": {},
-	"Luison": {},
-	"M1014": {},
-	"M12": {},
-	"M249": {},
-	"M249_SAW": {},
-	"M4": {},
-	"M45_MEUSOC": {},
-	"M590A1": {},
-	"M762": {},
-	"M870": {},
-	"Mk17_CQB": {},
-	"Mk1_9mm": {},
-	"Mk_14_EBR": {},
-	"MP5": {},
-	"MP5K": {},
-	"MP5SD": {},
-	"MP7": {},
-	"MPX": {
+	"417": {
 		"sight": [
-			"None",
+			"Magnified A",
+			"Magnified B",
+			"Magnified C",
+			"Telescopic A",
+			"Telescopic B",
 			"Red Dot A",
 			"Red Dot B",
 			"Red Dot C",
@@ -75,61 +13,2003 @@
 			"Holo B",
 			"Holo C",
 			"Holo D",
-			"Reflex",
-			"sight",
-			"Scope 1.5x"
+			"Reflex A",
+			"Reflex B",
+			"Reflex C",
+			"Iron Sight"
+		],
+		"barrel": ["Muzzle Brake", "Suppressor", "None"],
+		"grip": ["Vertical Grip", "Angled Grip", "Horizontal Grip"],
+		"under-barrel": ["None", "Laser"]
+	},
+	"1911_TACOPS": {
+		"barrel": ["Muzzle Brake", "Suppressor", "None"],
+		"under-barrel": ["None", "Laser"]
+	},
+	"416C_Carbine": {
+		"sight": [
+			"Red Dot A",
+			"Red Dot B",
+			"Red Dot C",
+			"Holo A",
+			"Holo B",
+			"Holo C",
+			"Holo D",
+			"Reflex A",
+			"Reflex B",
+			"Reflex C",
+			"Iron Sight"
+		],
+		"barrel": [
+			"Flash Hider",
+			"Compensator",
+			"Muzzle Brake",
+			"Suppressor",
+			"Extended Barrel",
+			"None"
+		],
+		"grip": ["Vertical Grip", "Angled Grip", "Horizontal Grip"],
+		"under-barrel": ["None", "Laser"]
+	},
+	"44VENDETTA": {
+		"under-barrel": ["None", "Laser"]
+	},
+	"44_MAG_SEMI-AUTO": {
+		"under-barrel": ["None", "Laser"]
+	},
+	"5-7_USG": {
+		"barrel": ["Muzzle Brake", "Suppressor", "None"],
+		"under-barrel": ["None", "Laser"]
+	},
+	"552_Commando": {
+		"sight": [
+			"Magnified A",
+			"Magnified B",
+			"Magnified C",
+			"Red Dot A",
+			"Red Dot B",
+			"Red Dot C",
+			"Holo A",
+			"Holo B",
+			"Holo C",
+			"Holo D",
+			"Reflex A",
+			"Reflex B",
+			"Reflex C",
+			"Iron Sight"
+		],
+		"barrel": [
+			"Flash Hider",
+			"Compensator",
+			"Muzzle Brake",
+			"Suppressor",
+			"Extended Barrel",
+			"None"
+		],
+		"grip": ["Vertical Grip", "Angled Grip", "Horizontal Grip"],
+		"under-barrel": ["None", "Laser"]
+	},
+	"556xi": {
+		"sight": [
+			"Magnified A",
+			"Magnified B",
+			"Magnified C",
+			"Red Dot A",
+			"Red Dot B",
+			"Red Dot C",
+			"Holo A",
+			"Holo B",
+			"Holo C",
+			"Holo D",
+			"Reflex A",
+			"Reflex B",
+			"Reflex C",
+			"Iron Sight"
+		],
+		"barrel": [
+			"Flash Hider",
+			"Compensator",
+			"Muzzle Brake",
+			"Suppressor",
+			"None"
+		],
+		"grip": ["Vertical Grip", "Angled Grip", "Horizontal Grip"],
+		"under-barrel": ["None", "Laser"]
+	},
+	"6P41": {
+		"sight": [
+			"Magnified A",
+			"Magnified B",
+			"Magnified C",
+			"Red Dot A",
+			"Red Dot B",
+			"Red Dot C",
+			"Holo A",
+			"Holo B",
+			"Holo C",
+			"Holo D",
+			"Reflex A",
+			"Reflex B",
+			"Reflex C",
+			"Iron Sight"
+		],
+		"barrel": [
+			"Flash Hider",
+			"Compensator",
+			"Muzzle Brake",
+			"Suppressor",
+			"None"
+		],
+		"grip": ["Vertical Grip", "Angled Grip", "Horizontal Grip"],
+		"under-barrel": ["None", "Laser"]
+	},
+	"9mm_C1": {
+		"sight": [
+			"Magnified A",
+			"Magnified B",
+			"Magnified C",
+			"Red Dot A",
+			"Red Dot B",
+			"Red Dot C",
+			"Holo A",
+			"Holo B",
+			"Holo C",
+			"Holo D",
+			"Reflex A",
+			"Reflex B",
+			"Reflex C",
+			"Iron Sight"
+		],
+		"barrel": [
+			"Flash Hider",
+			"Compensator",
+			"Muzzle Brake",
+			"Suppressor",
+			"Extended Barrel",
+			"None"
+		],
+		"grip": ["Vertical Grip", "Angled Grip", "Horizontal Grip"],
+		"under-barrel": ["None", "Laser"]
+	},
+	"9x19VSN": {
+		"sight": [
+			"Red Dot A",
+			"Red Dot B",
+			"Red Dot C",
+			"Holo A",
+			"Holo B",
+			"Holo C",
+			"Holo D",
+			"Reflex A",
+			"Reflex B",
+			"Reflex C",
+			"Iron Sight"
+		],
+		"barrel": [
+			"Flash Hider",
+			"Compensator",
+			"Muzzle Brake",
+			"Suppressor",
+			"Extended Barrel",
+			"None"
+		],
+		"grip": ["Vertical Grip", "Angled Grip", "Horizontal Grip"],
+		"under-barrel": ["None", "Laser"]
+	},
+	"ACS12": {
+		"sight": [
+			"Magnified A",
+			"Magnified B",
+			"Magnified C",
+			"Red Dot A",
+			"Red Dot B",
+			"Red Dot C",
+			"Holo A",
+			"Holo B",
+			"Holo C",
+			"Holo D",
+			"Reflex A",
+			"Reflex B",
+			"Reflex C",
+			"Iron Sight"
+		],
+		"grip": ["Vertical Grip", "Angled Grip", "Horizontal Grip"],
+		"under-barrel": ["None", "Laser"]
+	},
+	"AK-12": {
+		"sight": [
+			"Magnified A",
+			"Magnified B",
+			"Magnified C",
+			"Red Dot A",
+			"Red Dot B",
+			"Red Dot C",
+			"Holo A",
+			"Holo B",
+			"Holo C",
+			"Holo D",
+			"Reflex A",
+			"Reflex B",
+			"Reflex C",
+			"Iron Sight"
+		],
+		"barrel": [
+			"Flash Hider",
+			"Compensator",
+			"Muzzle Brake",
+			"Suppressor",
+			"None"
+		],
+		"grip": ["Vertical Grip", "Angled Grip", "Horizontal Grip"],
+		"under-barrel": ["None", "Laser"]
+	},
+	"AK-74M": {
+		"sight": [
+			"Magnified A",
+			"Magnified B",
+			"Magnified C",
+			"Red Dot A",
+			"Red Dot B",
+			"Red Dot C",
+			"Holo A",
+			"Holo B",
+			"Holo C",
+			"Holo D",
+			"Reflex A",
+			"Reflex B",
+			"Reflex C",
+			"Iron Sight"
+		],
+		"barrel": [
+			"Flash Hider",
+			"Compensator",
+			"Muzzle Brake",
+			"Suppressor",
+			"None"
+		],
+		"under-barrel": ["None", "Laser"]
+	},
+	"ALDA_5-56": {
+		"sight": [
+			"Red Dot A",
+			"Red Dot B",
+			"Red Dot C",
+			"Holo A",
+			"Holo B",
+			"Holo C",
+			"Holo D",
+			"Reflex A",
+			"Reflex B",
+			"Reflex C",
+			"Iron Sight"
+		],
+		"barrel": [
+			"Flash Hider",
+			"Compensator",
+			"Muzzle Brake",
+			"Suppressor",
+			"None"
+		],
+		"grip": ["Vertical Grip", "Horizontal Grip"],
+		"under-barrel": ["None", "Laser"]
+	},
+	"AR-15-50": {
+		"sight": [
+			"Magnified A",
+			"Magnified B",
+			"Magnified C",
+			"Telescopic A",
+			"Telescopic B",
+			"Red Dot A",
+			"Red Dot B",
+			"Red Dot C",
+			"Holo A",
+			"Holo B",
+			"Holo C",
+			"Holo D",
+			"Reflex A",
+			"Reflex B",
+			"Reflex C",
+			"Iron Sight"
+		],
+		"barrel": ["Muzzle Brake", "Suppressor", "None"],
+		"grip": ["Vertical Grip", "Angled Grip", "Horizontal Grip"],
+		"under-barrel": ["None", "Laser"]
+	},
+	"AR33": {
+		"sight": [
+			"Magnified A",
+			"Magnified B",
+			"Magnified C",
+			"Red Dot A",
+			"Red Dot B",
+			"Red Dot C",
+			"Holo A",
+			"Holo B",
+			"Holo C",
+			"Holo D",
+			"Reflex A",
+			"Reflex B",
+			"Reflex C",
+			"Iron Sight"
+		],
+		"barrel": [
+			"Flash Hider",
+			"Compensator",
+			"Muzzle Brake",
+			"Suppressor",
+			"None"
+		],
+		"grip": ["Vertical Grip", "Angled Grip", "Horizontal Grip"],
+		"under-barrel": ["None", "Laser"]
+	},
+	"ARX200": {
+		"sight": [
+			"Magnified A",
+			"Magnified B",
+			"Magnified C",
+			"Red Dot A",
+			"Red Dot B",
+			"Red Dot C",
+			"Holo A",
+			"Holo B",
+			"Holo C",
+			"Holo D",
+			"Reflex A",
+			"Reflex B",
+			"Reflex C",
+			"Iron Sight"
+		],
+		"barrel": [
+			"Flash Hider",
+			"Compensator",
+			"Muzzle Brake",
+			"Suppressor",
+			"None"
+		],
+		"grip": ["Vertical Grip", "Angled Grip", "Horizontal Grip"],
+		"under-barrel": ["None", "Laser"]
+	},
+	"AUG_A2": {
+		"sight": [
+			"Magnified A",
+			"Magnified B",
+			"Magnified C",
+			"Red Dot A",
+			"Red Dot B",
+			"Red Dot C",
+			"Holo A",
+			"Holo B",
+			"Holo C",
+			"Holo D",
+			"Reflex A",
+			"Reflex B",
+			"Reflex C",
+			"Iron Sight"
+		],
+		"barrel": [
+			"Flash Hider",
+			"Compensator",
+			"Muzzle Brake",
+			"Suppressor",
+			"None"
+		],
+		"under-barrel": ["None", "Laser"]
+	},
+	"AUG_A3": {
+		"sight": [
+			"Red Dot A",
+			"Red Dot B",
+			"Red Dot C",
+			"Holo A",
+			"Holo B",
+			"Holo C",
+			"Holo D",
+			"Reflex A",
+			"Reflex B",
+			"Reflex C",
+			"Iron Sight"
+		],
+		"barrel": [
+			"Flash Hider",
+			"Compensator",
+			"Muzzle Brake",
+			"Suppressor",
+			"Extended Barrel",
+			"None"
+		],
+		"grip": ["Vertical Grip", "Angled Grip", "Horizontal Grip"],
+		"under-barrel": ["None", "Laser"]
+	},
+	"Bailiff_410": {
+		"under-barrel": ["None", "Laser"]
+	},
+	"Bearing_9": {
+		"sight": [
+			"Red Dot A",
+			"Red Dot B",
+			"Red Dot C",
+			"Holo A",
+			"Holo B",
+			"Holo C",
+			"Holo D",
+			"Reflex A",
+			"Reflex B",
+			"Reflex C",
+			"Iron Sight"
+		],
+		"barrel": [
+			"Flash Hider",
+			"Compensator",
+			"Muzzle Brake",
+			"Suppressor",
+			"Extended Barrel",
+			"None"
+		],
+		"under-barrel": ["None", "Laser"]
+	},
+	"BOSG-12-2": {
+		"sight": [
+			"Magnified A",
+			"Magnified B",
+			"Magnified C",
+			"Red Dot A",
+			"Red Dot B",
+			"Red Dot C",
+			"Holo A",
+			"Holo B",
+			"Holo C",
+			"Holo D",
+			"Reflex A",
+			"Reflex B",
+			"Reflex C",
+			"Iron Sight"
+		],
+		"grip": ["Vertical Grip", "Angled Grip", "Horizontal Grip"],
+		"under-barrel": ["None", "Laser"]
+	},
+	"C75_Auto": {
+		"barrel": ["Suppressor", "None"],
+		"under-barrel": ["None", "Laser"]
+	},
+	"C7E": {
+		"sight": [
+			"Magnified A",
+			"Magnified B",
+			"Magnified C",
+			"Red Dot A",
+			"Red Dot B",
+			"Red Dot C",
+			"Holo A",
+			"Holo B",
+			"Holo C",
+			"Holo D",
+			"Reflex A",
+			"Reflex B",
+			"Reflex C",
+			"Iron Sight"
+		],
+		"barrel": [
+			"Flash Hider",
+			"Compensator",
+			"Muzzle Brake",
+			"Suppressor",
+			"None"
+		],
+		"grip": ["Vertical Grip", "Angled Grip", "Horizontal Grip"],
+		"under-barrel": ["None", "Laser"]
+	},
+	"C8-SFW": {
+		"sight": [
+			"Magnified A",
+			"Magnified B",
+			"Magnified C",
+			"Red Dot A",
+			"Red Dot B",
+			"Red Dot C",
+			"Holo A",
+			"Holo B",
+			"Holo C",
+			"Holo D",
+			"Reflex A",
+			"Reflex B",
+			"Reflex C",
+			"Iron Sight"
+		],
+		"barrel": [
+			"Flash Hider",
+			"Compensator",
+			"Muzzle Brake",
+			"Suppressor",
+			"Extended Barrel",
+			"None"
+		],
+		"under-barrel": ["None", "Laser"]
+	},
+	"CAMRS": {
+		"sight": [
+			"Magnified A",
+			"Magnified B",
+			"Magnified C",
+			"Telescopic A",
+			"Telescopic B",
+			"Red Dot A",
+			"Red Dot B",
+			"Red Dot C",
+			"Holo A",
+			"Holo B",
+			"Holo C",
+			"Holo D",
+			"Reflex A",
+			"Reflex B",
+			"Reflex C",
+			"Iron Sight"
+		],
+		"barrel": ["Muzzle Brake", "Suppressor", "None"],
+		"under-barrel": ["None", "Laser"]
+	},
+	"CCE_Shield": {},
+	"Commando_9": {
+		"sight": [
+			"Red Dot A",
+			"Red Dot B",
+			"Red Dot C",
+			"Holo A",
+			"Holo B",
+			"Holo C",
+			"Holo D",
+			"Reflex A",
+			"Reflex B",
+			"Reflex C",
+			"Iron Sight"
+		],
+		"barrel": [
+			"Flash Hider",
+			"Compensator",
+			"Muzzle Brake",
+			"Suppressor",
+			"Extended Barrel",
+			"None"
+		],
+		"grip": ["Vertical Grip", "Angled Grip", "Horizontal Grip"],
+		"under-barrel": ["None", "Laser"]
+	},
+	"CSRX_300": {},
+	"D-50": {
+		"barrel": ["Muzzle Brake", "Suppressor", "None"],
+		"under-barrel": ["None", "Laser"]
+	},
+	"DP27": {
+		"sight": [
+			"Red Dot A",
+			"Red Dot B",
+			"Red Dot C",
+			"Holo A",
+			"Holo B",
+			"Holo C",
+			"Holo D",
+			"Reflex A",
+			"Reflex B",
+			"Reflex C",
+			"Iron Sight"
+		]
+	},
+	"F2": {
+		"sight": [
+			"Magnified A",
+			"Magnified B",
+			"Magnified C",
+			"Red Dot A",
+			"Red Dot B",
+			"Red Dot C",
+			"Holo A",
+			"Holo B",
+			"Holo C",
+			"Holo D",
+			"Reflex A",
+			"Red Dot B",
+			"Red Dot C",
+			"Iron Sight"
+		],
+		"barrel": [
+			"Flash Hider",
+			"Compensator",
+			"Muzzle Brake",
+			"Suppressor",
+			"Extended Barrel",
+			"None"
+		],
+		"under-barrel": ["None", "Laser"]
+	},
+	"F90": {
+		"sight": [
+			"Magnified A",
+			"Magnified B",
+			"Magnified C",
+			"Red Dot A",
+			"Red Dot B",
+			"Red Dot C",
+			"Holo A",
+			"Holo B",
+			"Holo C",
+			"Holo D",
+			"Reflex A",
+			"Reflex B",
+			"Reflex C",
+			"Iron Sight"
+		],
+		"barrel": [
+			"Flash Hider",
+			"Compensator",
+			"Muzzle Brake",
+			"Suppressor",
+			"Extended Barrel",
+			"None"
+		],
+		"grip": ["Vertical Grip", "Angled Grip", "Horizontal Grip"],
+		"under-barrel": ["None", "Laser"]
+	},
+	"FMG-9": {
+		"sight": [
+			"Magnified A",
+			"Magnified B",
+			"Magnified C",
+			"Red Dot A",
+			"Red Dot B",
+			"Red Dot C",
+			"Holo A",
+			"Holo B",
+			"Holo C",
+			"Holo D",
+			"Reflex A",
+			"Reflex B",
+			"Reflex C",
+			"Iron Sight"
+		],
+		"barrel": [
+			"Flash Hider",
+			"Compensator",
+			"Muzzle Brake",
+			"Suppressor",
+			"Extended Barrel",
+			"None"
+		],
+		"under-barrel": ["None", "Laser"]
+	},
+	"FO-12": {
+		"sight": [
+			"Red Dot A",
+			"Red Dot B",
+			"Red Dot C",
+			"Holo A",
+			"Holo B",
+			"Holo C",
+			"Holo D",
+			"Reflex A",
+			"Reflex B",
+			"Reflex C",
+			"Iron Sight"
+		],
+		"barrel": ["Suppressor", "Extended Barrel", "None"],
+		"grip": ["Vertical Grip", "Angled Grip", "Horizontal Grip"],
+		"under-barrel": ["None", "Laser"]
+	},
+	"G36C": {
+		"sight": [
+			"Magnified A",
+			"Magnified B",
+			"Magnified C",
+			"Red Dot A",
+			"Red Dot B",
+			"Red Dot C",
+			"Holo A",
+			"Holo B",
+			"Holo C",
+			"Holo D",
+			"Reflex A",
+			"Reflex B",
+			"Reflex C",
+			"Iron Sight"
+		],
+		"barrel": [
+			"Flash Hider",
+			"Compensator",
+			"Muzzle Brake",
+			"Suppressor",
+			"Extended Barrel",
+			"None"
+		],
+		"grip": ["Vertical Grip", "Angled Grip", "Horizontal Grip"],
+		"under-barrel": ["None", "Laser"]
+	},
+	"G52-Tactical_Shield": {},
+	"G8A1": {
+		"sight": [
+			"Magnified A",
+			"Magnified B",
+			"Magnified C",
+			"Red Dot A",
+			"Red Dot B",
+			"Red Dot C",
+			"Holo A",
+			"Holo B",
+			"Holo C",
+			"Holo D",
+			"Reflex A",
+			"Reflex B",
+			"Reflex C",
+			"Iron Sight"
+		],
+		"barrel": [
+			"Flash Hider",
+			"Compensator",
+			"Muzzle Brake",
+			"Suppressor",
+			"None"
+		],
+		"grip": ["Vertical Grip", "Angled Grip", "Horizontal Grip"],
+		"under-barrel": ["None", "Laser"]
+	},
+	"Gonne_6": {},
+	"GSH_18": {
+		"barrel": ["Muzzle Brake", "Suppressor", "None"],
+		"under-barrel": ["None", "Laser"]
+	},
+	"ITA12L": {
+		"sight": [
+			"Red Dot A",
+			"Red Dot B",
+			"Red Dot C",
+			"Holo A",
+			"Holo B",
+			"Holo C",
+			"Holo D",
+			"Reflex A",
+			"Reflex B",
+			"Reflex C",
+			"Iron Sight"
+		],
+		"under-barrel": ["None", "Laser"]
+	},
+	"ITA12S": {
+		"sight": [
+			"Red Dot A",
+			"Red Dot B",
+			"Red Dot C",
+			"Holo A",
+			"Holo B",
+			"Holo C",
+			"Holo D",
+			"Reflex A",
+			"Reflex B",
+			"Reflex C",
+			"Iron Sight"
+		],
+		"under-barrel": ["None", "Laser"]
+	},
+	"K1A": {
+		"sight": [
+			"Red Dot A",
+			"Red Dot B",
+			"Red Dot C",
+			"Holo A",
+			"Holo B",
+			"Holo C",
+			"Holo D",
+			"Reflex A",
+			"Reflex B",
+			"Reflex C",
+			"Iron Sight"
+		],
+		"barrel": [
+			"Flash Hider",
+			"Compensator",
+			"Muzzle Brake",
+			"Suppressor",
+			"Extended Barrel",
+			"None"
+		],
+		"grip": ["Vertical Grip", "Angled Grip", "Horizontal Grip"],
+		"under-barrel": ["None", "Laser"]
+	},
+	"Keratos_357": {
+		"barrel": ["Muzzle Brake", "Suppressor", "None"],
+		"under-barrel": ["None", "Laser"]
+	},
+	"L85A2": {
+		"sight": [
+			"Magnified A",
+			"Magnified B",
+			"Magnified C",
+			"Red Dot A",
+			"Red Dot B",
+			"Red Dot C",
+			"Holo A",
+			"Holo B",
+			"Holo C",
+			"Holo D",
+			"Reflex A",
+			"Reflex B",
+			"Reflex C",
+			"Iron Sight"
+		],
+		"barrel": [
+			"Flash Hider",
+			"Compensator",
+			"Muzzle Brake",
+			"Suppressor",
+			"None"
+		],
+		"grip": ["Vertical Grip", "Angled Grip", "Horizontal Grip"],
+		"under-barrel": ["None", "Laser"]
+	},
+	"LE_ROC_SHIELD": {},
+	"LFP586": {
+		"under-barrel": ["None", "Laser"]
+	},
+	"LMG-E": {
+		"sight": [
+			"Magnified A",
+			"Magnified B",
+			"Magnified C",
+			"Red Dot A",
+			"Red Dot B",
+			"Red Dot C",
+			"Holo A",
+			"Holo B",
+			"Holo C",
+			"Holo D",
+			"Reflex A",
+			"Reflex B",
+			"Reflex C",
+			"Iron Sight"
+		],
+		"barrel": [
+			"Flash Hider",
+			"Compensator",
+			"Muzzle Brake",
+			"Suppressor",
+			"None"
+		],
+		"grip": ["Vertical Grip", "Angled Grip", "Horizontal Grip"],
+		"under-barrel": ["None", "Laser"]
+	},
+	"Luison": {
+		"under-barrel": ["None", "Laser"]
+	},
+	"M1014": {
+		"sight": [
+			"Red Dot A",
+			"Red Dot B",
+			"Red Dot C",
+			"Holo A",
+			"Holo B",
+			"Holo C",
+			"Holo D",
+			"Reflex A",
+			"Reflex B",
+			"Reflex C",
+			"Iron Sight"
+		],
+		"under-barrel": ["None", "Laser"]
+	},
+	"M12": {
+		"sight": [
+			"Red Dot A",
+			"Red Dot B",
+			"Red Dot C",
+			"Holo A",
+			"Holo B",
+			"Holo C",
+			"Holo D",
+			"Reflex A",
+			"Reflex B",
+			"Reflex C",
+			"Iron Sight"
+		],
+		"barrel": [
+			"Flash Hider",
+			"Compensator",
+			"Muzzle Brake",
+			"Suppressor",
+			"Extended Barrel",
+			"None"
+		],
+		"under-barrel": ["None", "Laser"]
+	},
+	"M249": {
+		"sight": [
+			"Magnified A",
+			"Magnified B",
+			"Magnified C",
+			"Red Dot A",
+			"Red Dot B",
+			"Red Dot C",
+			"Holo A",
+			"Holo B",
+			"Holo C",
+			"Holo D",
+			"Reflex A",
+			"Reflex B",
+			"Reflex C",
+			"Iron Sight"
+		],
+		"barrel": ["None", "Flash Hider", "Compensator", "Muzzle Brake"],
+		"grip": ["Vertical Grip", "Angled Grip", "Horizontal Grip"],
+		"under-barrel": ["None", "Laser"]
+	},
+	"M249_SAW": {
+		"sight": [
+			"Magnified A",
+			"Magnified B",
+			"Magnified C",
+			"Red Dot A",
+			"Red Dot B",
+			"Red Dot C",
+			"Holo A",
+			"Holo B",
+			"Holo C",
+			"Holo D",
+			"Reflex A",
+			"Reflex B",
+			"Reflex C",
+			"Iron Sight"
+		],
+		"barrel": ["Flash Hider", "Compensator", "Muzzle Brake", "None"],
+		"grip": ["Vertical Grip", "Angled Grip", "Horizontal Grip"],
+		"under-barrel": ["None", "Laser"]
+	},
+	"M4": {
+		"sight": [
+			"Iron Sight",
+			"Magnified A",
+			"Magnified B",
+			"Magnified C",
+			"Red Dot A",
+			"Red Dot B",
+			"Red Dot C",
+			"Holo A",
+			"Holo B",
+			"Holo C",
+			"Holo D",
+			"Reflex A",
+			"Reflex B",
+			"Reflex C"
 		],
 		"barrel": [
 			"None",
-			"Suppressor",
 			"Flash Hider",
 			"Compensator",
-			"Muzzle Brake"
+			"Muzzle Brake",
+			"Suppressor",
+			"Extended Barrel"
 		],
-		"grip": ["Vertical Grip", "Angled Grip"],
-		"under-barrel": ["Laser"]
+		"under-barrel": ["None", "Laser"],
+		"grip": ["Vertical Grip", "Angled Grip", "Horizontal Grip"]
 	},
-	"Mx4_Storm": {},
-	"OTs-03": {},
-	"P-10C": {},
-	"P10Roni": {},
-	"P12": {},
-	"P226_Mk_25": {},
-	"P229": {},
-	"P9": {},
-	"P90": {},
-	"PARA-308": {},
-	"PDW9": {},
-	"PMM": {},
-	"POF9": {},
-	"PRB92": {},
-	"Q-929": {},
-	"R4-C": {},
-	"RG15": {},
-	"SASG-12": {},
-	"SC3000K": {},
-	"Scorpion_EVO_3_A1": {},
-	"SDP_9mm": {},
-	"SG-CQB": {},
-	"SIX12": {},
-	"SIX12_SD": {},
-	"SMG-11": {},
-	"SMG-12": {},
-	"SPAS-12": {},
-	"SPAS-15": {},
-	"Spear_308": {},
-	"SPSMG9": {},
-	"SR-25": {},
-	"SuperNova": {},
-	"Super_90": {},
-	"Super_Shorty": {},
-	"T-5_SMG": {},
-	"T-95_LSW": {},
-	"TCSG12": {},
-	"Type-89": {},
-	"UMP45": {},
-	"USP40": {},
-	"uzk50gi": {},
-	"V308": {},
-	"Vector_45_ACP": {}
+	"M45_MEUSOC": {
+		"barrel": ["Muzzle Brake", "Suppressor", "None"],
+		"under-barrel": ["None", "Laser"]
+	},
+	"M590A1": {
+		"sight": [
+			"Red Dot A",
+			"Red Dot B",
+			"Red Dot C",
+			"Holo A",
+			"Holo B",
+			"Holo C",
+			"Holo D",
+			"Reflex A",
+			"Reflex B",
+			"Reflex C",
+			"Iron Sight"
+		],
+		"under-barrel": ["None", "Laser"]
+	},
+	"M762": {
+		"sight": [
+			"Magnified A",
+			"Magnified B",
+			"Magnified C",
+			"Red Dot A",
+			"Red Dot B",
+			"Red Dot C",
+			"Holo A",
+			"Holo B",
+			"Holo C",
+			"Holo D",
+			"Reflex A",
+			"Reflex B",
+			"Reflex C",
+			"Iron Sight"
+		],
+		"barrel": [
+			"Flash Hider",
+			"Compensator",
+			"Muzzle Brake",
+			"Suppressor",
+			"None"
+		],
+		"grip": ["Vertical Grip", "Angled Grip", "Horizontal Grip"],
+		"under-barrel": ["None", "Laser"]
+	},
+	"M870": {
+		"sight": [
+			"Red Dot A",
+			"Red Dot B",
+			"Red Dot C",
+			"Holo A",
+			"Holo B",
+			"Holo C",
+			"Holo D",
+			"Reflex A",
+			"Reflex B",
+			"Reflex C",
+			"Iron Sight"
+		],
+		"under-barrel": ["None", "Laser"]
+	},
+	"Mk17_CQB": {
+		"sight": [
+			"Magnified A",
+			"Magnified B",
+			"Magnified C",
+			"Red Dot A",
+			"Red Dot B",
+			"Red Dot C",
+			"Holo A",
+			"Holo B",
+			"Holo C",
+			"Holo D",
+			"Reflex A",
+			"Reflex B",
+			"Reflex C",
+			"Iron Sight"
+		],
+		"barrel": [
+			"Flash Hider",
+			"Compensator",
+			"Muzzle Brake",
+			"Suppressor",
+			"Extended Barrel",
+			"None"
+		],
+		"grip": ["Vertical Grip", "Angled Grip", "Horizontal Grip"],
+		"under-barrel": ["None", "Laser"]
+	},
+	"Mk1_9mm": {
+		"barrel": ["Muzzle Brake", "Suppressor", "None"],
+		"under-barrel": ["None", "Laser"]
+	},
+	"Mk_14_EBR": {
+		"sight": [
+			"Magnified A",
+			"Magnified B",
+			"Magnified C",
+			"Telescopic A",
+			"Telescopic B",
+			"Red Dot A",
+			"Red Dot B",
+			"Red Dot C",
+			"Holo A",
+			"Holo B",
+			"Holo C",
+			"Holo D",
+			"Reflex A",
+			"Reflex B",
+			"Reflex C",
+			"Iron Sight"
+		],
+		"barrel": ["Muzzle Brake", "Suppressor", "None"],
+		"grip": ["Vertical Grip", "Angled Grip", "Horizontal Grip"],
+		"under-barrel": ["None", "Laser"]
+	},
+	"MP5": {
+		"sight": [
+			"Magnified A",
+			"Magnified B",
+			"Magnified C",
+			"Red Dot A",
+			"Red Dot B",
+			"Red Dot C",
+			"Holo A",
+			"Holo B",
+			"Holo C",
+			"Holo D",
+			"Reflex A",
+			"Reflex B",
+			"Reflex C",
+			"Iron Sight"
+		],
+		"barrel": [
+			"Flash Hider",
+			"Compensator",
+			"Muzzle Brake",
+			"Suppressor",
+			"Extended Barrel",
+			"None"
+		],
+		"grip": ["Vertical Grip", "Angled Grip", "Horizontal Grip"],
+		"under-barrel": ["None", "Laser"]
+	},
+	"MP5K": {
+		"sight": [
+			"Red Dot A",
+			"Red Dot B",
+			"Red Dot C",
+			"Holo A",
+			"Holo B",
+			"Holo C",
+			"Holo D",
+			"Reflex A",
+			"Reflex B",
+			"Reflex C",
+			"Iron Sight"
+		],
+		"barrel": [
+			"Flash Hider",
+			"Compensator",
+			"Muzzle Brake",
+			"Suppressor",
+			"Extended Barrel",
+			"None"
+		],
+		"under-barrel": ["None", "Laser"]
+	},
+	"MP5SD": {
+		"sight": [
+			"Magnified A",
+			"Magnified B",
+			"Magnified C",
+			"Red Dot A",
+			"Red Dot B",
+			"Red Dot C",
+			"Holo A",
+			"Holo B",
+			"Holo C",
+			"Holo D",
+			"Reflex A",
+			"Reflex B",
+			"Reflex C",
+			"Iron Sight"
+		],
+		"grip": ["Vertical Grip", "Angled Grip", "Horizontal Grip"],
+		"under-barrel": ["None", "Laser"]
+	},
+	"MP7": {
+		"sight": [
+			"Magnified A",
+			"Magnified B",
+			"Magnified C",
+			"Red Dot A",
+			"Red Dot B",
+			"Red Dot C",
+			"Holo A",
+			"Holo B",
+			"Holo C",
+			"Holo D",
+			"Reflex A",
+			"Reflex B",
+			"Reflex C",
+			"Iron Sight"
+		],
+		"barrel": [
+			"Flash Hider",
+			"Compensator",
+			"Muzzle Brake",
+			"Suppressor",
+			"Extended Barrel",
+			"None"
+		],
+		"under-barrel": ["None", "Laser"]
+	},
+	"MPX": {
+		"sight": [
+			"Magnified A",
+			"Magnified B",
+			"Magnified C",
+			"Red Dot A",
+			"Red Dot B",
+			"Red Dot C",
+			"Holo A",
+			"Holo B",
+			"Holo C",
+			"Holo D",
+			"Reflex A",
+			"Reflex B",
+			"Reflex C",
+			"Iron Sight"
+		],
+		"barrel": [
+			"Flash Hider",
+			"Compensator",
+			"Muzzle Brake",
+			"Suppressor",
+			"Extended Barrel",
+			"None"
+		],
+		"grip": ["Vertical Grip", "Angled Grip", "Horizontal Grip"],
+		"under-barrel": ["None", "Laser"]
+	},
+	"Mx4_Storm": {
+		"sight": [
+			"Red Dot A",
+			"Red Dot B",
+			"Red Dot C",
+			"Holo A",
+			"Holo B",
+			"Holo C",
+			"Holo D",
+			"Reflex A",
+			"Reflex B",
+			"Reflex C",
+			"Iron Sight"
+		],
+		"barrel": [
+			"Flash Hider",
+			"Compensator",
+			"Muzzle Brake",
+			"Suppressor",
+			"Extended Barrel",
+			"None"
+		],
+		"grip": ["Vertical Grip", "Angled Grip", "Horizontal Grip"],
+		"under-barrel": ["None", "Laser"]
+	},
+	"OTs-03": {
+		"sight": [
+			"Red Dot A",
+			"Red Dot B",
+			"Red Dot C",
+			"Holo A",
+			"Holo B",
+			"Holo C",
+			"Holo D",
+			"Reflex A",
+			"Reflex B",
+			"Reflex C",
+			"Iron Sight"
+		],
+		"barrel": ["Muzzle Brake", "Suppressor", "None"],
+		"grip": ["Vertical Grip", "Angled Grip", "Horizontal Grip"],
+		"under-barrel": ["None", "Laser"]
+	},
+	"P-10C": {
+		"barrel": ["Muzzle Brake", "Suppressor", "None"],
+		"under-barrel": ["None", "Laser"]
+	},
+	"P10Roni": {
+		"sight": [
+			"Red Dot A",
+			"Red Dot B",
+			"Red Dot C",
+			"Holo A",
+			"Holo B",
+			"Holo C",
+			"Holo D",
+			"Reflex A",
+			"Reflex B",
+			"Reflex C",
+			"Iron Sight"
+		],
+		"barrel": [
+			"Flash Hider",
+			"Compensator",
+			"Muzzle Brake",
+			"Suppressor",
+			"Extended Barrel",
+			"None"
+		],
+		"grip": ["Vertical Grip", "Angled Grip", "Horizontal Grip"],
+		"under-barrel": ["None", "Laser"]
+	},
+	"P12": {
+		"barrel": ["Muzzle Brake", "Suppressor", "None"],
+		"under-barrel": ["None", "Laser"]
+	},
+	"P226_Mk_25": {
+		"barrel": ["Muzzle Brake", "Suppressor", "None"],
+		"under-barrel": ["None", "Laser"]
+	},
+	"P229": {
+		"barrel": ["Muzzle Brake", "Suppressor", "None"],
+		"under-barrel": ["None", "Laser"]
+	},
+	"P9": {
+		"barrel": ["Muzzle Brake", "Suppressor", "None"],
+		"under-barrel": ["None", "Laser"]
+	},
+	"P90": {
+		"sight": [
+			"Magnified A",
+			"Magnified B",
+			"Magnified C",
+			"Red Dot A",
+			"Red Dot B",
+			"Red Dot C",
+			"Holo A",
+			"Holo B",
+			"Holo C",
+			"Holo D",
+			"Reflex A",
+			"Reflex B",
+			"Reflex C",
+			"Iron Sight"
+		],
+		"barrel": [
+			"Flash Hider",
+			"Compensator",
+			"Muzzle Brake",
+			"Suppressor",
+			"Extended Barrel",
+			"None"
+		],
+		"under-barrel": ["None", "Laser"]
+	},
+	"PARA-308": {
+		"sight": [
+			"Magnified A",
+			"Magnified B",
+			"Magnified C",
+			"Red Dot A",
+			"Red Dot B",
+			"Red Dot C",
+			"Holo A",
+			"Holo B",
+			"Holo C",
+			"Holo D",
+			"Reflex A",
+			"Reflex B",
+			"Reflex C",
+			"Iron Sight"
+		],
+		"barrel": [
+			"Flash Hider",
+			"Compensator",
+			"Muzzle Brake",
+			"Suppressor",
+			"Extended Barrel",
+			"None"
+		],
+		"grip": ["Vertical Grip", "Angled Grip", "Horizontal Grip"],
+		"under-barrel": ["None", "Laser"]
+	},
+	"PDW9": {
+		"sight": [
+			"Magnified A",
+			"Magnified B",
+			"Magnified C",
+			"Red Dot A",
+			"Red Dot B",
+			"Red Dot C",
+			"Holo A",
+			"Holo B",
+			"Holo C",
+			"Holo D",
+			"Reflex A",
+			"Reflex B",
+			"Reflex C",
+			"Iron Sight"
+		],
+		"barrel": [
+			"Flash Hider",
+			"Compensator",
+			"Muzzle Brake",
+			"Suppressor",
+			"Extended Barrel",
+			"None"
+		],
+		"grip": ["Vertical Grip", "Angled Grip", "Horizontal Grip"],
+		"under-barrel": ["None", "Laser"]
+	},
+	"PMM": {
+		"barrel": ["Muzzle Brake", "Suppressor", "None"],
+		"under-barrel": ["None", "Laser"]
+	},
+	"POF9": {
+		"sight": [
+			"Magnified A",
+			"Magnified B",
+			"Magnified C",
+			"Red Dot A",
+			"Red Dot B",
+			"Red Dot C",
+			"Holo A",
+			"Holo B",
+			"Holo C",
+			"Holo D",
+			"Reflex A",
+			"Reflex B",
+			"Reflex C",
+			"Iron Sight"
+		],
+		"barrel": [
+			"Flash Hider",
+			"Compensator",
+			"Muzzle Brake",
+			"Suppressor",
+			"Extended Barrel",
+			"None"
+		],
+		"grip": ["Vertical Grip", "Angled Grip", "Horizontal Grip"],
+		"under-barrel": ["None", "Laser"]
+	},
+	"PRB92": {
+		"barrel": ["Muzzle Brake", "Suppressor", "None"],
+		"under-barrel": ["None", "Laser"]
+	},
+	"Q-929": {
+		"barrel": ["Muzzle Brake", "Suppressor", "None"],
+		"under-barrel": ["None", "Laser"]
+	},
+	"R4-C": {
+		"sight": [
+			"Magnified A",
+			"Magnified B",
+			"Magnified C",
+			"Red Dot A",
+			"Red Dot B",
+			"Red Dot C",
+			"Holo A",
+			"Holo B",
+			"Holo C",
+			"Holo D",
+			"Reflex A",
+			"Reflex B",
+			"Reflex C",
+			"Iron Sight"
+		],
+		"barrel": [
+			"Flash Hider",
+			"Compensator",
+			"Muzzle Brake",
+			"Suppressor",
+			"Extended Barrel",
+			"None"
+		],
+		"grip": ["Angled Grip", "Horizontal Grip", "Vertical Grip"],
+		"under-barrel": ["None", "Laser"]
+	},
+	"RG15": {
+		"barrel": ["Muzzle Brake", "Suppressor"],
+		"under-barrel": ["None", "Laser"]
+	},
+	"SASG-12": {
+		"sight": [
+			"Red Dot A",
+			"Red Dot B",
+			"Red Dot C",
+			"Holo A",
+			"Holo B",
+			"Holo C",
+			"Holo D",
+			"Reflex A",
+			"Reflex B",
+			"Reflex C",
+			"Iron Sight"
+		],
+		"barrel": ["Suppressor", "None"],
+		"grip": ["Vertical Grip", "Angled Grip", "Horizontal Grip"],
+		"under-barrel": ["None", "Laser"]
+	},
+	"SC3000K": {
+		"sight": [
+			"Magnified A",
+			"Magnified B",
+			"Magnified C",
+			"Red Dot A",
+			"Red Dot B",
+			"Red Dot C",
+			"Holo A",
+			"Holo B",
+			"Holo C",
+			"Holo D",
+			"Reflex A",
+			"Reflex B",
+			"Reflex C",
+			"Iron Sight"
+		],
+		"barrel": [
+			"Flash Hider",
+			"Compensator",
+			"Muzzle Brake",
+			"Suppressor",
+			"Extended Barrel",
+			"None"
+		],
+		"grip": ["Vertical Grip", "Angled Grip", "Horizontal Grip"],
+		"under-barrel": ["None", "Laser"]
+	},
+	"Scorpion_EVO_3_A1": {
+		"sight": [
+			"Red Dot A",
+			"Red Dot B",
+			"Red Dot C",
+			"Holo A",
+			"Holo B",
+			"Holo C",
+			"Holo D",
+			"Reflex A",
+			"Reflex B",
+			"Reflex C",
+			"Iron Sight"
+		],
+		"barrel": [
+			"Flash Hider",
+			"Compensator",
+			"Muzzle Brake",
+			"Suppressor",
+			"None"
+		],
+		"grip": ["Vertical Grip", "Angled Grip", "Horizontal Grip"],
+		"under-barrel": ["None", "Laser"]
+	},
+	"SDP_9mm": {
+		"barrel": ["Muzzle Brake", "Suppressor", "None"],
+		"under-barrel": ["None", "Laser"]
+	},
+	"SG-CQB": {
+		"sight": [
+			"Red Dot A",
+			"Red Dot B",
+			"Red Dot C",
+			"Holo A",
+			"Holo B",
+			"Holo C",
+			"Holo D",
+			"Reflex A",
+			"Reflex B",
+			"Reflex C",
+			"Iron Sight"
+		],
+		"grip": ["Vertical Grip", "Horizontal Grip"],
+		"under-barrel": ["None", "Laser"]
+	},
+	"SIX12": {
+		"sight": [
+			"Red Dot A",
+			"Red Dot B",
+			"Red Dot C",
+			"Holo A",
+			"Holo B",
+			"Holo C",
+			"Holo D",
+			"Reflex A",
+			"Reflex B",
+			"Reflex C",
+			"Iron Sight"
+		],
+		"under-barrel": ["None", "Laser"]
+	},
+	"SIX12_SD": {
+		"sight": [
+			"Red Dot A",
+			"Red Dot B",
+			"Red Dot C",
+			"Holo A",
+			"Holo B",
+			"Holo C",
+			"Holo D",
+			"Reflex A",
+			"Reflex B",
+			"Reflex C",
+			"Iron Sight"
+		],
+		"under-barrel": ["None", "Laser"]
+	},
+	"SMG-11": {
+		"sight": [
+			"Red Dot A",
+			"Red Dot B",
+			"Red Dot C",
+			"Holo A",
+			"Holo B",
+			"Holo C",
+			"Holo D",
+			"Reflex A",
+			"Reflex B",
+			"Reflex C",
+			"Iron Sight"
+		],
+		"barrel": [
+			"Flash Hider",
+			"Compensator",
+			"Muzzle Brake",
+			"Suppressor",
+			"Extended Barrel",
+			"None"
+		],
+		"grip": ["Vertical Grip", "Angled Grip", "Horizontal Grip"],
+		"under-barrel": ["None", "Laser"]
+	},
+	"SMG-12": {
+		"sight": [
+			"Red Dot A",
+			"Red Dot B",
+			"Red Dot C",
+			"Holo A",
+			"Holo B",
+			"Holo C",
+			"Holo D",
+			"Reflex A",
+			"Reflex B",
+			"Reflex C",
+			"Iron Sight"
+		],
+		"barrel": [
+			"Flash Hider",
+			"Compensator",
+			"Muzzle Brake",
+			"Suppressor",
+			"None"
+		],
+		"grip": ["Vertical Grip", "Angled Grip", "Horizontal Grip"],
+		"under-barrel": ["None", "Laser"]
+	},
+	"SPAS-12": {
+		"sight": [
+			"Red Dot A",
+			"Red Dot B",
+			"Red Dot C",
+			"Holo A",
+			"Holo B",
+			"Holo C",
+			"Holo D",
+			"Reflex A",
+			"Reflex B",
+			"Reflex C",
+			"Iron Sight"
+		],
+		"under-barrel": ["None", "Laser"]
+	},
+	"SPAS-15": {
+		"sight": [
+			"Red Dot A",
+			"Red Dot B",
+			"Red Dot C",
+			"Holo A",
+			"Holo B",
+			"Holo C",
+			"Holo D",
+			"Reflex A",
+			"Reflex B",
+			"Reflex C",
+			"Iron Sight"
+		],
+		"under-barrel": ["None", "Laser"]
+	},
+	"Spear_308": {
+		"sight": [
+			"Magnified A",
+			"Magnified B",
+			"Magnified C",
+			"Red Dot A",
+			"Red Dot B",
+			"Red Dot C",
+			"Holo A",
+			"Holo B",
+			"Holo C",
+			"Holo D",
+			"Reflex A",
+			"Reflex B",
+			"Reflex C",
+			"Iron Sight"
+		],
+		"barrel": [
+			"Flash Hider",
+			"Compensator",
+			"Muzzle Brake",
+			"Suppressor",
+			"Extended Barrel",
+			"None"
+		],
+		"grip": ["Vertical Grip", "Angled Grip", "Horizontal Grip"],
+		"under-barrel": ["None", "Laser"]
+	},
+	"SPSMG9": {
+		"sight": [
+			"Red Dot A",
+			"Red Dot B",
+			"Red Dot C",
+			"Holo A",
+			"Holo B",
+			"Holo C",
+			"Holo D",
+			"Reflex A",
+			"Reflex B",
+			"Reflex C",
+			"Iron Sight"
+		],
+		"barrel": [
+			"Flash Hider",
+			"Compensator",
+			"Muzzle Brake",
+			"Suppressor",
+			"Extended Barrel",
+			"None"
+		],
+		"under-barrel": ["None", "Laser"]
+	},
+	"SR-25": {
+		"sight": [
+			"Magnified A",
+			"Magnified B",
+			"Magnified C",
+			"Telescopic A",
+			"Telescopic B",
+			"Red Dot A",
+			"Red Dot B",
+			"Red Dot C",
+			"Holo A",
+			"Holo B",
+			"Holo C",
+			"Holo D",
+			"Reflex A",
+			"Reflex B",
+			"Reflex C",
+			"Iron Sight"
+		],
+		"barrel": ["Muzzle Brake", "Suppressor", "None"],
+		"grip": ["Vertical Grip", "Angled Grip", "Horizontal Grip"],
+		"under-barrel": ["None", "Laser"]
+	},
+	"SuperNova": {
+		"sight": [
+			"Red Dot A",
+			"Red Dot B",
+			"Red Dot C",
+			"Holo A",
+			"Holo B",
+			"Holo C",
+			"Holo D",
+			"Reflex A",
+			"Reflex B",
+			"Reflex C",
+			"Iron Sight"
+		],
+		"barrel": ["Suppressor", "None"],
+		"under-barrel": ["None", "Laser"]
+	},
+	"Super_90": {
+		"sight": [
+			"Red Dot A",
+			"Red Dot B",
+			"Red Dot C",
+			"Holo A",
+			"Holo B",
+			"Holo C",
+			"Holo D",
+			"Reflex A",
+			"Reflex B",
+			"Reflex C",
+			"Iron Sight"
+		],
+		"under-barrel": ["None", "Laser"]
+	},
+	"Super_Shorty": {
+		"sight": [
+			"Red Dot A",
+			"Red Dot B",
+			"Red Dot C",
+			"Holo A",
+			"Holo B",
+			"Holo C",
+			"Holo D",
+			"Reflex A",
+			"Reflex B",
+			"Reflex C",
+			"Iron Sight"
+		],
+		"under-barrel": ["None", "Laser"]
+	},
+	"T-5_SMG": {
+		"sight": [
+			"Red Dot A",
+			"Red Dot B",
+			"Red Dot C",
+			"Holo A",
+			"Holo B",
+			"Holo C",
+			"Holo D",
+			"Reflex A",
+			"Reflex B",
+			"Reflex C",
+			"Iron Sight"
+		],
+		"barrel": [
+			"Flash Hider",
+			"Compensator",
+			"Muzzle Brake",
+			"Suppressor",
+			"Extended Barrel",
+			"None"
+		],
+		"grip": ["Vertical Grip", "Angled Grip", "Horizontal Grip"],
+		"under-barrel": ["None", "Laser"]
+	},
+	"T-95_LSW": {
+		"sight": [
+			"Magnified A",
+			"Magnified B",
+			"Magnified C",
+			"Red Dot A",
+			"Red Dot B",
+			"Red Dot C",
+			"Holo A",
+			"Holo B",
+			"Holo C",
+			"Holo D",
+			"Reflex A",
+			"Reflex B",
+			"Reflex C",
+			"Iron Sight"
+		],
+		"barrel": [
+			"Flash Hider",
+			"Compensator",
+			"Muzzle Brake",
+			"Suppressor",
+			"None"
+		],
+		"grip": ["Vertical Grip", "Angled Grip", "Horizontal Grip"],
+		"under-barrel": ["None", "Laser"]
+	},
+	"TCSG12": {
+		"sight": [
+			"Magnified A",
+			"Magnified B",
+			"Magnified C",
+			"Red Dot A",
+			"Red Dot B",
+			"Red Dot C",
+			"Holo A",
+			"Holo B",
+			"Holo C",
+			"Holo D",
+			"Reflex A",
+			"Reflex B",
+			"Reflex C",
+			"Iron Sight"
+		],
+		"barrel": ["Suppressor", "None"],
+		"grip": ["Vertical Grip", "Angled Grip", "Horizontal Grip"],
+		"under-barrel": ["None", "Laser"]
+	},
+	"Type-89": {
+		"sight": [
+			"Magnified A",
+			"Magnified B",
+			"Magnified C",
+			"Red Dot A",
+			"Red Dot B",
+			"Red Dot C",
+			"Holo A",
+			"Holo B",
+			"Holo C",
+			"Holo D",
+			"Reflex A",
+			"Reflex B",
+			"Reflex C",
+			"Iron Sight"
+		],
+		"barrel": [
+			"Flash Hider",
+			"Compensator",
+			"Muzzle Brake",
+			"Suppressor",
+			"None"
+		],
+		"grip": ["Vertical Grip", "Angled Grip", "Horizontal Grip"],
+		"under-barrel": ["None", "Laser"]
+	},
+	"UMP45": {
+		"sight": [
+			"Magnified A",
+			"Magnified B",
+			"Magnified C",
+			"Red Dot A",
+			"Red Dot B",
+			"Red Dot C",
+			"Holo A",
+			"Holo B",
+			"Holo C",
+			"Holo D",
+			"Reflex A",
+			"Reflex B",
+			"Reflex C",
+			"Iron Sight"
+		],
+		"barrel": [
+			"Flash Hider",
+			"Compensator",
+			"Muzzle Brake",
+			"Suppressor",
+			"Extended Barrel",
+			"None"
+		],
+		"grip": ["Vertical Grip", "Angled Grip", "Horizontal Grip"],
+		"under-barrel": ["None", "Laser"]
+	},
+	"USP40": {
+		"barrel": ["Muzzle Brake", "Suppressor", "None"],
+		"under-barrel": ["None", "Laser"]
+	},
+	"uzk50gi": {
+		"sight": [
+			"Red Dot A",
+			"Red Dot B",
+			"Red Dot C",
+			"Holo A",
+			"Holo B",
+			"Holo C",
+			"Holo D",
+			"Reflex A",
+			"Reflex B",
+			"Reflex C",
+			"Iron Sight"
+		],
+		"barrel": [
+			"Flash Hider",
+			"Compensator",
+			"Muzzle Brake",
+			"Suppressor",
+			"Extended Barrel",
+			"None"
+		],
+		"grip": ["Vertical Grip", "Angled Grip", "Horizontal Grip"],
+		"under-barrel": ["None", "Laser"]
+	},
+	"V308": {
+		"sight": [
+			"Magnified A",
+			"Magnified B",
+			"Magnified C",
+			"Red Dot A",
+			"Red Dot B",
+			"Red Dot C",
+			"Holo A",
+			"Holo B",
+			"Holo C",
+			"Holo D",
+			"Reflex A",
+			"Reflex B",
+			"Reflex C",
+			"Iron Sight"
+		],
+		"barrel": [
+			"Flash Hider",
+			"Compensator",
+			"Muzzle Brake",
+			"Suppressor",
+			"None"
+		],
+		"grip": ["Vertical Grip", "Angled Grip", "Horizontal Grip"],
+		"under-barrel": ["None", "Laser"]
+	},
+	"Vector_45_ACP": {
+		"sight": [
+			"Red Dot A",
+			"Red Dot B",
+			"Red Dot C",
+			"Holo A",
+			"Holo B",
+			"Holo C",
+			"Holo D",
+			"Reflex A",
+			"Reflex B",
+			"Reflex C",
+			"Iron Sight"
+		],
+		"barrel": [
+			"Flash Hider",
+			"Compensator",
+			"Muzzle Brake",
+			"Suppressor",
+			"Extended Barrel",
+			"None"
+		],
+		"grip": ["Vertical Grip", "Angled Grip", "Horizontal Grip"],
+		"under-barrel": ["None", "Laser"]
+	}
 }

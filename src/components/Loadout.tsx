@@ -5,8 +5,14 @@ import { useRef } from "react";
 export type OperatorLoadout = {
 	operator: Operator;
 	loadout: {
-		primary: string;
-		secondary: string;
+		primary: {
+			weapon: string,
+			loadout: Record<string, string> | null
+		};
+		secondary: {
+			weapon: string,
+			loadout: Record<string, string> | null
+		}
 		gadget: string;
 		utility: string | null;
 	} | null;
@@ -51,33 +57,51 @@ export const Loadout: React.FC<{
 
 			{generateLoadout && data?.loadout ? (
 				<div className="flex flex-col gap-2 ml-4">
-					<div className="bg-gray-600 px-4 py-2 min-w-36 max-w-48">
-						<h1 className="font-bold text-lg">Primary</h1>
-						<p className="text-muted-foreground">
-							{data.loadout.primary.replaceAll("_", " ")}
-						</p>
-						<div className="h-14">
-							<img
-								className="h-full w-full object-contain"
-								src={`${import.meta.env.BASE_URL}weapons/${data.loadout.primary}.webp`}
-								alt={data.loadout.primary}
-							/>
+					<section className="flex gap-2">
+						<div className="bg-gray-600 px-4 py-2 min-w-36 max-w-48">
+							<h1 className="font-bold text-lg">Primary</h1>
+							<p className="text-muted-foreground">
+								{data.loadout.primary.weapon.replaceAll("_", " ")}
+							</p>
+							<div className="h-14">
+								<img
+									className="h-full w-full object-contain"
+									src={`${import.meta.env.BASE_URL}weapons/${data.loadout.primary.weapon}.webp`}
+									alt={data.loadout.primary.weapon}
+								/>
+							</div>
 						</div>
-					</div>
-					<div className="bg-gray-600 px-4 py-2 max-w-48">
-						<h1 className="font-bold text-lg">Secondary</h1>
-						<p className="text-muted-foreground">
-							{data.loadout.secondary.replaceAll("_", " ")}
-						</p>
-						<div className="h-14">
-							<img
-								className="h-full w-full object-contain"
-								src={`${import.meta.env.BASE_URL}weapons/${data.loadout.secondary}.webp`}
-								alt={data.loadout.secondary}
-							/>
+						{data.loadout.primary.loadout ? (
+							<div className="flex flex-col justify-start gap-1.5">
+								{Object.entries(data.loadout.primary.loadout).map(([name, value], i) => (
+									<div className="bg-gray-600 px-4 py-2 min-w-48 first-letter:capitalize" key={`${name}_${i}_${value}`}><span className="text-muted-foreground">{name.replaceAll("-", " ")}</span>: {value}</div>
+								))}
+							</div>
+						) : null}
+					</section>
+					<section className="flex gap-2">
+						<div className="bg-gray-600 px-4 py-2 max-w-48">
+							<h1 className="font-bold text-lg">Secondary</h1>
+							<p className="text-muted-foreground">
+								{data.loadout.secondary.weapon.replaceAll("_", " ")}
+							</p>
+							<div className="h-14">
+								<img
+									className="h-full w-full object-contain"
+									src={`${import.meta.env.BASE_URL}weapons/${data.loadout.secondary.weapon}.webp`}
+									alt={data.loadout.secondary.weapon}
+								/>
+							</div>
 						</div>
-					</div>
-					<div className="flex gap-2">
+						{data.loadout.secondary.loadout ? (
+							<div className="flex flex-col justify-start gap-1.5">
+								{Object.entries(data.loadout.secondary.loadout).map(([name, value], i) => (
+									<div className="bg-gray-600 px-4 py-2 min-w-48 first-letter:capitalize" key={`${name}_${i}_${value}`}><span className="text-muted-foreground">{name.replaceAll("-", " ")}</span>: {value}</div>
+								))}
+							</div>
+						) : null}
+					</section>
+					<section className="flex gap-2">
 						<div className="bg-gray-600 px-4 py-2 min-w-36 max-w-48">
 							<h1 className="font-bold text-lg">Gadget</h1>
 							<p className="text-muted-foreground">
@@ -106,7 +130,7 @@ export const Loadout: React.FC<{
 								</div>
 							</div>
 						) : null}
-					</div>
+					</section>
 				</div>
 			) : null}
 		</div>

@@ -20,7 +20,7 @@ const Randomizer: React.FC = () => {
 		loadout: null,
 	});
 	const [state, setState] = useState<State>(State.Init);
-	const { team, generateLoadout, goTo } = useRouter();
+	const { team, generateLoadout, weaponLoadouts, goTo } = useRouter();
 	const spinnerRef = useRef<SpinnerRef>(null);
 
 	// biome-ignore lint/correctness/useExhaustiveDependencies: team and generateLoadout variables are used
@@ -35,14 +35,14 @@ const Randomizer: React.FC = () => {
 			let loadout = null;
 			if (generateLoadout) {
 				console.log(team);
-				loadout = generateLoadoutFromOp(operator.id, team);
+				loadout = generateLoadoutFromOp(operator.id, team, weaponLoadouts);
 			}
 
 			setLoadout({ operator, loadout });
 			await new Promise<void>((ok) => setTimeout(ok, 600));
 			setState(State.Display);
 		}, 3000),
-		[team, generateLoadout],
+		[team, generateLoadout, weaponLoadouts],
 	);
 
 	return (

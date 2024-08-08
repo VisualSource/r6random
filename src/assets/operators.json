@@ -541,7 +541,7 @@
 		{
 			"id": "thunderbird",
 			"loadout": {
-				"primary": ["Spear_308", "SPAS_15"],
+				"primary": ["Spear_308", "SPAS-15"],
 				"secondary": ["Bearing_9", "Q-929"],
 				"gadget": ["Barbed_Wire", "Bulletproof_Camera", "Deployable_Shield"]
 			}

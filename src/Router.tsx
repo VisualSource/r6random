@@ -14,6 +14,8 @@ export type RouterState = {
 	page: string;
 	team: Team;
 	generateLoadout: boolean;
+	weaponLoadouts: boolean,
+	setWeaponLoadouts: (value: boolean | ((value: boolean) => boolean)) => void,
 	setGenerateLoadout: (value: boolean | ((value: boolean) => boolean)) => void;
 	setTeam: (team: Team) => void;
 	goTo: (page: Page) => void;
@@ -22,25 +24,27 @@ export type RouterState = {
 const router = createContext<RouterState | null>(null);
 
 export const RouterProvider: React.FC = () => {
-	const [currentPage, setCurrentPage] = useLocalStorageState("r6.page", {
+	const [page, goTo] = useLocalStorageState("r6.page", {
 		defaultValue: "/",
 	});
 	const [team, setTeam] = useLocalStorageState("r6.team", {
 		defaultValue: "attackers",
 	});
 	const [generateLoadout, setGenerateLoadout] = useState<boolean>(true);
-
-	const Page = PAGES[currentPage as Page];
+	const [weaponLoadouts, setWeaponLoadouts] = useState<boolean>(true);
+	const Page = PAGES[page as Page];
 
 	return (
 		<router.Provider
 			value={{
 				team: team as Team,
+				weaponLoadouts,
 				generateLoadout,
-				setGenerateLoadout,
+				page,
 				setTeam,
-				page: currentPage,
-				goTo: setCurrentPage,
+				setGenerateLoadout,
+				setWeaponLoadouts,
+				goTo,
 			}}
 		>
 			<Page />

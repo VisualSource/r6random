@@ -57,8 +57,8 @@ export const Loadout: React.FC<{
 
 			{generateLoadout && data?.loadout ? (
 				<div className="flex flex-col gap-2 ml-4">
-					<section className="flex gap-2">
-						<div className="bg-gray-600 px-4 py-2 min-w-36 max-w-48">
+					<section className="flex gap-2 max-h-36">
+						<div className="bg-rose-600 px-4 py-2 min-w-36 max-w-48">
 							<h1 className="font-bold text-lg">Primary</h1>
 							<p className="text-muted-foreground">
 								{data.loadout.primary.weapon.replaceAll("_", " ")}
@@ -72,15 +72,15 @@ export const Loadout: React.FC<{
 							</div>
 						</div>
 						{data.loadout.primary.loadout ? (
-							<div className="flex flex-col justify-start gap-1.5">
+							<div className="flex flex-col justify-start gap-1.5 flex-wrap">
 								{Object.entries(data.loadout.primary.loadout).map(([name, value], i) => (
-									<div className="bg-gray-600 px-4 py-2 min-w-48 first-letter:capitalize" key={`${name}_${i}_${value}`}><span className="text-muted-foreground">{name.replaceAll("-", " ")}</span>: {value}</div>
+									<div className="bg-rose-600 px-4 py-2 min-w-48 first-letter:capitalize" key={`${name}_${i}_${value}`}><span className="text-muted-foreground">{name.replaceAll("-", " ")}</span>: {value}</div>
 								))}
 							</div>
 						) : null}
 					</section>
-					<section className="flex gap-2">
-						<div className="bg-gray-600 px-4 py-2 max-w-48">
+					<section className="flex gap-2 max-h-36">
+						<div className="bg-indigo-600 px-4 py-2 max-w-48">
 							<h1 className="font-bold text-lg">Secondary</h1>
 							<p className="text-muted-foreground">
 								{data.loadout.secondary.weapon.replaceAll("_", " ")}
@@ -94,9 +94,9 @@ export const Loadout: React.FC<{
 							</div>
 						</div>
 						{data.loadout.secondary.loadout ? (
-							<div className="flex flex-col justify-start gap-1.5">
+							<div className="flex flex-col justify-start gap-1.5 flex-wrap">
 								{Object.entries(data.loadout.secondary.loadout).map(([name, value], i) => (
-									<div className="bg-gray-600 px-4 py-2 min-w-48 first-letter:capitalize" key={`${name}_${i}_${value}`}><span className="text-muted-foreground">{name.replaceAll("-", " ")}</span>: {value}</div>
+									<div className="bg-indigo-600 px-4 py-2 min-w-48 first-letter:capitalize" key={`${name}_${i}_${value}`}><span className="text-muted-foreground">{name.replaceAll("-", " ")}</span>: {value}</div>
 								))}
 							</div>
 						) : null}

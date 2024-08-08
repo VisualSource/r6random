@@ -437,8 +437,8 @@
 		{
 			"id": "ela",
 			"loadout": {
-				"primary": ["Scorpion_EVO_3_A1"],
-				"secondary": ["FO-12"],
+				"primary": ["Scorpion_EVO_3_A1", "FO-12"],
+				"secondary": ["RG15"],
 				"gadget": ["Barbed_Wire", "Deployable_Shield", "Impact_Grenade"]
 			}
 		},

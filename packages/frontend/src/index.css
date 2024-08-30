@@ -58,12 +58,19 @@
     --chart-5: 340 75% 55%;
   }
 }
+@layer utilities {
+  .window-drag {
+    -webkit-app-region: drag;
+  }
+}
+
 @layer base {
   * {
     @apply border-border;
   }
   #root {
     height: 100vh;
+    @apply flex flex-col
   }
   body { 
     @apply bg-background text-foreground;

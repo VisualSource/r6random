@@ -39,10 +39,6 @@ export class OSRWindowController {
             }
         }
 
-        const activeGame = this.overlayService.api?.getActiveGameInfo();
-        const gameWinInfo = activeGame?.gameWindowInfo;
-
-        const screenWidth = gameWinInfo?.size.width ?? 500;
         opt.x = 100;
         opt.y = 50;
 
@@ -51,7 +47,7 @@ export class OSRWindowController {
         this.registerToIpc();
         this.registerToWindowEvents();
 
-        await this.overlayWindow?.window.loadURL("http://192.168.1.10:5173/");
+        await this.overlayWindow?.window.loadFile(path.join(__dirname, "../renderer/osr.html"))  /*loadURL("http://192.168.1.10:5173/")*/;
         this.overlayWindow?.window.show();
     }
 

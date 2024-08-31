@@ -5,12 +5,50 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Control Panel</title>
     <script src="./main.ts" type="module"></script>
+    <style>
+        #log {
+            max-height: 20rem;
+            overflow-y: scroll;
+        }
+        .loader {
+              width: 45px;
+              aspect-ratio: 1;
+              --c: no-repeat linear-gradient(#000 0 0);
+              background: 
+                var(--c) 0%   50%,
+                var(--c) 50%  50%,
+                var(--c) 100% 50%;
+              background-size: 20% 100%;
+              animation: l1 1s infinite linear;
+            }
+            @keyframes l1 {
+              0%  {background-size: 20% 100%,20% 100%,20% 100%}
+              33% {background-size: 20% 10% ,20% 100%,20% 100%}
+              50% {background-size: 20% 100%,20% 10% ,20% 100%}
+              66% {background-size: 20% 100%,20% 100%,20% 10% }
+              100%{background-size: 20% 100%,20% 100%,20% 100%}
+            }
+    </style>
 </head>
 <body>
-    <button id ='createOSR' class="btn">Create OSR</button>
-    <button id ='visibilityOSR' class="btn">Show all OSR</button>
-    <button id ='updateHotkey' class="btn">update Hotkey</button>
-    <div class="electron-version"></div>
-    <div id="log"></div>
+    <header>
+        <button id ='createOSR' class="btn">Create OSR</button>
+        <button id ='visibilityOSR' class="btn">Show all OSR</button>
+        <button id ='updateHotkey' class="btn">update Hotkey</button>
+    </header>
+    <main>
+        <div id="loadingBox">
+           <div class="loader"></div> 
+           Loading
+        </div>
+        <div>
+            <div id="log"></div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="electron-version"></div>
+    </footer>
+
 </body>
 </html>

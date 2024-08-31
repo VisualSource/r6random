@@ -16,6 +16,7 @@
 		"overwolf": {
 			"disableAdOptimization": false
 		},
+		"icon":"icon.png",
 		"productName": "R6Random",
 		"directories": {
 			"output": "build"

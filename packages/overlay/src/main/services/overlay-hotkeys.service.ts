@@ -9,7 +9,7 @@ export class OverlayHotkeysService extends EventEmitter {
     }
     private installHotKeys = () => {
         pkg.overlay.hotkeys.register({
-            name: "showOverlay",
+            name: "overlayToggle",
             keyCode: 82, // r
             modifiers: {
                 ctrl: true,
@@ -18,20 +18,7 @@ export class OverlayHotkeysService extends EventEmitter {
         }, (hotkey, state) => {
             this.log(`on hotkey: '${hotkey.name}'`, state)
             if (state === "pressed") {
-                this.emit("hotkey::showOverlay")
-            }
-        });
-        pkg.overlay.hotkeys.register({
-            name: "hideOverlay",
-            keyCode: 90, // z
-            modifiers: {
-                ctrl: true
-            },
-            passthrough: true
-        }, (hotkey, state) => {
-            this.log(`on hotkey: '${hotkey.name}'`, state)
-            if (state === "pressed") {
-                this.emit("hotkey::hideOverlay");
+                this.emit("hotkey::overlayToggle")
             }
         });
     }

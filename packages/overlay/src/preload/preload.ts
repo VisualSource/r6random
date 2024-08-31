@@ -8,6 +8,7 @@ async function initialize() {
 }
 
 contextBridge.exposeInMainWorld("app", {
+    onConnected: (callback: () => void) => ipcRenderer.on("overlay-injected", () => callback()),
     onLog: (callback: (...args: unknown[]) => void) => ipcRenderer.on("console-log", (_ev, value) => callback(value)),
     initialize
 });

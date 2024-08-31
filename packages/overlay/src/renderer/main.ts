@@ -1,5 +1,5 @@
 interface WindowExtend {
-    app: { initialize: () => void, onLog: (callback: (...args: unknown[]) => void) => void },
+    app: { initialize: () => void, onLog: (callback: (...args: unknown[]) => void) => void, onConnected: (callback: () => void) => void },
     osr: { openOSR: () => void, toggle: () => void, updateHotkey: () => void },
 }
 type Win = typeof window & WindowExtend;
@@ -12,10 +12,13 @@ type Win = typeof window & WindowExtend;
     el.textContent = JSON.stringify(value);
     log?.appendChild(el);
 });
+(window as Win).app.onConnected(() => {
+    const el = document.getElementById("loadingBox");
+    if (!el) return;
+    el.innerHTML = "All Ready";
+});
 
 window.addEventListener("DOMContentLoaded", () => {
-
-
 
     document.getElementById('createOSR')?.addEventListener("click", async () => {
         try {

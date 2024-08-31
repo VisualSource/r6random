@@ -8,19 +8,19 @@ export class OSRWindowController {
 
     constructor(private readonly overlayService: OverlayService) { }
 
-    quit() {
+    public quit() {
         this.overlayWindow = null;
+        ipcMain.removeHandler("OSR::quit");
+        ipcMain.removeHandler("OSR::minimize")
     }
 
-    show() {
+    public show() {
         if (!this.overlayWindow) return;
         this.overlayWindow.window.show();
     }
-    hide() {
+    public hide() {
         if (!this.overlayWindow) return;
         this.overlayWindow.window.hide();
-        ipcMain.removeHandler("OSR::quit");
-        ipcMain.removeHandler("OSR::minimize")
     }
 
     public async createAndShow() {
@@ -28,14 +28,14 @@ export class OSRWindowController {
             name: `osrWindow-${Math.floor(Math.random() * 1000)}`,
             height: 800,
             width: 1000,
-            show: true,
+            show: false,
             transparent: false,
             resizable: false,
             webPreferences: {
                 preload: path.join(__dirname, "../preload/osr-preload.js"),
                 devTools: false,
                 nodeIntegration: false,
-                contextIsolation: false
+                contextIsolation: true
             }
         }
 
@@ -47,8 +47,7 @@ export class OSRWindowController {
         this.registerToIpc();
         this.registerToWindowEvents();
 
-        await this.overlayWindow?.window.loadFile(path.join(__dirname, "../renderer/osr.html"))  /*loadURL("http://192.168.1.10:5173/")*/;
-        this.overlayWindow?.window.show();
+        await this.overlayWindow?.window.loadURL("http://192.168.1.10:5173/");
     }
 
     registerToIpc() {

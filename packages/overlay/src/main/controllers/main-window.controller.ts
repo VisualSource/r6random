@@ -17,8 +17,7 @@ export class MainWindowController {
         private readonly createOsrWinController: () => OSRWindowController
     ) {
 
-        overlayHotKeysService.on("hotkey::hideOverlay", () => this.hideOsr());
-        overlayHotKeysService.on("hotkey::showOverlay", () => this.showOsr())
+        overlayHotKeysService.on("hotkey::overlayToggle", () => this.toggleOsr());
 
         overlayService.on("log", this.printLogMessage);
         overlayService.on("error", this.printErrorMessage);
@@ -32,17 +31,22 @@ export class MainWindowController {
         pkg.on("failed-to-initialize", this.logPackageMangerErrors);
     }
 
-    showOsr() {
+    public toggleOsr() {
         if (!this.osrWindow) return;
-        this.osrWindow.show();
+        if (this.osrWindow.overlayWindow?.window.isVisible()) {
+            this.osrWindow.hide();
+        } else {
+            this.osrWindow.show();
+        }
     }
-    hideOsr() {
-        if (!this.osrWindow) return;
-        this.osrWindow.hide();
-    }
-    quitOsr() {
+    public quitOsr() {
         if (!this.osrWindow) return;
         this.osrWindow.quit();
+    }
+
+    async emitReady() {
+        this.browserWindow?.webContents.send("overlay-injected");
+        await this.createOSRWindow();
     }
 
     private logPackageMangerErrors = (e: unknown, packageName: string, ...args: unknown[]) => {
@@ -59,8 +63,9 @@ export class MainWindowController {
 
     public async createAndShow() {
         this.browserWindow = new BrowserWindow({
-            width: 900,
-            height: 900,
+            width: 400,
+            height: 300,
+            resizable: false,
             show: true,
             webPreferences: {
                 nodeIntegration: false,
@@ -115,7 +120,7 @@ export class MainWindowController {
             return;
         }
 
-        this.osrWindow.overlayWindow?.window.show();
+        this.osrWindow.overlayWindow?.window.hide();
     }
 
 }

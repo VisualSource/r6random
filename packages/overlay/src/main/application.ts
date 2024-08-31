@@ -18,6 +18,7 @@ export class Application {
         this.overlayService.registerToGames([
             kGameIds.Rainbow6Siege
         ])
+        this.mainWindowController.emitReady();
     }
     run = () => {
         this.mainWindowController.createAndShow();

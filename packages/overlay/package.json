@@ -16,7 +16,7 @@
 		"overwolf": {
 			"disableAdOptimization": false
 		},
-		"icon":"icon.png",
+		"icon": "./resources/icon.png",
 		"productName": "R6Random",
 		"directories": {
 			"output": "build"
@@ -44,7 +44,7 @@
 		"dev": "electron-vite dev",
 		"prebuild": "electron-vite build",
 		"start": "ow-electron .",
-		"build:ow-electron": "ow-electron-builder --c.extraMetadata.name=R6Random --publish=never"
+		"build": "pnpm prebuild && ow-electron-builder --c.extraMetadata.name=R6Random --publish=never"
 	},
 	"keywords": [],
 	"license": "ISC",

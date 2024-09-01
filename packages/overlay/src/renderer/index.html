@@ -3,52 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Control Panel</title>
+    <title>R6Random: Control Panel</title>
+    <link rel="stylesheet" href="./style.css">
     <script src="./main.ts" type="module"></script>
-    <style>
-        #log {
-            max-height: 20rem;
-            overflow-y: scroll;
-        }
-        .loader {
-              width: 45px;
-              aspect-ratio: 1;
-              --c: no-repeat linear-gradient(#000 0 0);
-              background: 
-                var(--c) 0%   50%,
-                var(--c) 50%  50%,
-                var(--c) 100% 50%;
-              background-size: 20% 100%;
-              animation: l1 1s infinite linear;
-            }
-            @keyframes l1 {
-              0%  {background-size: 20% 100%,20% 100%,20% 100%}
-              33% {background-size: 20% 10% ,20% 100%,20% 100%}
-              50% {background-size: 20% 100%,20% 10% ,20% 100%}
-              66% {background-size: 20% 100%,20% 100%,20% 10% }
-              100%{background-size: 20% 100%,20% 100%,20% 100%}
-            }
-    </style>
+    <style>html{ background-color: #131313; }</style>
 </head>
 <body>
     <header>
-        <button id ='createOSR' class="btn">Create OSR</button>
-        <button id ='visibilityOSR' class="btn">Show all OSR</button>
-        <button id ='updateHotkey' class="btn">update Hotkey</button>
+        <button type="button" id ='createOSR' class="btn" title="Inject overlay into game">Create OSR</button>
+        <button type="button" id ='visibilityOSR' class="btn" title="Show overlay ingame">Show all OSR</button>
+        <button type="button" id ='updateHotkey' class="btn" title="Update hotkey to toggle overlay">update Hotkey</button>
+        <button type="button" id ='showLog' class="btn" title="Show the system log">System Log</button>
     </header>
-    <main>
-        <div id="loadingBox">
-           <div class="loader"></div> 
-           Loading
-        </div>
+    <main id="mainContent">
+        <div class="loader"></div>
+    </main>
+    <footer>
+        <div class="versions"></div>
+    </footer>
+    <dialog id="systemLog" class="system-dialog">
         <div>
+            <header>
+                <h5>System Log</h5>
+                <button type="button" class="btn-error btn-sqaure" data-close="systemLog" title="Close">X</button>
+            </header>
             <div id="log"></div>
         </div>
-    </main>
-
-    <footer>
-        <div class="electron-version"></div>
-    </footer>
-
+    </dialog>
+    <dialog id="hotHeyChanger" class="system-dialog">
+        <div>
+            <header>
+                <h5>Hot Key</h5>
+                <button type="button" class="btn-error btn-sqaure" data-close="hotHeyChanger" title="Close">X</button>
+            </header>
+            <form id="hotKeyForm">
+                <div>
+                    <select name="mod" required>
+                        <option value="none">None</option>
+                        <option value="ctrl">Ctrl</option>
+                        <option value="alt">Alt</option>
+                        <option value="shift">Shift</option>
+                    </select>
+                    <input name="key" value="R" maxlength="1" minlength="1" required/>
+                </div>
+                <button type="submit">Save</button>
+            </form>
+        </div>
+    </dialog>
 </body>
 </html>

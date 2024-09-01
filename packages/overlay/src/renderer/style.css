@@ -1,0 +1,162 @@
+html, body {
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    box-sizing: border-box;
+}
+body {
+    display: flex;
+    flex-direction: column;
+    background-image: url("./backgound.webp");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+input {
+    width: 100%;
+    padding: 10px 24px;
+}
+
+select {
+    width: 100%;
+    padding: 10px 24px;
+}
+
+button {
+    background-color: #555555;
+    border: none;
+    color: white;
+    padding: 10px 24px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 10px;
+}
+button:hover {
+    opacity: 0.9;
+}
+button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.btn-sqaure { padding: 5px 10px; }
+.btn-error {background-color: #f44336;} 
+
+.versions {
+    color: white;
+}
+
+.system-dialog {
+    border: none;
+    height: 80%;
+    width: 85%;
+    overflow: hidden;
+    background-color: #131313;
+    color: white;
+}
+
+.system-dialog > div {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.system-dialog > div > header {
+    display: flex;
+    justify-content: end;
+    justify-items: center;
+    align-items: center;
+    border-bottom: solid 1px white;
+}
+.system-dialog > div > header > h5 {
+    padding: 0;
+    margin: 0;
+    margin-right: auto;
+}
+
+form#hotKeyForm {
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    height: 100%;
+    justify-content: center;
+}
+
+form#hotKeyForm > div {
+    display: flex;
+    gap: 4px;
+    margin-bottom: 4px;
+}
+
+#log {
+    height: 100%;
+    overflow-y: scroll;
+}
+
+#log::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+#log::-webkit-scrollbar-thumb {
+    background: #1e1e1e;
+    border-radius: 5px;
+}
+#log::-webkit-scrollbar-track {
+    background-color: #151515;
+}
+
+.hidden {
+    display: none;
+}
+
+header {
+    padding: 2px 2px 2px 0px;
+    display: flex;
+    justify-content: space-between;
+    gap: 2px;
+}
+
+footer {
+    display: flex;
+    padding: 2px 4px;
+    justify-content: end;
+}
+
+main {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.ready {
+    width: fit-content;
+    padding-bottom: 5px;
+    font-weight: bold;
+    font-family: sans-serif;
+    font-size: 30px;
+    overflow: hidden;
+    color: white;
+    text-shadow: 0 0 0 #000,10ch 0 0 #000;
+    background: linear-gradient(white 0 0) bottom left/0% 3px no-repeat;
+}
+.ready:before {
+    content: "Ready!";
+}
+
+.loader {
+    width: fit-content;
+    font-weight: bold;
+    font-family: sans-serif;
+    color: white;
+    font-size: 30px;
+    padding: 0 5px 8px 0;
+    background: repeating-linear-gradient(90deg,currentColor 0 8%,transparent 0 10%) 200% 100%/200% 3px no-repeat;
+    animation: l3 2s steps(6) infinite;
+  }
+.loader:before {
+    content:"Loading..."
+}
+@keyframes l3 {to{background-position: 80% 100%}}

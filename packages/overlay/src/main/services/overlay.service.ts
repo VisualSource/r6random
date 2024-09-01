@@ -87,11 +87,11 @@ export class OverlayService extends EventEmitter {
 	private error(message: string, ...args: unknown[]): void {
 		try {
 			this.emit("error", message, ...args);
-		} catch (error) { }
+		} catch (error) {}
 	}
 	private log(message: string, ...args: unknown[]): void {
 		try {
 			this.emit("log", message, args);
-		} catch (err) { }
+		} catch (err) {}
 	}
 }

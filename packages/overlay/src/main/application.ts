@@ -1,4 +1,7 @@
-import type { GameInfo, GameLaunchEvent, } from "@overwolf/ow-electron-packages-types";
+import type {
+	GameInfo,
+	GameLaunchEvent,
+} from "@overwolf/ow-electron-packages-types";
 import { kGameIds } from "@overwolf/ow-electron-packages-types/game-list";
 import { Menu, nativeImage, Tray } from "electron";
 import type { MainWindowController } from "./controllers/main-window.controller";

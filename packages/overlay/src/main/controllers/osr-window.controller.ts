@@ -9,7 +9,7 @@ import type { OverlayService } from "../services/overlay.service";
 export class OSRWindowController {
 	public overlayWindow: OverlayBrowserWindow | null = null;
 
-	constructor(private readonly overlayService: OverlayService) { }
+	constructor(private readonly overlayService: OverlayService) {}
 
 	public quit() {
 		this.overlayWindow = null;
@@ -50,7 +50,11 @@ export class OSRWindowController {
 		this.registerToIpc();
 		this.registerToWindowEvents();
 
-		await this.overlayWindow?.window.loadURL(import.meta.env.DEV ? "http://192.168.1.10:5173/" : "https://visualsource.github.io/r6random/");
+		await this.overlayWindow?.window.loadURL(
+			import.meta.env.DEV
+				? "http://192.168.1.10:5173/"
+				: "https://visualsource.github.io/r6random/",
+		);
 	}
 
 	private registerToIpc() {

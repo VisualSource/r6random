@@ -10,7 +10,14 @@ import { Button } from "@/components/ui/button";
 import { useRouter } from "@/Router";
 
 const Home: React.FC = () => {
-	const { team, goTo, setGenerateLoadout, generateLoadout, weaponLoadouts, setWeaponLoadouts } = useRouter();
+	const {
+		team,
+		goTo,
+		setGenerateLoadout,
+		generateLoadout,
+		weaponLoadouts,
+		setWeaponLoadouts,
+	} = useRouter();
 	const [_, setSelected] = useSelectedOperators(team);
 
 	const ops = useMemo(() => {
@@ -62,8 +69,14 @@ const Home: React.FC = () => {
 						{generateLoadout ? "Enabled" : "Disabled"}
 					</span>
 				</Button>
-				<Button className="rounded-none bg-orange-500 text-accent-foreground hover:bg-orange-500/90" onClick={() => setWeaponLoadouts(e => !e)}>
-					Random Attachments: <span className="ml-1">{weaponLoadouts ? "Enabled" : "Disabled"}</span>
+				<Button
+					className="rounded-none bg-orange-500 text-accent-foreground hover:bg-orange-500/90"
+					onClick={() => setWeaponLoadouts((e) => !e)}
+				>
+					Random Attachments:{" "}
+					<span className="ml-1">
+						{weaponLoadouts ? "Enabled" : "Disabled"}
+					</span>
 				</Button>
 			</div>
 		</div>

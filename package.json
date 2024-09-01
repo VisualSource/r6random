@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "pnpm --filter=!overlay build",
+    "lint":"pnpm --filter=\"./packages/**\" lint",
+    "format":"pnpm --filter=\"./packages/**\" format"
   },
   "keywords": [],
   "author": "",

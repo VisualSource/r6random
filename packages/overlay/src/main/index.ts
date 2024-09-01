@@ -6,7 +6,6 @@ import { OverlayInputService } from "./services/overlay-input.service";
 import { OverlayService } from "./services/overlay.service";
 import { Application } from "./application";
 
-
 const bootstrap = () => {
 	const overlayService = new OverlayService();
 	const overlayHotkeysService = new OverlayHotkeysService(overlayService);

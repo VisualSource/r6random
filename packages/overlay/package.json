@@ -40,6 +40,8 @@
 		}
 	},
 	"scripts": {
+		"lint": "pnpm biome lint --write ./src",
+		"format": "pnpm biome format --write ./src",
 		"preview": "electron-vite preview",
 		"dev": "electron-vite dev",
 		"prebuild": "electron-vite build",

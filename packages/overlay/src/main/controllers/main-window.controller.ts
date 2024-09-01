@@ -42,7 +42,7 @@ export class MainWindowController {
 			if (!this.browserWindow) return;
 
 			if (this.browserWindow.isMinimized()) {
-				this.browserWindow?.restore()
+				this.browserWindow?.restore();
 			} else {
 				this.browserWindow.show();
 			}

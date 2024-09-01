@@ -6,13 +6,13 @@ export type OperatorLoadout = {
 	operator: Operator;
 	loadout: {
 		primary: {
-			weapon: string,
-			loadout: Record<string, string> | null
+			weapon: string;
+			loadout: Record<string, string> | null;
 		};
 		secondary: {
-			weapon: string,
-			loadout: Record<string, string> | null
-		}
+			weapon: string;
+			loadout: Record<string, string> | null;
+		};
 		gadget: string;
 		utility: string | null;
 	} | null;
@@ -73,9 +73,19 @@ export const Loadout: React.FC<{
 						</div>
 						{data.loadout.primary.loadout ? (
 							<div className="flex flex-col justify-start gap-1.5 flex-wrap">
-								{Object.entries(data.loadout.primary.loadout).map(([name, value], i) => (
-									<div className="bg-rose-600 px-4 py-2 min-w-48 first-letter:capitalize" key={`${name}_${i}_${value}`}><span className="text-muted-foreground">{name.replaceAll("-", " ")}</span>: {value}</div>
-								))}
+								{Object.entries(data.loadout.primary.loadout).map(
+									([name, value], i) => (
+										<div
+											className="bg-rose-600 px-4 py-2 min-w-48 first-letter:capitalize"
+											key={`${name}_${i}_${value}`}
+										>
+											<span className="text-muted-foreground">
+												{name.replaceAll("-", " ")}
+											</span>
+											: {value}
+										</div>
+									),
+								)}
 							</div>
 						) : null}
 					</section>
@@ -95,9 +105,19 @@ export const Loadout: React.FC<{
 						</div>
 						{data.loadout.secondary.loadout ? (
 							<div className="flex flex-col justify-start gap-1.5 flex-wrap">
-								{Object.entries(data.loadout.secondary.loadout).map(([name, value], i) => (
-									<div className="bg-indigo-600 px-4 py-2 min-w-48 first-letter:capitalize" key={`${name}_${i}_${value}`}><span className="text-muted-foreground">{name.replaceAll("-", " ")}</span>: {value}</div>
-								))}
+								{Object.entries(data.loadout.secondary.loadout).map(
+									([name, value], i) => (
+										<div
+											className="bg-indigo-600 px-4 py-2 min-w-48 first-letter:capitalize"
+											key={`${name}_${i}_${value}`}
+										>
+											<span className="text-muted-foreground">
+												{name.replaceAll("-", " ")}
+											</span>
+											: {value}
+										</div>
+									),
+								)}
 							</div>
 						) : null}
 					</section>

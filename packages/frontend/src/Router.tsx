@@ -14,8 +14,8 @@ export type RouterState = {
 	page: string;
 	team: Team;
 	generateLoadout: boolean;
-	weaponLoadouts: boolean,
-	setWeaponLoadouts: (value: boolean | ((value: boolean) => boolean)) => void,
+	weaponLoadouts: boolean;
+	setWeaponLoadouts: (value: boolean | ((value: boolean) => boolean)) => void;
 	setGenerateLoadout: (value: boolean | ((value: boolean) => boolean)) => void;
 	setTeam: (team: Team) => void;
 	goTo: (page: Page) => void;

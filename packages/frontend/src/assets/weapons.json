@@ -18,13 +18,31 @@
 			"Reflex C",
 			"Iron Sight"
 		],
-		"barrel": ["Muzzle Brake", "Suppressor", "None"],
-		"grip": ["Vertical Grip", "Angled Grip", "Horizontal Grip"],
-		"under-barrel": ["None", "Laser"]
+		"barrel": [
+			"Muzzle Brake",
+			"Suppressor",
+			"None"
+		],
+		"grip": [
+			"Vertical Grip",
+			"Angled Grip",
+			"Horizontal Grip"
+		],
+		"under-barrel": [
+			"None",
+			"Laser"
+		]
 	},
 	"1911_TACOPS": {
-		"barrel": ["Muzzle Brake", "Suppressor", "None"],
-		"under-barrel": ["None", "Laser"]
+		"barrel": [
+			"Muzzle Brake",
+			"Suppressor",
+			"None"
+		],
+		"under-barrel": [
+			"None",
+			"Laser"
+		]
 	},
 	"416C_Carbine": {
 		"sight": [
@@ -48,18 +66,38 @@
 			"Extended Barrel",
 			"None"
 		],
-		"grip": ["Vertical Grip", "Angled Grip", "Horizontal Grip"],
-		"under-barrel": ["None", "Laser"]
+		"grip": [
+			"Vertical Grip",
+			"Angled Grip",
+			"Horizontal Grip"
+		],
+		"under-barrel": [
+			"None",
+			"Laser"
+		]
 	},
 	"44VENDETTA": {
-		"under-barrel": ["None", "Laser"]
+		"under-barrel": [
+			"None",
+			"Laser"
+		]
 	},
 	"44_MAG_SEMI-AUTO": {
-		"under-barrel": ["None", "Laser"]
+		"under-barrel": [
+			"None",
+			"Laser"
+		]
 	},
 	"5-7_USG": {
-		"barrel": ["Muzzle Brake", "Suppressor", "None"],
-		"under-barrel": ["None", "Laser"]
+		"barrel": [
+			"Muzzle Brake",
+			"Suppressor",
+			"None"
+		],
+		"under-barrel": [
+			"None",
+			"Laser"
+		]
 	},
 	"552_Commando": {
 		"sight": [
@@ -86,8 +124,15 @@
 			"Extended Barrel",
 			"None"
 		],
-		"grip": ["Vertical Grip", "Angled Grip", "Horizontal Grip"],
-		"under-barrel": ["None", "Laser"]
+		"grip": [
+			"Vertical Grip",
+			"Angled Grip",
+			"Horizontal Grip"
+		],
+		"under-barrel": [
+			"None",
+			"Laser"
+		]
 	},
 	"556xi": {
 		"sight": [
@@ -113,8 +158,15 @@
 			"Suppressor",
 			"None"
 		],
-		"grip": ["Vertical Grip", "Angled Grip", "Horizontal Grip"],
-		"under-barrel": ["None", "Laser"]
+		"grip": [
+			"Vertical Grip",
+			"Angled Grip",
+			"Horizontal Grip"
+		],
+		"under-barrel": [
+			"None",
+			"Laser"
+		]
 	},
 	"6P41": {
 		"sight": [
@@ -140,8 +192,15 @@
 			"Suppressor",
 			"None"
 		],
-		"grip": ["Vertical Grip", "Angled Grip", "Horizontal Grip"],
-		"under-barrel": ["None", "Laser"]
+		"grip": [
+			"Vertical Grip",
+			"Angled Grip",
+			"Horizontal Grip"
+		],
+		"under-barrel": [
+			"None",
+			"Laser"
+		]
 	},
 	"9mm_C1": {
 		"sight": [
@@ -168,8 +227,15 @@
 			"Extended Barrel",
 			"None"
 		],
-		"grip": ["Vertical Grip", "Angled Grip", "Horizontal Grip"],
-		"under-barrel": ["None", "Laser"]
+		"grip": [
+			"Vertical Grip",
+			"Angled Grip",
+			"Horizontal Grip"
+		],
+		"under-barrel": [
+			"None",
+			"Laser"
+		]
 	},
 	"9x19VSN": {
 		"sight": [
@@ -193,8 +259,15 @@
 			"Extended Barrel",
 			"None"
 		],
-		"grip": ["Vertical Grip", "Angled Grip", "Horizontal Grip"],
-		"under-barrel": ["None", "Laser"]
+		"grip": [
+			"Vertical Grip",
+			"Angled Grip",
+			"Horizontal Grip"
+		],
+		"under-barrel": [
+			"None",
+			"Laser"
+		]
 	},
 	"ACS12": {
 		"sight": [
@@ -213,8 +286,15 @@
 			"Reflex C",
 			"Iron Sight"
 		],
-		"grip": ["Vertical Grip", "Angled Grip", "Horizontal Grip"],
-		"under-barrel": ["None", "Laser"]
+		"grip": [
+			"Vertical Grip",
+			"Angled Grip",
+			"Horizontal Grip"
+		],
+		"under-barrel": [
+			"None",
+			"Laser"
+		]
 	},
 	"AK-12": {
 		"sight": [
@@ -240,8 +320,15 @@
 			"Suppressor",
 			"None"
 		],
-		"grip": ["Vertical Grip", "Angled Grip", "Horizontal Grip"],
-		"under-barrel": ["None", "Laser"]
+		"grip": [
+			"Vertical Grip",
+			"Angled Grip",
+			"Horizontal Grip"
+		],
+		"under-barrel": [
+			"None",
+			"Laser"
+		]
 	},
 	"AK-74M": {
 		"sight": [
@@ -267,7 +354,10 @@
 			"Suppressor",
 			"None"
 		],
-		"under-barrel": ["None", "Laser"]
+		"under-barrel": [
+			"None",
+			"Laser"
+		]
 	},
 	"ALDA_5-56": {
 		"sight": [
@@ -290,8 +380,14 @@
 			"Suppressor",
 			"None"
 		],
-		"grip": ["Vertical Grip", "Horizontal Grip"],
-		"under-barrel": ["None", "Laser"]
+		"grip": [
+			"Vertical Grip",
+			"Horizontal Grip"
+		],
+		"under-barrel": [
+			"None",
+			"Laser"
+		]
 	},
 	"AR-15-50": {
 		"sight": [
@@ -312,9 +408,20 @@
 			"Reflex C",
 			"Iron Sight"
 		],
-		"barrel": ["Muzzle Brake", "Suppressor", "None"],
-		"grip": ["Vertical Grip", "Angled Grip", "Horizontal Grip"],
-		"under-barrel": ["None", "Laser"]
+		"barrel": [
+			"Muzzle Brake",
+			"Suppressor",
+			"None"
+		],
+		"grip": [
+			"Vertical Grip",
+			"Angled Grip",
+			"Horizontal Grip"
+		],
+		"under-barrel": [
+			"None",
+			"Laser"
+		]
 	},
 	"AR33": {
 		"sight": [
@@ -340,8 +447,15 @@
 			"Suppressor",
 			"None"
 		],
-		"grip": ["Vertical Grip", "Angled Grip", "Horizontal Grip"],
-		"under-barrel": ["None", "Laser"]
+		"grip": [
+			"Vertical Grip",
+			"Angled Grip",
+			"Horizontal Grip"
+		],
+		"under-barrel": [
+			"None",
+			"Laser"
+		]
 	},
 	"ARX200": {
 		"sight": [
@@ -367,8 +481,15 @@
 			"Suppressor",
 			"None"
 		],
-		"grip": ["Vertical Grip", "Angled Grip", "Horizontal Grip"],
-		"under-barrel": ["None", "Laser"]
+		"grip": [
+			"Vertical Grip",
+			"Angled Grip",
+			"Horizontal Grip"
+		],
+		"under-barrel": [
+			"None",
+			"Laser"
+		]
 	},
 	"AUG_A2": {
 		"sight": [
@@ -394,7 +515,10 @@
 			"Suppressor",
 			"None"
 		],
-		"under-barrel": ["None", "Laser"]
+		"under-barrel": [
+			"None",
+			"Laser"
+		]
 	},
 	"AUG_A3": {
 		"sight": [
@@ -418,11 +542,21 @@
 			"Extended Barrel",
 			"None"
 		],
-		"grip": ["Vertical Grip", "Angled Grip", "Horizontal Grip"],
-		"under-barrel": ["None", "Laser"]
+		"grip": [
+			"Vertical Grip",
+			"Angled Grip",
+			"Horizontal Grip"
+		],
+		"under-barrel": [
+			"None",
+			"Laser"
+		]
 	},
 	"Bailiff_410": {
-		"under-barrel": ["None", "Laser"]
+		"under-barrel": [
+			"None",
+			"Laser"
+		]
 	},
 	"Bearing_9": {
 		"sight": [
@@ -446,7 +580,10 @@
 			"Extended Barrel",
 			"None"
 		],
-		"under-barrel": ["None", "Laser"]
+		"under-barrel": [
+			"None",
+			"Laser"
+		]
 	},
 	"BOSG-12-2": {
 		"sight": [
@@ -465,12 +602,25 @@
 			"Reflex C",
 			"Iron Sight"
 		],
-		"grip": ["Vertical Grip", "Angled Grip", "Horizontal Grip"],
-		"under-barrel": ["None", "Laser"]
+		"grip": [
+			"Vertical Grip",
+			"Angled Grip",
+			"Horizontal Grip"
+		],
+		"under-barrel": [
+			"None",
+			"Laser"
+		]
 	},
 	"C75_Auto": {
-		"barrel": ["Suppressor", "None"],
-		"under-barrel": ["None", "Laser"]
+		"barrel": [
+			"Suppressor",
+			"None"
+		],
+		"under-barrel": [
+			"None",
+			"Laser"
+		]
 	},
 	"C7E": {
 		"sight": [
@@ -496,8 +646,15 @@
 			"Suppressor",
 			"None"
 		],
-		"grip": ["Vertical Grip", "Angled Grip", "Horizontal Grip"],
-		"under-barrel": ["None", "Laser"]
+		"grip": [
+			"Vertical Grip",
+			"Angled Grip",
+			"Horizontal Grip"
+		],
+		"under-barrel": [
+			"None",
+			"Laser"
+		]
 	},
 	"C8-SFW": {
 		"sight": [
@@ -524,7 +681,10 @@
 			"Extended Barrel",
 			"None"
 		],
-		"under-barrel": ["None", "Laser"]
+		"under-barrel": [
+			"None",
+			"Laser"
+		]
 	},
 	"CAMRS": {
 		"sight": [
@@ -545,8 +705,15 @@
 			"Reflex C",
 			"Iron Sight"
 		],
-		"barrel": ["Muzzle Brake", "Suppressor", "None"],
-		"under-barrel": ["None", "Laser"]
+		"barrel": [
+			"Muzzle Brake",
+			"Suppressor",
+			"None"
+		],
+		"under-barrel": [
+			"None",
+			"Laser"
+		]
 	},
 	"CCE_Shield": {},
 	"Commando_9": {
@@ -571,13 +738,27 @@
 			"Extended Barrel",
 			"None"
 		],
-		"grip": ["Vertical Grip", "Angled Grip", "Horizontal Grip"],
-		"under-barrel": ["None", "Laser"]
+		"grip": [
+			"Vertical Grip",
+			"Angled Grip",
+			"Horizontal Grip"
+		],
+		"under-barrel": [
+			"None",
+			"Laser"
+		]
 	},
 	"CSRX_300": {},
 	"D-50": {
-		"barrel": ["Muzzle Brake", "Suppressor", "None"],
-		"under-barrel": ["None", "Laser"]
+		"barrel": [
+			"Muzzle Brake",
+			"Suppressor",
+			"None"
+		],
+		"under-barrel": [
+			"None",
+			"Laser"
+		]
 	},
 	"DP27": {
 		"sight": [
@@ -619,7 +800,10 @@
 			"Extended Barrel",
 			"None"
 		],
-		"under-barrel": ["None", "Laser"]
+		"under-barrel": [
+			"None",
+			"Laser"
+		]
 	},
 	"F90": {
 		"sight": [
@@ -646,8 +830,15 @@
 			"Extended Barrel",
 			"None"
 		],
-		"grip": ["Vertical Grip", "Angled Grip", "Horizontal Grip"],
-		"under-barrel": ["None", "Laser"]
+		"grip": [
+			"Vertical Grip",
+			"Angled Grip",
+			"Horizontal Grip"
+		],
+		"under-barrel": [
+			"None",
+			"Laser"
+		]
 	},
 	"FMG-9": {
 		"sight": [
@@ -674,7 +865,10 @@
 			"Extended Barrel",
 			"None"
 		],
-		"under-barrel": ["None", "Laser"]
+		"under-barrel": [
+			"None",
+			"Laser"
+		]
 	},
 	"FO-12": {
 		"sight": [
@@ -690,9 +884,20 @@
 			"Reflex C",
 			"Iron Sight"
 		],
-		"barrel": ["Suppressor", "Extended Barrel", "None"],
-		"grip": ["Vertical Grip", "Angled Grip", "Horizontal Grip"],
-		"under-barrel": ["None", "Laser"]
+		"barrel": [
+			"Suppressor",
+			"Extended Barrel",
+			"None"
+		],
+		"grip": [
+			"Vertical Grip",
+			"Angled Grip",
+			"Horizontal Grip"
+		],
+		"under-barrel": [
+			"None",
+			"Laser"
+		]
 	},
 	"G36C": {
 		"sight": [
@@ -719,8 +924,15 @@
 			"Extended Barrel",
 			"None"
 		],
-		"grip": ["Vertical Grip", "Angled Grip", "Horizontal Grip"],
-		"under-barrel": ["None", "Laser"]
+		"grip": [
+			"Vertical Grip",
+			"Angled Grip",
+			"Horizontal Grip"
+		],
+		"under-barrel": [
+			"None",
+			"Laser"
+		]
 	},
 	"G52-Tactical_Shield": {},
 	"G8A1": {
@@ -747,13 +959,27 @@
 			"Suppressor",
 			"None"
 		],
-		"grip": ["Vertical Grip", "Angled Grip", "Horizontal Grip"],
-		"under-barrel": ["None", "Laser"]
+		"grip": [
+			"Vertical Grip",
+			"Angled Grip",
+			"Horizontal Grip"
+		],
+		"under-barrel": [
+			"None",
+			"Laser"
+		]
 	},
 	"Gonne_6": {},
 	"GSH_18": {
-		"barrel": ["Muzzle Brake", "Suppressor", "None"],
-		"under-barrel": ["None", "Laser"]
+		"barrel": [
+			"Muzzle Brake",
+			"Suppressor",
+			"None"
+		],
+		"under-barrel": [
+			"None",
+			"Laser"
+		]
 	},
 	"ITA12L": {
 		"sight": [
@@ -769,7 +995,10 @@
 			"Reflex C",
 			"Iron Sight"
 		],
-		"under-barrel": ["None", "Laser"]
+		"under-barrel": [
+			"None",
+			"Laser"
+		]
 	},
 	"ITA12S": {
 		"sight": [
@@ -785,7 +1014,10 @@
 			"Reflex C",
 			"Iron Sight"
 		],
-		"under-barrel": ["None", "Laser"]
+		"under-barrel": [
+			"None",
+			"Laser"
+		]
 	},
 	"K1A": {
 		"sight": [
@@ -809,12 +1041,26 @@
 			"Extended Barrel",
 			"None"
 		],
-		"grip": ["Vertical Grip", "Angled Grip", "Horizontal Grip"],
-		"under-barrel": ["None", "Laser"]
+		"grip": [
+			"Vertical Grip",
+			"Angled Grip",
+			"Horizontal Grip"
+		],
+		"under-barrel": [
+			"None",
+			"Laser"
+		]
 	},
 	"Keratos_357": {
-		"barrel": ["Muzzle Brake", "Suppressor", "None"],
-		"under-barrel": ["None", "Laser"]
+		"barrel": [
+			"Muzzle Brake",
+			"Suppressor",
+			"None"
+		],
+		"under-barrel": [
+			"None",
+			"Laser"
+		]
 	},
 	"L85A2": {
 		"sight": [
@@ -840,12 +1086,22 @@
 			"Suppressor",
 			"None"
 		],
-		"grip": ["Vertical Grip", "Angled Grip", "Horizontal Grip"],
-		"under-barrel": ["None", "Laser"]
+		"grip": [
+			"Vertical Grip",
+			"Angled Grip",
+			"Horizontal Grip"
+		],
+		"under-barrel": [
+			"None",
+			"Laser"
+		]
 	},
 	"LE_ROC_SHIELD": {},
 	"LFP586": {
-		"under-barrel": ["None", "Laser"]
+		"under-barrel": [
+			"None",
+			"Laser"
+		]
 	},
 	"LMG-E": {
 		"sight": [
@@ -871,11 +1127,21 @@
 			"Suppressor",
 			"None"
 		],
-		"grip": ["Vertical Grip", "Angled Grip", "Horizontal Grip"],
-		"under-barrel": ["None", "Laser"]
+		"grip": [
+			"Vertical Grip",
+			"Angled Grip",
+			"Horizontal Grip"
+		],
+		"under-barrel": [
+			"None",
+			"Laser"
+		]
 	},
 	"Luison": {
-		"under-barrel": ["None", "Laser"]
+		"under-barrel": [
+			"None",
+			"Laser"
+		]
 	},
 	"M1014": {
 		"sight": [
@@ -891,7 +1157,10 @@
 			"Reflex C",
 			"Iron Sight"
 		],
-		"under-barrel": ["None", "Laser"]
+		"under-barrel": [
+			"None",
+			"Laser"
+		]
 	},
 	"M12": {
 		"sight": [
@@ -915,7 +1184,10 @@
 			"Extended Barrel",
 			"None"
 		],
-		"under-barrel": ["None", "Laser"]
+		"under-barrel": [
+			"None",
+			"Laser"
+		]
 	},
 	"M249": {
 		"sight": [
@@ -934,9 +1206,21 @@
 			"Reflex C",
 			"Iron Sight"
 		],
-		"barrel": ["None", "Flash Hider", "Compensator", "Muzzle Brake"],
-		"grip": ["Vertical Grip", "Angled Grip", "Horizontal Grip"],
-		"under-barrel": ["None", "Laser"]
+		"barrel": [
+			"None",
+			"Flash Hider",
+			"Compensator",
+			"Muzzle Brake"
+		],
+		"grip": [
+			"Vertical Grip",
+			"Angled Grip",
+			"Horizontal Grip"
+		],
+		"under-barrel": [
+			"None",
+			"Laser"
+		]
 	},
 	"M249_SAW": {
 		"sight": [
@@ -955,9 +1239,21 @@
 			"Reflex C",
 			"Iron Sight"
 		],
-		"barrel": ["Flash Hider", "Compensator", "Muzzle Brake", "None"],
-		"grip": ["Vertical Grip", "Angled Grip", "Horizontal Grip"],
-		"under-barrel": ["None", "Laser"]
+		"barrel": [
+			"Flash Hider",
+			"Compensator",
+			"Muzzle Brake",
+			"None"
+		],
+		"grip": [
+			"Vertical Grip",
+			"Angled Grip",
+			"Horizontal Grip"
+		],
+		"under-barrel": [
+			"None",
+			"Laser"
+		]
 	},
 	"M4": {
 		"sight": [
@@ -984,12 +1280,26 @@
 			"Suppressor",
 			"Extended Barrel"
 		],
-		"under-barrel": ["None", "Laser"],
-		"grip": ["Vertical Grip", "Angled Grip", "Horizontal Grip"]
+		"under-barrel": [
+			"None",
+			"Laser"
+		],
+		"grip": [
+			"Vertical Grip",
+			"Angled Grip",
+			"Horizontal Grip"
+		]
 	},
 	"M45_MEUSOC": {
-		"barrel": ["Muzzle Brake", "Suppressor", "None"],
-		"under-barrel": ["None", "Laser"]
+		"barrel": [
+			"Muzzle Brake",
+			"Suppressor",
+			"None"
+		],
+		"under-barrel": [
+			"None",
+			"Laser"
+		]
 	},
 	"M590A1": {
 		"sight": [
@@ -1005,7 +1315,10 @@
 			"Reflex C",
 			"Iron Sight"
 		],
-		"under-barrel": ["None", "Laser"]
+		"under-barrel": [
+			"None",
+			"Laser"
+		]
 	},
 	"M762": {
 		"sight": [
@@ -1031,8 +1344,15 @@
 			"Suppressor",
 			"None"
 		],
-		"grip": ["Vertical Grip", "Angled Grip", "Horizontal Grip"],
-		"under-barrel": ["None", "Laser"]
+		"grip": [
+			"Vertical Grip",
+			"Angled Grip",
+			"Horizontal Grip"
+		],
+		"under-barrel": [
+			"None",
+			"Laser"
+		]
 	},
 	"M870": {
 		"sight": [
@@ -1048,7 +1368,10 @@
 			"Reflex C",
 			"Iron Sight"
 		],
-		"under-barrel": ["None", "Laser"]
+		"under-barrel": [
+			"None",
+			"Laser"
+		]
 	},
 	"Mk17_CQB": {
 		"sight": [
@@ -1075,12 +1398,26 @@
 			"Extended Barrel",
 			"None"
 		],
-		"grip": ["Vertical Grip", "Angled Grip", "Horizontal Grip"],
-		"under-barrel": ["None", "Laser"]
+		"grip": [
+			"Vertical Grip",
+			"Angled Grip",
+			"Horizontal Grip"
+		],
+		"under-barrel": [
+			"None",
+			"Laser"
+		]
 	},
 	"Mk1_9mm": {
-		"barrel": ["Muzzle Brake", "Suppressor", "None"],
-		"under-barrel": ["None", "Laser"]
+		"barrel": [
+			"Muzzle Brake",
+			"Suppressor",
+			"None"
+		],
+		"under-barrel": [
+			"None",
+			"Laser"
+		]
 	},
 	"Mk_14_EBR": {
 		"sight": [
@@ -1101,9 +1438,20 @@
 			"Reflex C",
 			"Iron Sight"
 		],
-		"barrel": ["Muzzle Brake", "Suppressor", "None"],
-		"grip": ["Vertical Grip", "Angled Grip", "Horizontal Grip"],
-		"under-barrel": ["None", "Laser"]
+		"barrel": [
+			"Muzzle Brake",
+			"Suppressor",
+			"None"
+		],
+		"grip": [
+			"Vertical Grip",
+			"Angled Grip",
+			"Horizontal Grip"
+		],
+		"under-barrel": [
+			"None",
+			"Laser"
+		]
 	},
 	"MP5": {
 		"sight": [
@@ -1130,8 +1478,15 @@
 			"Extended Barrel",
 			"None"
 		],
-		"grip": ["Vertical Grip", "Angled Grip", "Horizontal Grip"],
-		"under-barrel": ["None", "Laser"]
+		"grip": [
+			"Vertical Grip",
+			"Angled Grip",
+			"Horizontal Grip"
+		],
+		"under-barrel": [
+			"None",
+			"Laser"
+		]
 	},
 	"MP5K": {
 		"sight": [
@@ -1155,7 +1510,10 @@
 			"Extended Barrel",
 			"None"
 		],
-		"under-barrel": ["None", "Laser"]
+		"under-barrel": [
+			"None",
+			"Laser"
+		]
 	},
 	"MP5SD": {
 		"sight": [
@@ -1174,8 +1532,15 @@
 			"Reflex C",
 			"Iron Sight"
 		],
-		"grip": ["Vertical Grip", "Angled Grip", "Horizontal Grip"],
-		"under-barrel": ["None", "Laser"]
+		"grip": [
+			"Vertical Grip",
+			"Angled Grip",
+			"Horizontal Grip"
+		],
+		"under-barrel": [
+			"None",
+			"Laser"
+		]
 	},
 	"MP7": {
 		"sight": [
@@ -1202,7 +1567,10 @@
 			"Extended Barrel",
 			"None"
 		],
-		"under-barrel": ["None", "Laser"]
+		"under-barrel": [
+			"None",
+			"Laser"
+		]
 	},
 	"MPX": {
 		"sight": [
@@ -1229,8 +1597,15 @@
 			"Extended Barrel",
 			"None"
 		],
-		"grip": ["Vertical Grip", "Angled Grip", "Horizontal Grip"],
-		"under-barrel": ["None", "Laser"]
+		"grip": [
+			"Vertical Grip",
+			"Angled Grip",
+			"Horizontal Grip"
+		],
+		"under-barrel": [
+			"None",
+			"Laser"
+		]
 	},
 	"Mx4_Storm": {
 		"sight": [
@@ -1254,8 +1629,15 @@
 			"Extended Barrel",
 			"None"
 		],
-		"grip": ["Vertical Grip", "Angled Grip", "Horizontal Grip"],
-		"under-barrel": ["None", "Laser"]
+		"grip": [
+			"Vertical Grip",
+			"Angled Grip",
+			"Horizontal Grip"
+		],
+		"under-barrel": [
+			"None",
+			"Laser"
+		]
 	},
 	"OTs-03": {
 		"sight": [
@@ -1271,13 +1653,31 @@
 			"Reflex C",
 			"Iron Sight"
 		],
-		"barrel": ["Muzzle Brake", "Suppressor", "None"],
-		"grip": ["Vertical Grip", "Angled Grip", "Horizontal Grip"],
-		"under-barrel": ["None", "Laser"]
+		"barrel": [
+			"Muzzle Brake",
+			"Suppressor",
+			"None"
+		],
+		"grip": [
+			"Vertical Grip",
+			"Angled Grip",
+			"Horizontal Grip"
+		],
+		"under-barrel": [
+			"None",
+			"Laser"
+		]
 	},
 	"P-10C": {
-		"barrel": ["Muzzle Brake", "Suppressor", "None"],
-		"under-barrel": ["None", "Laser"]
+		"barrel": [
+			"Muzzle Brake",
+			"Suppressor",
+			"None"
+		],
+		"under-barrel": [
+			"None",
+			"Laser"
+		]
 	},
 	"P10Roni": {
 		"sight": [
@@ -1301,24 +1701,59 @@
 			"Extended Barrel",
 			"None"
 		],
-		"grip": ["Vertical Grip", "Angled Grip", "Horizontal Grip"],
-		"under-barrel": ["None", "Laser"]
+		"grip": [
+			"Vertical Grip",
+			"Angled Grip",
+			"Horizontal Grip"
+		],
+		"under-barrel": [
+			"None",
+			"Laser"
+		]
 	},
 	"P12": {
-		"barrel": ["Muzzle Brake", "Suppressor", "None"],
-		"under-barrel": ["None", "Laser"]
+		"barrel": [
+			"Muzzle Brake",
+			"Suppressor",
+			"None"
+		],
+		"under-barrel": [
+			"None",
+			"Laser"
+		]
 	},
 	"P226_Mk_25": {
-		"barrel": ["Muzzle Brake", "Suppressor", "None"],
-		"under-barrel": ["None", "Laser"]
+		"barrel": [
+			"Muzzle Brake",
+			"Suppressor",
+			"None"
+		],
+		"under-barrel": [
+			"None",
+			"Laser"
+		]
 	},
 	"P229": {
-		"barrel": ["Muzzle Brake", "Suppressor", "None"],
-		"under-barrel": ["None", "Laser"]
+		"barrel": [
+			"Muzzle Brake",
+			"Suppressor",
+			"None"
+		],
+		"under-barrel": [
+			"None",
+			"Laser"
+		]
 	},
 	"P9": {
-		"barrel": ["Muzzle Brake", "Suppressor", "None"],
-		"under-barrel": ["None", "Laser"]
+		"barrel": [
+			"Muzzle Brake",
+			"Suppressor",
+			"None"
+		],
+		"under-barrel": [
+			"None",
+			"Laser"
+		]
 	},
 	"P90": {
 		"sight": [
@@ -1345,7 +1780,10 @@
 			"Extended Barrel",
 			"None"
 		],
-		"under-barrel": ["None", "Laser"]
+		"under-barrel": [
+			"None",
+			"Laser"
+		]
 	},
 	"PARA-308": {
 		"sight": [
@@ -1372,8 +1810,15 @@
 			"Extended Barrel",
 			"None"
 		],
-		"grip": ["Vertical Grip", "Angled Grip", "Horizontal Grip"],
-		"under-barrel": ["None", "Laser"]
+		"grip": [
+			"Vertical Grip",
+			"Angled Grip",
+			"Horizontal Grip"
+		],
+		"under-barrel": [
+			"None",
+			"Laser"
+		]
 	},
 	"PDW9": {
 		"sight": [
@@ -1400,12 +1845,26 @@
 			"Extended Barrel",
 			"None"
 		],
-		"grip": ["Vertical Grip", "Angled Grip", "Horizontal Grip"],
-		"under-barrel": ["None", "Laser"]
+		"grip": [
+			"Vertical Grip",
+			"Angled Grip",
+			"Horizontal Grip"
+		],
+		"under-barrel": [
+			"None",
+			"Laser"
+		]
 	},
 	"PMM": {
-		"barrel": ["Muzzle Brake", "Suppressor", "None"],
-		"under-barrel": ["None", "Laser"]
+		"barrel": [
+			"Muzzle Brake",
+			"Suppressor",
+			"None"
+		],
+		"under-barrel": [
+			"None",
+			"Laser"
+		]
 	},
 	"POF9": {
 		"sight": [
@@ -1432,16 +1891,37 @@
 			"Extended Barrel",
 			"None"
 		],
-		"grip": ["Vertical Grip", "Angled Grip", "Horizontal Grip"],
-		"under-barrel": ["None", "Laser"]
+		"grip": [
+			"Vertical Grip",
+			"Angled Grip",
+			"Horizontal Grip"
+		],
+		"under-barrel": [
+			"None",
+			"Laser"
+		]
 	},
 	"PRB92": {
-		"barrel": ["Muzzle Brake", "Suppressor", "None"],
-		"under-barrel": ["None", "Laser"]
+		"barrel": [
+			"Muzzle Brake",
+			"Suppressor",
+			"None"
+		],
+		"under-barrel": [
+			"None",
+			"Laser"
+		]
 	},
 	"Q-929": {
-		"barrel": ["Muzzle Brake", "Suppressor", "None"],
-		"under-barrel": ["None", "Laser"]
+		"barrel": [
+			"Muzzle Brake",
+			"Suppressor",
+			"None"
+		],
+		"under-barrel": [
+			"None",
+			"Laser"
+		]
 	},
 	"R4-C": {
 		"sight": [
@@ -1468,12 +1948,25 @@
 			"Extended Barrel",
 			"None"
 		],
-		"grip": ["Angled Grip", "Horizontal Grip", "Vertical Grip"],
-		"under-barrel": ["None", "Laser"]
+		"grip": [
+			"Angled Grip",
+			"Horizontal Grip",
+			"Vertical Grip"
+		],
+		"under-barrel": [
+			"None",
+			"Laser"
+		]
 	},
 	"RG15": {
-		"barrel": ["Muzzle Brake", "Suppressor"],
-		"under-barrel": ["None", "Laser"]
+		"barrel": [
+			"Muzzle Brake",
+			"Suppressor"
+		],
+		"under-barrel": [
+			"None",
+			"Laser"
+		]
 	},
 	"SASG-12": {
 		"sight": [
@@ -1489,9 +1982,19 @@
 			"Reflex C",
 			"Iron Sight"
 		],
-		"barrel": ["Suppressor", "None"],
-		"grip": ["Vertical Grip", "Angled Grip", "Horizontal Grip"],
-		"under-barrel": ["None", "Laser"]
+		"barrel": [
+			"Suppressor",
+			"None"
+		],
+		"grip": [
+			"Vertical Grip",
+			"Angled Grip",
+			"Horizontal Grip"
+		],
+		"under-barrel": [
+			"None",
+			"Laser"
+		]
 	},
 	"SC3000K": {
 		"sight": [
@@ -1518,8 +2021,15 @@
 			"Extended Barrel",
 			"None"
 		],
-		"grip": ["Vertical Grip", "Angled Grip", "Horizontal Grip"],
-		"under-barrel": ["None", "Laser"]
+		"grip": [
+			"Vertical Grip",
+			"Angled Grip",
+			"Horizontal Grip"
+		],
+		"under-barrel": [
+			"None",
+			"Laser"
+		]
 	},
 	"Scorpion_EVO_3_A1": {
 		"sight": [
@@ -1542,12 +2052,26 @@
 			"Suppressor",
 			"None"
 		],
-		"grip": ["Vertical Grip", "Angled Grip", "Horizontal Grip"],
-		"under-barrel": ["None", "Laser"]
+		"grip": [
+			"Vertical Grip",
+			"Angled Grip",
+			"Horizontal Grip"
+		],
+		"under-barrel": [
+			"None",
+			"Laser"
+		]
 	},
 	"SDP_9mm": {
-		"barrel": ["Muzzle Brake", "Suppressor", "None"],
-		"under-barrel": ["None", "Laser"]
+		"barrel": [
+			"Muzzle Brake",
+			"Suppressor",
+			"None"
+		],
+		"under-barrel": [
+			"None",
+			"Laser"
+		]
 	},
 	"SG-CQB": {
 		"sight": [
@@ -1563,8 +2087,14 @@
 			"Reflex C",
 			"Iron Sight"
 		],
-		"grip": ["Vertical Grip", "Horizontal Grip"],
-		"under-barrel": ["None", "Laser"]
+		"grip": [
+			"Vertical Grip",
+			"Horizontal Grip"
+		],
+		"under-barrel": [
+			"None",
+			"Laser"
+		]
 	},
 	"SIX12": {
 		"sight": [
@@ -1580,7 +2110,10 @@
 			"Reflex C",
 			"Iron Sight"
 		],
-		"under-barrel": ["None", "Laser"]
+		"under-barrel": [
+			"None",
+			"Laser"
+		]
 	},
 	"SIX12_SD": {
 		"sight": [
@@ -1596,7 +2129,10 @@
 			"Reflex C",
 			"Iron Sight"
 		],
-		"under-barrel": ["None", "Laser"]
+		"under-barrel": [
+			"None",
+			"Laser"
+		]
 	},
 	"SMG-11": {
 		"sight": [
@@ -1620,8 +2156,15 @@
 			"Extended Barrel",
 			"None"
 		],
-		"grip": ["Vertical Grip", "Angled Grip", "Horizontal Grip"],
-		"under-barrel": ["None", "Laser"]
+		"grip": [
+			"Vertical Grip",
+			"Angled Grip",
+			"Horizontal Grip"
+		],
+		"under-barrel": [
+			"None",
+			"Laser"
+		]
 	},
 	"SMG-12": {
 		"sight": [
@@ -1644,8 +2187,15 @@
 			"Suppressor",
 			"None"
 		],
-		"grip": ["Vertical Grip", "Angled Grip", "Horizontal Grip"],
-		"under-barrel": ["None", "Laser"]
+		"grip": [
+			"Vertical Grip",
+			"Angled Grip",
+			"Horizontal Grip"
+		],
+		"under-barrel": [
+			"None",
+			"Laser"
+		]
 	},
 	"SPAS-12": {
 		"sight": [
@@ -1661,7 +2211,10 @@
 			"Reflex C",
 			"Iron Sight"
 		],
-		"under-barrel": ["None", "Laser"]
+		"under-barrel": [
+			"None",
+			"Laser"
+		]
 	},
 	"SPAS-15": {
 		"sight": [
@@ -1677,7 +2230,10 @@
 			"Reflex C",
 			"Iron Sight"
 		],
-		"under-barrel": ["None", "Laser"]
+		"under-barrel": [
+			"None",
+			"Laser"
+		]
 	},
 	"Spear_308": {
 		"sight": [
@@ -1704,8 +2260,15 @@
 			"Extended Barrel",
 			"None"
 		],
-		"grip": ["Vertical Grip", "Angled Grip", "Horizontal Grip"],
-		"under-barrel": ["None", "Laser"]
+		"grip": [
+			"Vertical Grip",
+			"Angled Grip",
+			"Horizontal Grip"
+		],
+		"under-barrel": [
+			"None",
+			"Laser"
+		]
 	},
 	"SPSMG9": {
 		"sight": [
@@ -1729,7 +2292,10 @@
 			"Extended Barrel",
 			"None"
 		],
-		"under-barrel": ["None", "Laser"]
+		"under-barrel": [
+			"None",
+			"Laser"
+		]
 	},
 	"SR-25": {
 		"sight": [
@@ -1750,9 +2316,20 @@
 			"Reflex C",
 			"Iron Sight"
 		],
-		"barrel": ["Muzzle Brake", "Suppressor", "None"],
-		"grip": ["Vertical Grip", "Angled Grip", "Horizontal Grip"],
-		"under-barrel": ["None", "Laser"]
+		"barrel": [
+			"Muzzle Brake",
+			"Suppressor",
+			"None"
+		],
+		"grip": [
+			"Vertical Grip",
+			"Angled Grip",
+			"Horizontal Grip"
+		],
+		"under-barrel": [
+			"None",
+			"Laser"
+		]
 	},
 	"SuperNova": {
 		"sight": [
@@ -1768,8 +2345,14 @@
 			"Reflex C",
 			"Iron Sight"
 		],
-		"barrel": ["Suppressor", "None"],
-		"under-barrel": ["None", "Laser"]
+		"barrel": [
+			"Suppressor",
+			"None"
+		],
+		"under-barrel": [
+			"None",
+			"Laser"
+		]
 	},
 	"Super_90": {
 		"sight": [
@@ -1785,7 +2368,10 @@
 			"Reflex C",
 			"Iron Sight"
 		],
-		"under-barrel": ["None", "Laser"]
+		"under-barrel": [
+			"None",
+			"Laser"
+		]
 	},
 	"Super_Shorty": {
 		"sight": [
@@ -1801,7 +2387,10 @@
 			"Reflex C",
 			"Iron Sight"
 		],
-		"under-barrel": ["None", "Laser"]
+		"under-barrel": [
+			"None",
+			"Laser"
+		]
 	},
 	"T-5_SMG": {
 		"sight": [
@@ -1825,8 +2414,15 @@
 			"Extended Barrel",
 			"None"
 		],
-		"grip": ["Vertical Grip", "Angled Grip", "Horizontal Grip"],
-		"under-barrel": ["None", "Laser"]
+		"grip": [
+			"Vertical Grip",
+			"Angled Grip",
+			"Horizontal Grip"
+		],
+		"under-barrel": [
+			"None",
+			"Laser"
+		]
 	},
 	"T-95_LSW": {
 		"sight": [
@@ -1852,8 +2448,15 @@
 			"Suppressor",
 			"None"
 		],
-		"grip": ["Vertical Grip", "Angled Grip", "Horizontal Grip"],
-		"under-barrel": ["None", "Laser"]
+		"grip": [
+			"Vertical Grip",
+			"Angled Grip",
+			"Horizontal Grip"
+		],
+		"under-barrel": [
+			"None",
+			"Laser"
+		]
 	},
 	"TCSG12": {
 		"sight": [
@@ -1872,9 +2475,19 @@
 			"Reflex C",
 			"Iron Sight"
 		],
-		"barrel": ["Suppressor", "None"],
-		"grip": ["Vertical Grip", "Angled Grip", "Horizontal Grip"],
-		"under-barrel": ["None", "Laser"]
+		"barrel": [
+			"Suppressor",
+			"None"
+		],
+		"grip": [
+			"Vertical Grip",
+			"Angled Grip",
+			"Horizontal Grip"
+		],
+		"under-barrel": [
+			"None",
+			"Laser"
+		]
 	},
 	"Type-89": {
 		"sight": [
@@ -1900,8 +2513,15 @@
 			"Suppressor",
 			"None"
 		],
-		"grip": ["Vertical Grip", "Angled Grip", "Horizontal Grip"],
-		"under-barrel": ["None", "Laser"]
+		"grip": [
+			"Vertical Grip",
+			"Angled Grip",
+			"Horizontal Grip"
+		],
+		"under-barrel": [
+			"None",
+			"Laser"
+		]
 	},
 	"UMP45": {
 		"sight": [
@@ -1928,12 +2548,26 @@
 			"Extended Barrel",
 			"None"
 		],
-		"grip": ["Vertical Grip", "Angled Grip", "Horizontal Grip"],
-		"under-barrel": ["None", "Laser"]
+		"grip": [
+			"Vertical Grip",
+			"Angled Grip",
+			"Horizontal Grip"
+		],
+		"under-barrel": [
+			"None",
+			"Laser"
+		]
 	},
 	"USP40": {
-		"barrel": ["Muzzle Brake", "Suppressor", "None"],
-		"under-barrel": ["None", "Laser"]
+		"barrel": [
+			"Muzzle Brake",
+			"Suppressor",
+			"None"
+		],
+		"under-barrel": [
+			"None",
+			"Laser"
+		]
 	},
 	"uzk50gi": {
 		"sight": [
@@ -1957,8 +2591,15 @@
 			"Extended Barrel",
 			"None"
 		],
-		"grip": ["Vertical Grip", "Angled Grip", "Horizontal Grip"],
-		"under-barrel": ["None", "Laser"]
+		"grip": [
+			"Vertical Grip",
+			"Angled Grip",
+			"Horizontal Grip"
+		],
+		"under-barrel": [
+			"None",
+			"Laser"
+		]
 	},
 	"V308": {
 		"sight": [
@@ -1984,8 +2625,15 @@
 			"Suppressor",
 			"None"
 		],
-		"grip": ["Vertical Grip", "Angled Grip", "Horizontal Grip"],
-		"under-barrel": ["None", "Laser"]
+		"grip": [
+			"Vertical Grip",
+			"Angled Grip",
+			"Horizontal Grip"
+		],
+		"under-barrel": [
+			"None",
+			"Laser"
+		]
 	},
 	"Vector_45_ACP": {
 		"sight": [
@@ -2009,7 +2657,46 @@
 			"Extended Barrel",
 			"None"
 		],
-		"grip": ["Vertical Grip", "Angled Grip", "Horizontal Grip"],
-		"under-barrel": ["None", "Laser"]
+		"grip": [
+			"Vertical Grip",
+			"Angled Grip",
+			"Horizontal Grip"
+		],
+		"under-barrel": [
+			"None",
+			"Laser"
+		]
+	},
+	"PCX-33": {
+		"sight": [
+			"Red Dot A",
+			"Red Dot B",
+			"Red Dot B",
+			"Holo A",
+			"Holo B",
+			"Holo C",
+			"Holo D",
+			"Reflex A",
+			"Reflex B",
+			"Reflex C",
+			"Iron Sight"
+		],
+		"barrel": [
+			"Flash Hider",
+			"Compensator",
+			"Muzzle Brake",
+			"Suppressor",
+			"Extended Barrel",
+			"None"
+		],
+		"grip": [
+			"Vertical Grip",
+			"Angled Grip",
+			"Horizontal Grip"
+		],
+		"under-barrel": [
+			"Laser",
+			"None"
+		]
 	}
 }

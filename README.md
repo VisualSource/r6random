@@ -12,7 +12,7 @@ Currently supports Y9.3 operators and loadouts.
 
 Can be use via the web site at [https://visualsource.github.io/r6random/](https://visualsource.github.io/r6random/)
 
-or can be used ingame via a overlay that can be download here [Latest Download](https://github.com/VisualSource/r6random/releases/tag/latest) (Windows only)
+or can be used ingame via a overlay that can be download here [Latest Download](https://github.com/VisualSource/r6random/releases/latest) (Windows only)
 
 
 ## Run Locally

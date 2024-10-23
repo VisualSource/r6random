@@ -3,7 +3,7 @@
 
 Rainbow Six Siege operator and loadout randomizer.
 
-Currently supports Y9.2 operators and loadouts.
+Currently supports Y9.3 operators and loadouts.
 
 
 

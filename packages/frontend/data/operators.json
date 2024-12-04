@@ -194,16 +194,15 @@
 			"id": "blackbeard",
 			"loadout": {
 				"primary": [
+					"LE_ROC_SHIELD"
+				],
+				"secondary": [
 					"Mk17_CQB",
 					"SR-25"
 				],
-				"secondary": [
-					"D-50"
-				],
 				"gadget": [
 					"Claymore",
-					"Stun_Grenade",
-					"Impact_EMP_Grenade"
+					"Frag_Grenade"
 				]
 			}
 		},
@@ -544,12 +543,12 @@
 					"417"
 				],
 				"secondary": [
-					"SDP_9mm",
-					"Gonne_6"
+					"SDP_9mm"
 				],
 				"gadget": [
 					"Hard_Breach",
-					"Claymore"
+					"Claymore",
+					"Frag_Grenade"
 				]
 			}
 		},
@@ -1151,7 +1150,8 @@
 				],
 				"secondary": [
 					"Bearing_9",
-					"Q-929"
+					"Q-929",
+					"ITA12S"
 				],
 				"gadget": [
 					"Barbed_Wire",

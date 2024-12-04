@@ -1,13 +1,15 @@
 {
 	"name": "overlay",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"description": "",
 	"main": "dist/main/index.js",
 	"author": {
 		"name": "VisualSource"
 	},
 	"overwolf": {
-		"packages": ["overlay"]
+		"packages": [
+			"overlay"
+		]
 	},
 	"build": {
 		"nodeGypRebuild": false,
@@ -21,13 +23,20 @@
 		"directories": {
 			"output": "build"
 		},
-		"files": ["dist/**/*", "*.js", "*.html", "*.exe"],
+		"files": [
+			"dist/**/*",
+			"*.js",
+			"*.html",
+			"*.exe"
+		],
 		"copyright": "Copyright 2023 VisualSource",
 		"win": {
 			"target": [
 				{
 					"target": "nsis",
-					"arch": ["x64"]
+					"arch": [
+						"x64"
+					]
 				}
 			],
 			"artifactName": "${productName}-Setup-${version}.${ext}",
@@ -51,14 +60,14 @@
 	"keywords": [],
 	"license": "ISC",
 	"devDependencies": {
-		"@biomejs/biome": "^1.8.3",
-		"@overwolf/ow-electron-builder": "^24.13.8",
-		"electron": "32.0.1",
+		"@biomejs/biome": "^1.9.4",
+		"@overwolf/ow-electron-builder": "^25.0.6",
+		"electron": "33.2.1",
 		"electron-vite": "^2.3.0",
-		"typescript": "^5.5.4"
+		"typescript": "^5.7.2"
 	},
 	"dependencies": {
-		"@overwolf/ow-electron": "^28.3.5",
-		"@overwolf/ow-electron-packages-types": "^0.0.12"
+		"@overwolf/ow-electron": "^31.7.3",
+		"@overwolf/ow-electron-packages-types": "^0.0.13"
 	}
 }

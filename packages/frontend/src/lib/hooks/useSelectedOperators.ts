@@ -1,10 +1,12 @@
 import useLocalStorageState from "use-local-storage-state";
-import ops from "../../assets/operators.json";
 import type { Team } from "@/Router";
+import { useR6Data } from "./useR6Data";
 
 const getDefaultSelected = (team: Team) => {
-	if (team === "attackers") return ops.attackers.map(e => e.id);
-	return ops.defenders.map(e => e.id);
+	const { data } = useR6Data<true>();
+
+	if (team === "attackers") return data.operators.attackers.map(e => e.id);
+	return data.operators.defenders.map(e => e.id);
 }
 
 export const useSelectedOperators = (team: Team) => {

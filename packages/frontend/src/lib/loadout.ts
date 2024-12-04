@@ -1,9 +1,12 @@
-import operators from "../assets/operators.json";
-import weapons from "../assets/weapons.json";
+import type operators from "../../data/operators.json"
+import type weapons from "../../data/weapons.json";
 import type { Team } from "@/Router";
 import { getSeed } from "./rand";
 
-function getWeaponLoadout(weaponName: string) {
+export type OperatorList = typeof operators;
+export type WeaponList = typeof weapons;
+
+function getWeaponLoadout(weaponName: string, weapons: WeaponList) {
 	const weapon = weapons[weaponName as keyof typeof weapons];
 	if (!weapon) return null;
 
@@ -21,6 +24,8 @@ export function generateLoadoutFromOp(
 	op: string,
 	team: Team,
 	weaponLoadouts: boolean,
+	operators: OperatorList,
+	weapons: WeaponList
 ) {
 	const idx = operators[team].findIndex((e) => e.id === op);
 	const loadout = operators[team][idx].loadout;
@@ -39,13 +44,13 @@ export function generateLoadoutFromOp(
 		primary: {
 			weapon: loadout.primary[primaryIdx],
 			loadout: weaponLoadouts
-				? getWeaponLoadout(loadout.primary[primaryIdx])
+				? getWeaponLoadout(loadout.primary[primaryIdx], weapons)
 				: null,
 		},
 		secondary: {
 			weapon: loadout.secondary[secondaryIdx],
 			loadout: weaponLoadouts
-				? getWeaponLoadout(loadout.secondary[secondaryIdx])
+				? getWeaponLoadout(loadout.secondary[secondaryIdx], weapons)
 				: null,
 		},
 		gadget: loadout.gadget[gadgetIdx],

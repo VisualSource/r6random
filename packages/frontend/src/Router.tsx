@@ -1,5 +1,6 @@
 import { createContext, useContext, useState } from "react";
 import useLocalStorageState from "use-local-storage-state";
+import { R6DataProvider } from "./components/R6DataProvider";
 import Randomizer from "./pages/Randomizer";
 import Home from "./pages/Home";
 
@@ -35,20 +36,22 @@ export const RouterProvider: React.FC = () => {
 	const Page = PAGES[page as Page];
 
 	return (
-		<router.Provider
-			value={{
-				team: team as Team,
-				weaponLoadouts,
-				generateLoadout,
-				page,
-				setTeam,
-				setGenerateLoadout,
-				setWeaponLoadouts,
-				goTo,
-			}}
-		>
-			<Page />
-		</router.Provider>
+		<R6DataProvider>
+			<router.Provider
+				value={{
+					team: team as Team,
+					weaponLoadouts,
+					generateLoadout,
+					page,
+					setTeam,
+					setGenerateLoadout,
+					setWeaponLoadouts,
+					goTo,
+				}}
+			>
+				<Page />
+			</router.Provider>
+		</R6DataProvider>
 	);
 };
 

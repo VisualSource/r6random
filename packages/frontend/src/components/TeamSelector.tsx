@@ -4,7 +4,7 @@ import { useRouter } from "@/Router";
 export const TeamSelector: React.FC = () => {
 	const router = useRouter();
 	return (
-		<div className="w-full flex justify-center my-6">
+		<div className="w-full flex justify-center my-6 relative">
 			<button
 				className={cn(
 					"h-14 w-52 -skew-x-12 transition-colors duration-300 ease-in font-bold text-xl",

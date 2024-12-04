@@ -1,20 +1,10 @@
 import { createContext } from "react";
 import type { OperatorList, WeaponList } from "./loadout";
 
-export type LoadedContext = {
-    data: { weapons: WeaponList, operators: OperatorList },
-    loading: false,
-    error: undefined
-};
-export type UnloadedContext = {
-    data: undefined,
-    loading: true,
-    error: undefined
+export type R6DataContext<T> = {
+    data: T extends true ? { weapons: WeaponList, operators: OperatorList } : undefined,
+    isLoading: boolean,
+    error: Error | null
 }
-type ErrorContext = {
-    data: { weapons: WeaponList, operators: OperatorList } | undefined,
-    loading: boolean,
-    error?: Error
-};
 
-export const r6DataContext = createContext<LoadedContext | UnloadedContext | ErrorContext | null>(null)
+export const r6DataContext = createContext<R6DataContext<boolean> | null>(null)

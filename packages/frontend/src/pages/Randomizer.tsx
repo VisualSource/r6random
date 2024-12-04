@@ -7,6 +7,8 @@ import { Button } from "@/components/ui/button";
 import { useRouter } from "@/Router";
 import r6operators from "r6operators";
 import debounce from "lodash.debounce";
+import { Season } from "@/components/Season";
+import { useR6Data } from "@/lib/hooks/useR6Data";
 
 enum State {
 	Init = -1,
@@ -22,6 +24,7 @@ const Randomizer: React.FC = () => {
 	const [state, setState] = useState<State>(State.Init);
 	const { team, generateLoadout, weaponLoadouts, goTo } = useRouter();
 	const spinnerRef = useRef<SpinnerRef>(null);
+	const { data } = useR6Data<true>();
 
 	// biome-ignore lint/correctness/useExhaustiveDependencies: team and generateLoadout variables are used
 	const onSpinnerEnd = useCallback(
@@ -35,7 +38,7 @@ const Randomizer: React.FC = () => {
 			let loadout = null;
 			if (generateLoadout) {
 				console.log(team);
-				loadout = generateLoadoutFromOp(operator.id, team, weaponLoadouts);
+				loadout = generateLoadoutFromOp(operator.id, team, weaponLoadouts, data.operators, data.weapons);
 			}
 
 			setLoadout({ operator, loadout });
@@ -47,6 +50,7 @@ const Randomizer: React.FC = () => {
 
 	return (
 		<div className="flex flex-col h-full">
+			<Season />
 			<TeamSelector />
 			<div className="container my-auto">
 				<Loadout

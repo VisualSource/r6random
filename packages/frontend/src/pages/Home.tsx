@@ -5,9 +5,10 @@ import { useSelectedOperators } from "@/lib/hooks/useSelectedOperators";
 import { SelectableOperator } from "@/components/SelectableOperator";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { TeamSelector } from "@/components/TeamSelector";
-import operators from "../assets/operators.json";
 import { Button } from "@/components/ui/button";
 import { useRouter } from "@/Router";
+import { useR6Data } from "@/lib/hooks/useR6Data";
+import { Season } from "@/components/Season";
 
 const Home: React.FC = () => {
 	const {
@@ -19,21 +20,21 @@ const Home: React.FC = () => {
 		setWeaponLoadouts,
 	} = useRouter();
 	const [_, setSelected] = useSelectedOperators(team);
+	const r6Data = useR6Data<true>();
+
+	const operators = r6Data.data.operators[team] ?? [];
 
 	const ops = useMemo(() => {
-		const t = operators[team as keyof typeof operators];
-
-		if (!t) return [];
-
-		return t.map((e) => {
+		return operators.map((e) => {
 			const op = r6operators[e.id as keyof typeof r6operators];
 			if (!op) return null;
 			return <SelectableOperator team={team} key={e.id} op={op} />;
 		});
-	}, [team]);
+	}, [team, operators]);
 
 	return (
 		<div className="flex flex-col h-full">
+			<Season />
 			<TeamSelector />
 			<TooltipProvider>
 				<div className="flex flex-wrap gap-4 container max-w-screen-sm my-auto">
@@ -50,7 +51,7 @@ const Home: React.FC = () => {
 				<Button
 					onClick={() =>
 						setSelected(
-							operators[team as keyof typeof operators].map((e) => e.id),
+							operators.map((e) => e.id),
 						)
 					}
 					className="rounded-none"

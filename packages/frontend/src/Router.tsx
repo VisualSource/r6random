@@ -1,3 +1,5 @@
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import { ReactQueryDevtools } from '@tanstack/react-query-devtools'
 import { createContext, useContext, useState } from "react";
 import useLocalStorageState from "use-local-storage-state";
 import { R6DataProvider } from "./components/R6DataProvider";
@@ -23,6 +25,7 @@ export type RouterState = {
 };
 
 const router = createContext<RouterState | null>(null);
+const client = new QueryClient();
 
 export const RouterProvider: React.FC = () => {
 	const [page, goTo] = useLocalStorageState("r6.page", {
@@ -36,22 +39,25 @@ export const RouterProvider: React.FC = () => {
 	const Page = PAGES[page as Page];
 
 	return (
-		<R6DataProvider>
-			<router.Provider
-				value={{
-					team: team as Team,
-					weaponLoadouts,
-					generateLoadout,
-					page,
-					setTeam,
-					setGenerateLoadout,
-					setWeaponLoadouts,
-					goTo,
-				}}
-			>
-				<Page />
-			</router.Provider>
-		</R6DataProvider>
+		<QueryClientProvider client={client}>
+			<R6DataProvider>
+				<router.Provider
+					value={{
+						team: team as Team,
+						weaponLoadouts,
+						generateLoadout,
+						page,
+						setTeam,
+						setGenerateLoadout,
+						setWeaponLoadouts,
+						goTo,
+					}}
+				>
+					<Page />
+				</router.Provider>
+			</R6DataProvider>
+			<ReactQueryDevtools />
+		</QueryClientProvider>
 	);
 };
 

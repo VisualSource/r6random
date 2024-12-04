@@ -1,23 +1,17 @@
-import { useEffect, useState } from "react";
+import { useQuery } from "@tanstack/react-query";
 import { r6DataContext } from "../lib/r6dataContext";
-import type { OperatorList, WeaponList } from "@/lib/loadout";
 import ErrorPage from "@/pages/ErrorPage";
 import Loading from "@/pages/Loading";
 
-const DATA_ROOT_URL = "https://raw.githubusercontent.com/VisualSource/r6random/tree/main/packages/frontend/data";
+const DATA_ROOT_URL = "https://raw.githubusercontent.com/VisualSource/r6random/refs/heads/main/packages/frontend/data/";
 
 export const R6DataProvider: React.FC<React.PropsWithChildren> = ({ children }) => {
-    const [error, setError] = useState<Error | undefined>();
-    const [loading, setLoading] = useState(false);
-    const [data, setData] = useState<{ weapons: WeaponList, operators: OperatorList } | undefined>();
-
-    useEffect(() => {
-        const signal = new AbortController();
-
-        const init = async () => {
+    const { data, isError, isLoading, error } = useQuery({
+        queryKey: ["R6_DATA"],
+        queryFn: async () => {
             const [ops, weap] = await Promise.allSettled([
-                fetch(`${DATA_ROOT_URL}/operators.json`, { signal: signal.signal }).then(e => e.json()),
-                fetch(`${DATA_ROOT_URL}/weapons.json`, { signal: signal.signal }).then(e => e.json())
+                fetch(`${DATA_ROOT_URL}/operators.json`).then(e => e.json()),
+                fetch(`${DATA_ROOT_URL}/weapons.json`).then(e => e.json())
             ]);
 
             if (ops.status === "rejected") {
@@ -32,19 +26,14 @@ export const R6DataProvider: React.FC<React.PropsWithChildren> = ({ children }) 
                 operators: ops.value
             }
         }
+    })
 
-        init().then(e => setData(e)).catch(e => setError(e)).finally(() => setLoading(false));
-
-        return () => {
-            signal.abort();
-        }
-    }, []);
 
     return (
-        <r6DataContext.Provider value={{ data, loading, error }}>
-            {loading ? (
+        <r6DataContext.Provider value={{ data, isLoading, error }}>
+            {isLoading ? (
                 <Loading />
-            ) : error ? (
+            ) : isError ? (
                 <ErrorPage error={error} />
             ) : (
                 children

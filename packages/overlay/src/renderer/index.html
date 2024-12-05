@@ -1,40 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>R6Random: Control Panel</title>
     <link rel="stylesheet" href="./style.css">
     <script src="./main.ts" type="module"></script>
-    <style>html{ background-color: #131313; }</style>
 </head>
 <body>
-    <header>
-        <button type="button" id ='createOSR' class="btn" title="Inject overlay into game">Create OSR</button>
-        <button type="button" id ='visibilityOSR' class="btn" title="Show overlay ingame">Show all OSR</button>
-        <button type="button" id ='updateHotkey' class="btn" title="Update hotkey to toggle overlay">update Hotkey</button>
-        <button type="button" id ='showLog' class="btn" title="Show the system log">System Log</button>
+    <header class="header">
+        <button type="button" id ='createOSR' class="btn" title="Inject overlay into game">Inject Overlay</button>
+        <button type="button" id ='visibilityOSR' class="btn" title="Show overlay ingame">Show Overlay</button>
+        <button type="button" id ='updateHotKey' class="btn" title="Update hotkey to toggle overlay">Update Hotkey</button>
     </header>
     <main id="mainContent">
         <div class="loader"></div>
     </main>
+    <div class="version-container">
+        Version: 
+        v<span class="version">0.0.0</span>
+    </div>
     <footer>
         <div class="versions"></div>
     </footer>
-    <dialog id="systemLog" class="system-dialog">
+    <dialog id="infoDialog" class="system-dialog">
         <div>
             <header>
-                <h5>System Log</h5>
-                <button type="button" class="btn-error btn-sqaure" data-close="systemLog" title="Close">X</button>
+                <h5 data-title>Info</h5>
+                <button type="button" class="btn-error btn-sqaure" data-close="infoDialog" title="Close">X</button>
             </header>
-            <div id="log"></div>
+            <div>
+                <h4 data-info-title>Info</h4>
+                <p data-info-message></p>
+            </div>
         </div>
     </dialog>
-    <dialog id="hotHeyChanger" class="system-dialog">
+    <dialog id="hotHeyDialog" class="system-dialog">
         <div>
             <header>
-                <h5>Hot Key</h5>
-                <button type="button" class="btn-error btn-sqaure" data-close="hotHeyChanger" title="Close">X</button>
+                <h5>Set Hot Key</h5>
+                <button type="button" class="btn-error btn-sqaure" data-close="hotHeyDialog" title="Close">X</button>
             </header>
             <form id="hotKeyForm">
                 <div>

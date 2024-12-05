@@ -1,7 +1,8 @@
 {
 	"name": "overlay",
-	"version": "1.0.1",
-	"description": "",
+	"version": "1.1.0-7",
+	"repository": "https://github.com/VisualSource/r6random",
+	"description": "A ingame overlay for r6 and provides a operator randomizer",
 	"main": "dist/main/index.js",
 	"author": {
 		"name": "VisualSource"
@@ -29,7 +30,7 @@
 			"*.html",
 			"*.exe"
 		],
-		"copyright": "Copyright 2023 VisualSource",
+		"copyright": "Copyright 2024 VisualSource",
 		"win": {
 			"target": [
 				{
@@ -68,6 +69,8 @@
 	},
 	"dependencies": {
 		"@overwolf/ow-electron": "^31.7.3",
-		"@overwolf/ow-electron-packages-types": "^0.0.13"
+		"@overwolf/ow-electron-packages-types": "^0.0.13",
+		"electron-log": "^5.2.3",
+		"electron-updater": "^6.3.9"
 	}
 }

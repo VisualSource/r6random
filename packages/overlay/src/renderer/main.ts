@@ -1,63 +1,101 @@
-interface WindowExtend {
-	app: {
-		getCurrentHotKey: () => Promise<{ mod: string; key: string }>;
-		getVersionData: () => void;
-		onLog: (callback: (...args: unknown[]) => void) => void;
-		onConnected: (callback: () => void) => void;
-	};
-	osr: {
-		openOSR: () => Promise<void>;
-		toggle: () => Promise<void>;
-		updateHotkey: (mod: string, key: string) => Promise<void>;
-	};
-}
-type Win = typeof window & WindowExtend;
+import { win, query, onClick } from "./utils";
 
-const extendWindow = window as Win;
+win.app.onReady(() => {
+	query<HTMLDivElement>(".header")?.classList.remove("header");
 
-function getTarget<T extends HTMLElement>(value: string) {
-	return document.getElementById(value) as T;
-}
-
-function onClick(
-	target: string,
-	callback: ((ev: unknown) => void) | (() => Promise<void>),
-) {
-	getTarget(target)?.addEventListener("click", callback);
-}
-
-function logMessage(value: unknown) {
-	const log = getTarget("log");
-	const el = document.createElement("p");
-	if (typeof value !== "string") {
-		el.textContent = JSON.stringify(value);
-	} else {
-		el.textContent = value;
-	}
-	log?.appendChild(el);
-}
-
-let isReady = false;
-
-extendWindow.app.getVersionData();
-extendWindow.app.onLog((value) => logMessage(value));
-extendWindow.app.onConnected(() => {
-	isReady = true;
 	const el = document.getElementById("mainContent");
 	if (!el) return;
 	el.innerHTML = "<div class='ready'></div>";
 });
 
-window.addEventListener("DOMContentLoaded", () => {
-	getTarget("hotKeyForm").addEventListener("submit", async (ev) => {
+function openInfoDialog(
+	dialogTitle: string,
+	info: { title: string; message: string },
+) {
+	const dialog = query<HTMLDialogElement>("dialog#infoDialog");
+	if (!dialog) {
+		win.app.log("error", "Failed to get info dialog element");
+		return;
+	}
+
+	const header = query<HTMLHeadingElement>("h5[data-title]", dialog);
+	if (header) {
+		header.textContent = dialogTitle;
+	}
+
+	const infoTitle = query<HTMLHeadingElement>("h4[data-info-title]", dialog);
+	const infoMessage = query<HTMLHeadingElement>("p[data-info-message]", dialog);
+	if (infoTitle) {
+		infoTitle.textContent = info.title;
+	}
+	if (infoMessage) {
+		infoMessage.textContent = info.message;
+	}
+
+	dialog.showModal();
+}
+
+async function onHotKeyFormSubmit(ev: SubmitEvent) {
+	try {
 		ev.preventDefault();
+
 		const data = new FormData(ev.target as HTMLFormElement);
 
 		const mod = data.get("mod")?.toString();
 		const key = data.get("key")?.toString();
-		if (!mod || !key) return;
+		if (!mod || !key) throw new Error("Failed to get new hot key data");
 
-		await extendWindow.osr.updateHotkey(mod, key);
+		await win.osr.updateHotkey(mod, key);
+
+		query<HTMLDialogElement>("dialog#hotHeyDialog")?.close();
+	} catch (error) {
+		win.app.log("error", (error as Error).message);
+		openInfoDialog("Submit Error", {
+			title: "Error",
+			message: "There was an error settting the hot key.",
+		});
+	}
+}
+
+function main() {
+	win.app
+		.getAppVersion()
+		.then((version) => {
+			const container = query("span.version");
+			if (!container) throw new Error("Failed to get container");
+			container.innerText = version;
+		})
+		.catch((e) => win.app.log("error", (e as Error).message));
+
+	query<HTMLFormElement>("#hotKeyForm")?.addEventListener(
+		"submit",
+		onHotKeyFormSubmit,
+	);
+	onClick("button#createOSR", () => win.osr.openOSR());
+	onClick("button#visibilityOSR", () => win.osr.toggle());
+	onClick("button#updateHotKey", async () => {
+		try {
+			const dialog = query<HTMLDialogElement>("dialog#hotHeyDialog");
+			if (!dialog) throw new Error("Failed to get dialog");
+
+			const hotKey = await win.app.getCurrentHotKey();
+
+			const selected = query<HTMLOptionElement>(
+				`option[value='${hotKey.mod}']`,
+				dialog,
+			);
+			if (!selected) throw new Error("Failed to get option elemenet");
+			selected.toggleAttribute("selected");
+
+			const input = query<HTMLInputElement>("input[name='key']", dialog);
+			if (!input) throw new Error("Failed to get input");
+			input.value = hotKey.key;
+
+			dialog.showModal();
+		} catch (error) {
+			console.error(error);
+			win.app.log("error", (error as Error).message);
+		}
 	});
 
 	for (const btn of document.querySelectorAll("button[data-close]")) {
@@ -68,34 +106,13 @@ window.addEventListener("DOMContentLoaded", () => {
 			dialog.close();
 		});
 	}
-	onClick("createOSR", () =>
-		extendWindow.osr.openOSR().catch((e) => logMessage(e?.message ?? e)),
-	);
-	onClick("visibilityOSR", async () =>
-		extendWindow.osr.toggle().catch((e) => logMessage(e?.message ?? e)),
-	);
-	onClick("updateHotkey", async () => {
-		try {
-			if (!isReady) return;
-			const dialog = getTarget<HTMLDialogElement>("hotHeyChanger");
+}
 
-			const { mod, key } = await extendWindow.app.getCurrentHotKey();
-
-			dialog
-				.querySelector(`option[value=${mod}]`)
-				?.setAttribute("selected", "");
-			const keyInput =
-				dialog.querySelector<HTMLInputElement>("input[name='key']");
-			if (keyInput) {
-				keyInput.value = key;
-			}
-
-			dialog.showModal();
-		} catch (error) {
-			logMessage((error as Error)?.message ?? error);
-		}
-	});
-	onClick("showLog", () =>
-		getTarget<HTMLDialogElement>("systemLog").showModal(),
-	);
+window.addEventListener("DOMContentLoaded", () => {
+	try {
+		main();
+	} catch (error) {
+		console.error(error);
+		win.app.log("error", (error as Error).message);
+	}
 });

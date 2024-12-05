@@ -1,11 +1,11 @@
 import { app, BrowserWindow, ipcMain } from "electron";
 import path from "node:path";
+import log from "electron-log/main";
 import type { OverlayHotkeysService } from "../services/overlay-hotkeys.service";
 import type { OSRWindowController } from "../controllers/osr-window.controller";
 import type { OverlayInputService } from "../services/overlay-input.service";
 import type { OverlayService } from "../services/overlay.service";
 import icon from "../../assets/icon.ico?asset";
-import { pkg } from "../utils";
 
 export class MainWindowController {
 	private browserWindow: BrowserWindow | null = null;
@@ -19,20 +19,9 @@ export class MainWindowController {
 	) {
 		overlayHotKeysService.on("hotkey::overlayToggle", () => this.toggleOsr());
 
-		overlayService.on("log", this.printLogMessage);
-		overlayService.on("error", this.printErrorMessage);
-		overlayHotKeysService.on("log", this.printLogMessage);
-		overlayHotKeysService.on("error", this.printErrorMessage);
-
 		overlayService.on("inject-overlay", () => {
 			this.createOSRWindow();
 		});
-
-		pkg.on("crashed", (_e, ...args) => {
-			this.printLogMessage("package crashed", ...args);
-		});
-
-		pkg.on("failed-to-initialize", this.logPackageMangerErrors);
 
 		app.on("before-quit", () => {
 			this.isQuiting = true;
@@ -64,7 +53,8 @@ export class MainWindowController {
 	}
 
 	async emitReady() {
-		this.browserWindow?.webContents.send("overlay-ready");
+		if (!this.browserWindow) throw new Error("There is not window to emit to");
+		this.browserWindow.webContents.send("overlay-ready");
 	}
 
 	public quit() {
@@ -75,26 +65,6 @@ export class MainWindowController {
 	public show() {
 		this.browserWindow?.show();
 	}
-
-	private logPackageMangerErrors = (
-		e: unknown,
-		packageName: string,
-		...args: unknown[]
-	) => {
-		this.printErrorMessage(
-			"Overwolf Package Manager error!",
-			packageName,
-			...args,
-		);
-	};
-	private printErrorMessage = (msg: string, ...args: unknown[]) => {
-		if (this.browserWindow?.isDestroyed() ?? true) return;
-		this.browserWindow?.webContents.send("console-log", msg, ...args);
-	};
-	private printLogMessage = (msg: string, ...args: unknown[]) => {
-		if (this.browserWindow?.isDestroyed() ?? true) return;
-		this.browserWindow?.webContents.send("console-log", msg, ...args);
-	};
 
 	public async createAndShow() {
 		this.browserWindow = new BrowserWindow({
@@ -138,6 +108,7 @@ export class MainWindowController {
 			}
 		});
 		ipcMain.handle("updateHotkey", (_ev, arg: { mod: string; key: string }) => {
+			log.info("Updated hot key");
 			this.overlayHotKeysService.updateHotKey(arg.mod, arg.key);
 		});
 		ipcMain.handle("getCurrentHotKey", () =>
@@ -145,7 +116,7 @@ export class MainWindowController {
 		);
 	}
 
-	private async createOSRWindow(): Promise<void> {
+	public async createOSRWindow(): Promise<void> {
 		if (!this.osrWindow) {
 			this.osrWindow = this.createOsrWinController();
 			await this.osrWindow.createAndShow();

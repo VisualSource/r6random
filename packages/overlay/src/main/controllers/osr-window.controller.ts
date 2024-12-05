@@ -13,7 +13,6 @@ export class OSRWindowController {
 
 	public quit() {
 		this.overlayWindow = null;
-		ipcMain.removeHandler("OSR::quit");
 		ipcMain.removeHandler("OSR::minimize");
 	}
 
@@ -60,9 +59,6 @@ export class OSRWindowController {
 	private registerToIpc() {
 		ipcMain.handle("OSR::minimize", () => {
 			this.hide();
-		});
-		ipcMain.handle("OSR::quit", () => {
-			this.quit();
 		});
 	}
 	private registerToWindowEvents() {

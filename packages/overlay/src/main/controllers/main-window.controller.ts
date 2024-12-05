@@ -1,6 +1,5 @@
 import { app, BrowserWindow, ipcMain } from "electron";
 import path from "node:path";
-import log from "electron-log/main";
 import type { OverlayHotkeysService } from "../services/overlay-hotkeys.service";
 import type { OSRWindowController } from "../controllers/osr-window.controller";
 import type { OverlayInputService } from "../services/overlay-input.service";
@@ -9,7 +8,7 @@ import icon from "../../assets/icon.ico?asset";
 
 export class MainWindowController {
 	private browserWindow: BrowserWindow | null = null;
-	private osrWindow: OSRWindowController | null = null;
+	private osrWindow: OSRWindowController;
 	private isQuiting = false;
 	constructor(
 		private readonly overlayService: OverlayService,
@@ -17,12 +16,13 @@ export class MainWindowController {
 		private readonly overlayInputService: OverlayInputService,
 		private readonly createOsrWinController: () => OSRWindowController,
 	) {
-		overlayHotKeysService.on("hotkey::overlayToggle", () => this.toggleOsr());
+		this.osrWindow = createOsrWinController();
 
-		overlayService.on("inject-overlay", () => {
-			this.createOSRWindow();
+		overlayService.on("game-injected", () => {
+			this.createAndShow();
 		});
 
+		overlayHotKeysService.on("hotkey::overlayToggle", () => this.toggleOsr());
 		app.on("before-quit", () => {
 			this.isQuiting = true;
 		});
@@ -87,10 +87,6 @@ export class MainWindowController {
 			path.join(__dirname, "../renderer/index.html"),
 		);
 
-		this.browserWindow.on("minimize", (ev: Event) => {
-			ev.preventDefault();
-			this.browserWindow?.hide();
-		});
 		this.browserWindow.on("close", (ev) => {
 			if (!this.isQuiting) {
 				ev.preventDefault();
@@ -101,31 +97,17 @@ export class MainWindowController {
 	}
 
 	private registerToIpc() {
-		ipcMain.handle("createOSR", async () => this.createOSRWindow());
+		ipcMain.handle("createOSR", async () => this.osrWindow.createOrShow());
 		ipcMain.handle("toggleOSRVisibility", async () => {
 			for (const e of this.overlayService.api?.getAllWindows() ?? []) {
 				e.window.show();
 			}
 		});
 		ipcMain.handle("updateHotkey", (_ev, arg: { mod: string; key: string }) => {
-			log.info("Updated hot key");
 			this.overlayHotKeysService.updateHotKey(arg.mod, arg.key);
 		});
 		ipcMain.handle("getCurrentHotKey", () =>
 			this.overlayHotKeysService.getCurrentHotKey(),
 		);
-	}
-
-	public async createOSRWindow(): Promise<void> {
-		if (!this.osrWindow) {
-			this.osrWindow = this.createOsrWinController();
-			await this.osrWindow.createAndShow();
-			this.osrWindow.overlayWindow?.window.on("closed", () => {
-				this.printLogMessage("osr window closed");
-			});
-			return;
-		}
-
-		this.osrWindow.overlayWindow?.window.show();
 	}
 }

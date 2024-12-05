@@ -1,6 +1,6 @@
 import EventEmitter from "node:events";
+import log from "electron-log/main";
 import type { OverlayService } from "./overlay.service";
-import { pkg } from "../utils";
 
 export class OverlayHotkeysService extends EventEmitter {
 	constructor(private overlayService: OverlayService) {
@@ -8,7 +8,8 @@ export class OverlayHotkeysService extends EventEmitter {
 		overlayService.on("ready", this.installHotKeys);
 	}
 	private installHotKeys = () => {
-		pkg.overlay.hotkeys.register(
+		if (!this.overlayService.api) throw new Error("No overlay api is ready!");
+		this.overlayService.api.hotkeys.register(
 			{
 				name: "overlayToggle",
 				keyCode: 82, // r
@@ -18,7 +19,7 @@ export class OverlayHotkeysService extends EventEmitter {
 				passthrough: true,
 			},
 			(hotkey, state) => {
-				this.log(`on hotkey: '${hotkey.name}'`, state);
+				log.info(`on hotkey: '${hotkey.name}'`, state);
 				if (state === "pressed") {
 					this.emit("hotkey::overlayToggle");
 				}
@@ -27,7 +28,9 @@ export class OverlayHotkeysService extends EventEmitter {
 	};
 
 	public getCurrentHotKey(): { mod: string; key: string } | null {
-		const hotkey = pkg.overlay.hotkeys
+		if (!this.overlayService.api) throw new Error("No overlay api is ready!");
+
+		const hotkey = this.overlayService.api.hotkeys
 			.all()
 			.find((h) => h.name === "overlayToggle");
 		if (!hotkey) return null;
@@ -45,7 +48,9 @@ export class OverlayHotkeysService extends EventEmitter {
 	}
 
 	public updateHotKey(mod: string, key: string) {
-		const hotkey = pkg.overlay.hotkeys
+		if (!this.overlayService.api) throw new Error("No overlay api is ready!");
+
+		const hotkey = this.overlayService.api.hotkeys
 			.all()
 			.find((h) => h.name === "overlayToggle");
 		if (!hotkey) return;
@@ -56,10 +61,7 @@ export class OverlayHotkeysService extends EventEmitter {
 			alt: mod === "alt",
 			shift: mod === "shift",
 		};
-		pkg.overlay.hotkeys.update(hotkey);
-	}
-
-	private log(message: string, ...args: unknown[]) {
-		this.emit("log", message, ...args);
+		this.overlayService.api.hotkeys.update(hotkey);
+		log.info(`Updated hot key to: ${mod}-${key}`);
 	}
 }

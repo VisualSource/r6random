@@ -1,14 +1,7 @@
 {
-  "name": "r6random",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "build": "pnpm --filter=!overlay build",
-    "lint": "pnpm --filter=\"./packages/**\" lint",
-    "format": "pnpm --filter=\"./packages/**\" format"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC"
+  "name": "electron",
+  "productName": "Electron",
+  "author":"electron",
+  "main": "main.js",
+  "type": "module"
 }

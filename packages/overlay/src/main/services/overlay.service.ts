@@ -27,12 +27,13 @@ export class OverlayService extends EventEmitter {
 			log.info(
 				`The following packages are pending updates: ${info.map((e) => `${e.name}: ${e.version}`).join(", ")}`,
 			);
+			this.emit("package-update-pending", info);
 		});
-		pkg.on("ready", (_, pkgName, version) => {
+		pkg.on("ready", async (_, pkgName, version) => {
 			log.info(`Package ${pkgName}:${version} is ready`);
 			if (pkgName !== "overlay") return;
 			this.isOverlayReady = true;
-			this.registerOverlayEvents();
+			await this.registerOverlayEvents();
 			this.emit("ready");
 		});
 	}
@@ -50,40 +51,63 @@ export class OverlayService extends EventEmitter {
 		return overlay;
 	}
 
-	private registerOverlayEvents() {
+	private async registerOverlayEvents() {
 		const api = this.api;
 		if (!api) {
-			this.error("No api was ready");
+			log.error("No api was ready");
 			return;
 		}
+		log.info("registering overlay event");
+
+		// prevent double events in case the package relaunch due crash
+		// or update.
+		api.removeAllListeners();
+
 		api.on("game-launched", (ev, info) => {
-			this.log("game launched", info);
+			log.info("game launched", info);
+
+			if (info.processInfo?.isElevated) {
+				log.error("Can not inject into elevated processes");
+				return;
+			}
+
 			ev.inject();
+			this.emit("game-launched", ev, info);
 		});
 
 		api.on("game-injection-error", (info, error) => {
-			this.error("game-injection-error", error, info);
+			log.error("game-injection-error", error, info);
+			this.emit("game-injection-error", info, error);
 		});
+
+		api.on("game-injected", (info) => {
+			log.info("game-injected", info);
+			this.emit("game-injected", info);
+		});
+		api.on("game-exit", (game, was) => {
+			log.info("game-exit", game, was);
+			this.emit("game-exit", game, was);
+		});
+		api.on("game-window-changed", (win, info, reason) => {
+			log.info("game-window-changed", info, reason);
+			this.emit("game-window-changed", win, info, reason);
+		});
+		api.on("game-input-interception-changed", (info) => {
+			log.info("game-input-interception-changed", info);
+			this.emit("game-input-interception-changed", info);
+		});
+		api.on("game-input-exclusive-mode-changed", (info) => {
+			log.info("game-input-exclusive-mode-changed", info);
+			this.emit("game-input-exclusive-mode-changed", info);
+		});
+
+		await new Promise(ok => setTimeout(ok, 2000));
 
 		api.registerGames({
-			includeUnsupported: true,
-			all: true,
 			gamesIds: [
-				kGameIds.Rainbow6Siege
+				kGameIds.Rainbow6Siege,
+				kGameIds.HELLDIVERS2
 			],
 		});
-	}
-
-	private error(message: string, ...args: unknown[]): void {
-		try {
-			log.error(message, ...args);
-			this.emit("error", message, ...args);
-		} catch (error) { }
-	}
-	private log(message: string, ...args: unknown[]): void {
-		try {
-			log.info(message, ...args);
-			this.emit("log", message, args);
-		} catch (err) { }
 	}
 }

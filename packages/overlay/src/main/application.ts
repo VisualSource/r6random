@@ -37,5 +37,6 @@ export class Application {
 
 		this.tray.setToolTip("R6Random");
 		this.tray.setContextMenu(menu);
+		this.tray.setTitle("R6Random");
 	}
 }

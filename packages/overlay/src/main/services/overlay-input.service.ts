@@ -1,37 +1,34 @@
 import type {
-	GameInfo,
 	GameInputInterception,
 	GameWindowInfo,
 	OverlayBrowserWindow,
 } from "@overwolf/ow-electron-packages-types";
 import type { OverlayService } from "./overlay.service";
-import { pkg } from "../utils";
 
 export class OverlayInputService {
 	private exclusiveModeBackgroundWindow: OverlayBrowserWindow | null = null;
 	public exclusiveModeAsWindow = false;
 	public mode: "toggle" | "auto" = "toggle";
-	constructor(overlayService: OverlayService) {
-		overlayService.on("ready", this.init);
+	constructor(private overlayService: OverlayService) {
+		this.init();
 	}
-
 	private init = () => {
-		pkg.overlay.on("game-injected", (info) => this.onNewGameInjected(info));
-		pkg.overlay.on("game-exit", (_, wasInjected) => {
+		this.overlayService.on("game-injected", () => this.onNewGameInjected());
+		this.overlayService.on("game-exit", (_, wasInjected: boolean) => {
 			if (wasInjected) {
 				this.onGameExit();
 			}
 		});
-		pkg.overlay.on("game-window-changed", (win, _info, _reason) => {
+		this.overlayService.on("game-window-changed", (win: GameWindowInfo, _info, _reason) => {
 			this.onUpdateGameWindow(win);
 		});
 
-		pkg.overlay.on("game-input-interception-changed", (info) => {
+		this.overlayService.on("game-input-interception-changed", (info: GameInputInterception) => {
 			if (!info.canInterceptInput) {
 				this.assureExclusiveModeWindow();
 			}
 		});
-		pkg.overlay.on("game-input-exclusive-mode-changed", (info) => {
+		this.overlayService.on("game-input-exclusive-mode-changed", (info: GameInputInterception) => {
 			this.onGameExclusiveModeChanged(info);
 		});
 	};
@@ -52,15 +49,15 @@ export class OverlayInputService {
 	}
 
 	private async assureExclusiveModeWindow() {
-		if (!this.exclusiveModeAsWindow || this.exclusiveModeBackgroundWindow) {
+		if (!this.overlayService.api || !this.exclusiveModeAsWindow || this.exclusiveModeBackgroundWindow) {
 			return;
 		}
 
-		const activeGame = pkg.overlay.getActiveGameInfo();
+		const activeGame = this.overlayService.api.getActiveGameInfo()
 		const width = activeGame?.gameWindowInfo.size.width ?? 500;
 		const height = activeGame?.gameWindowInfo.size.height ?? 500;
 
-		this.exclusiveModeBackgroundWindow = await pkg.overlay.createWindow({
+		this.exclusiveModeBackgroundWindow = await this.overlayService.api.createWindow({
 			name: "exclusiveModeBackground",
 			height,
 			width,
@@ -102,7 +99,7 @@ export class OverlayInputService {
 		this.exclusiveModeBackgroundWindow = null;
 	}
 
-	private onNewGameInjected(info: GameInfo) {
+	private onNewGameInjected() {
 		this.assureExclusiveModeWindow();
 	}
 }

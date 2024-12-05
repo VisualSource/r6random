@@ -1,8 +1,8 @@
 {
 	"name": "overlay",
-	"version": "1.1.0-7",
+	"version": "1.1.0-11",
 	"repository": "https://github.com/VisualSource/r6random",
-	"description": "A ingame overlay for r6 and provides a operator randomizer",
+	"description": "A ingame overlay for r6 that provides a operator randomizer",
 	"main": "dist/main/index.js",
 	"author": {
 		"name": "VisualSource"
@@ -63,14 +63,14 @@
 	"devDependencies": {
 		"@biomejs/biome": "^1.9.4",
 		"@overwolf/ow-electron-builder": "^25.0.6",
-		"electron": "33.2.1",
 		"electron-vite": "^2.3.0",
-		"typescript": "^5.7.2"
+		"typescript": "^5.7.2",
+		"electron": "31.7.3"
 	},
 	"dependencies": {
 		"@overwolf/ow-electron": "^31.7.3",
 		"@overwolf/ow-electron-packages-types": "^0.0.13",
-		"electron-log": "^5.2.3",
+		"electron-log": "^5.2.4",
 		"electron-updater": "^6.3.9"
 	}
 }

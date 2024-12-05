@@ -7,6 +7,7 @@ import { OSRWindowController } from "./controllers/osr-window.controller";
 import { OverlayInputService } from "./services/overlay-input.service";
 import { OverlayService } from "./services/overlay.service";
 import { Application } from "./application";
+import { pkg } from "./utils";
 
 function getAutoUpdater(): AppUpdater {
 	// Using destructuring to access autoUpdater due to the CommonJS module of 'electron-updater'.

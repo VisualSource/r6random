@@ -6,3 +6,4 @@ export const app = electron as overwolf.OverwolfApp;
 export const pkg = app.overwolf.packages as typeof app.overwolf.packages & {
 	overlay: IOverwolfOverlayApi;
 };
+

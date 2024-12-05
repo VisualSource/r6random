@@ -3,13 +3,14 @@ import type {
 	OverlayWindowOptions,
 } from "@overwolf/ow-electron-packages-types";
 import { ipcMain } from "electron/main";
+import Logger from "electron-log";
 import path from "node:path";
 import type { OverlayService } from "../services/overlay.service";
 
 export class OSRWindowController {
 	public overlayWindow: OverlayBrowserWindow | null = null;
 
-	constructor(private readonly overlayService: OverlayService) {}
+	constructor(private readonly overlayService: OverlayService) { }
 
 	public quit() {
 		this.overlayWindow = null;
@@ -25,7 +26,18 @@ export class OSRWindowController {
 		this.overlayWindow.window.hide();
 	}
 
-	public async createAndShow() {
+	public async createOrShow() {
+		Logger.info("showing overlay window");
+		if (!this.overlayWindow) {
+			Logger.info("creating new overlay window");
+			this.overlayWindow = await this.createOverlay();
+			ipcMain.handle("OSR::minimize", () => this.hide());
+		}
+
+		this.show();
+	}
+
+	private async createOverlay() {
 		const opt: OverlayWindowOptions = {
 			name: `osrWindow-${Math.floor(Math.random() * 1000)}`,
 			height: 800,
@@ -44,28 +56,19 @@ export class OSRWindowController {
 		opt.x = 100;
 		opt.y = 50;
 
-		this.overlayWindow = await this.overlayService.createNewOsrWindow(opt);
+		const window = await this.overlayService.createNewOsrWindow(opt);
 
-		this.registerToIpc();
-		this.registerToWindowEvents();
+		window.window.on("closed", () => {
+			this.overlayWindow = null;
+			Logger.info("overlay window closed");
+		});
 
 		await this.overlayWindow?.window.loadURL(
 			import.meta.env.DEV
 				? "http://192.168.1.10:5173/"
 				: "https://visualsource.github.io/r6random/",
 		);
-	}
 
-	private registerToIpc() {
-		ipcMain.handle("OSR::minimize", () => {
-			this.hide();
-		});
-	}
-	private registerToWindowEvents() {
-		const win = this.overlayWindow?.window;
-		win?.on("closed", () => {
-			this.overlayWindow = null;
-			console.log("osr window closed");
-		});
+		return window;
 	}
 }
